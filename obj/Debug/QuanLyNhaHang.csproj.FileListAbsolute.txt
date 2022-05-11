@@ -1,0 +1,9 @@
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
