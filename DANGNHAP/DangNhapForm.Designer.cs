@@ -63,6 +63,7 @@ namespace QuanLyNhaHang
             this.radioButtonQuanLy.TabStop = true;
             this.radioButtonQuanLy.Text = "Quản Lý";
             this.radioButtonQuanLy.UseVisualStyleBackColor = true;
+            this.radioButtonQuanLy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radioButtonQuanLy_KeyPress);
             // 
             // radioButtonNhanVien
             // 
@@ -151,6 +152,7 @@ namespace QuanLyNhaHang
             this.textBoxMatKhau.PasswordChar = '*';
             this.textBoxMatKhau.Size = new System.Drawing.Size(337, 30);
             this.textBoxMatKhau.TabIndex = 27;
+            this.textBoxMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMatKhau_KeyPress);
             // 
             // label2
             // 
@@ -171,6 +173,7 @@ namespace QuanLyNhaHang
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
             this.textBoxTaiKhoan.Size = new System.Drawing.Size(337, 30);
             this.textBoxTaiKhoan.TabIndex = 25;
+            this.textBoxTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTaiKhoan_KeyPress);
             // 
             // labelTaiKhoan
             // 
@@ -277,6 +280,7 @@ namespace QuanLyNhaHang
             this.Name = "DangNhapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhapForm";
+            this.Load += new System.EventHandler(this.DangNhapForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).EndInit();
             this.groupBoxChucVu.ResumeLayout(false);
             this.groupBoxChucVu.PerformLayout();
