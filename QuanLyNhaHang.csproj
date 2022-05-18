@@ -52,19 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="File CS\Program.cs" />
+    <Compile Include="File CS\MY_NH.cs" />
+    <Compile Include="NHANVIEN\NHANVIEN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyBanAnForm.cs">
       <SubType>Form</SubType>
@@ -78,12 +68,22 @@
     <Compile Include="QuanLyMonAnForm.Designer.cs">
       <DependentUpon>QuanLyMonAnForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhanVienForm.cs">
+    <Compile Include="NHANVIEN\QuanLyNhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanVienForm.Designer.cs">
+    <Compile Include="NHANVIEN\QuanLyNhanVienForm.Designer.cs">
       <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemUserNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemUserNewForm.Designer.cs">
+      <DependentUpon>ThemUserNewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\USER.cs" />
+    <EmbeddedResource Include="NHANVIEN\QuanLyNhanVienForm.resx">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,7 +92,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThemUserNewForm.resx">
+      <DependentUpon>ThemUserNewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,6 +109,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo đăng nhập.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-dep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mau-sac-logo-1024x640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder2\" />
+    <Folder Include="NewFolder3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

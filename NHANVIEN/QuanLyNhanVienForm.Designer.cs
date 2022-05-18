@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyNhaHang
 {
-    partial class MainForm
+    partial class QuanLyNhanVienForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,18 @@ namespace QuanLyNhaHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // QuanLyNhanVienForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MainForm";
+            this.Name = "QuanLyNhanVienForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "QuanLyNhanVienForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -7,3 +7,9 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.LoginForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.MainForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemTaiKhoanForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.QuanLyNhanVienForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\File Học\Lập trình trên Windows\Đồ án Cuối Kỳ\Quản Lý Nhà Hàng\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemUserNewForm.resources
