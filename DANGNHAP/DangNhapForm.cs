@@ -28,7 +28,9 @@ namespace QuanLyNhaHang
         }
 
 
-
+        // Đăng nhâp
+        // Quản lý có toàn quyền
+        // Nhân viên chỉ dùng mục đích checkin
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
             MY_NH mynh = new MY_NH();
@@ -38,7 +40,7 @@ namespace QuanLyNhaHang
             {
                 SqlDataAdapter ad = new SqlDataAdapter();
                 DataTable dt = new DataTable();
-                if (radioButtonQuanLy.Checked != true)
+                if (radioButtonQuanLy.Checked) // Dành cho quản lý
                 {
                     SqlCommand command = new SqlCommand("SELECT * FROM quanly WHERE id_quanly = @id AND password =@password", mynh.GetConnection);
 
@@ -46,12 +48,11 @@ namespace QuanLyNhaHang
                     command.Parameters.Add("@password", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
 
                     ad.SelectCommand = command;
-
                     ad.Fill(dt);
 
                     if ((dt.Rows.Count > 0))
                     {
-                        int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
+                        //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
                         // Globals.SetGlobalUserId(userid);
                         MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.DialogResult = DialogResult.OK;
@@ -62,7 +63,7 @@ namespace QuanLyNhaHang
                     }
 
                 }
-                else
+                else   // Dành cho nhân viên
                 {
                     SqlCommand command = new SqlCommand("SELECT * FROM nhanvien WHERE id_nhanvien = @id AND password =@password", mynh.GetConnection);
 
@@ -70,55 +71,24 @@ namespace QuanLyNhaHang
                     command.Parameters.Add("@password", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
 
                     ad.SelectCommand = command;
-
                     ad.Fill(dt);
 
                     if ((dt.Rows.Count > 0))
                     {
-                        int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
-                        // Globals.SetGlobalUserId(userid);
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
+                        MessageBox.Show("Check In thành công", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.DialogResult = DialogResult.OK;
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản hoặc Mật khẩu đăng nhập không chính xác", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tài khoản hoặc Mật khẩu đăng nhập không chính xác", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            else
+            else // Yêu cầu nhập đầy đủ thông tin
             {
                 MessageBox.Show("Tài khoản / Mật khẩu / Chức vụ / Ca làm việc chưa được nhập", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-           
-
-
-
-            /* MY_DB db = new MY_DB();
-
-             SqlDataAdapter ad = new SqlDataAdapter();
-
-             DataTable dt = new DataTable();
-
-             SqlCommand command = new SqlCommand("SELECT * FROM Login WHERE username = @user AND password =@password", db.GetConnection);
-
-             command.Parameters.Add("@user", SqlDbType.VarChar).Value = textUser.Text;
-             command.Parameters.Add("@password", SqlDbType.VarChar).Value = textPass.Text;
-
-             ad.SelectCommand = command;
-
-             ad.Fill(dt);
-
-             if ((dt.Rows.Count > 0))
-             {
-                 MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 this.DialogResult = DialogResult.OK;                
-             }
-             else
-             {
-                 MessageBox.Show("Tài khoản hoặc Mật khẩu đăng nhập không chính xác", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             }*/
         }
 
 
@@ -157,6 +127,14 @@ namespace QuanLyNhaHang
         {
             if (e.KeyChar == 13)
                 buttonDangNhap.Focus();
+        }
+
+
+        //
+        private void buttonDangKy_Click(object sender, EventArgs e)
+        {
+            DangKyForm dangKy = new DangKyForm();
+            dangKy.Show(this);
         }
     }
 }

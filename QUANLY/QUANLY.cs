@@ -15,6 +15,44 @@ namespace QuanLyNhaHang
 
 
 
+        //
+        public DataTable GetQuanLy(SqlCommand command)
+        {
+            command.Connection = mynh.GetConnection;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+
+        //
+        public bool InsertQuanLy(int id, string hoten, string gioitinh, DateTime ngaysinh,
+            string matkhau, string diachi, string sdt, MemoryStream hinh)
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO quanly " +
+                "(id_quanly, ho_ten, gioi_tinh, ngay_sinh, password, hinh, dia_chi, sdt) VALUES " +
+                "(@id, @hoten, @gioitinh, @ngaysinh, @pass, @hinh, @diachi, @sdt)", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@hoten", SqlDbType.VarChar).Value = hoten;
+            command.Parameters.Add("@gioitinh", SqlDbType.VarChar).Value = gioitinh;
+            command.Parameters.Add("@ngaysinh", SqlDbType.DateTime).Value = ngaysinh;
+            command.Parameters.Add("@diachi", SqlDbType.VarChar).Value = diachi;
+            command.Parameters.Add("@sdt", SqlDbType.VarChar).Value = sdt;
+            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = matkhau;
+            command.Parameters.Add("@hinh", SqlDbType.Image).Value = hinh.ToArray();
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
 
 
         /* //

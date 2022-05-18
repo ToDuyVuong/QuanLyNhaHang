@@ -16,7 +16,25 @@ namespace QuanLyNhaHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhapForm());
+
+            DangNhapForm dangNhap = new DangNhapForm();
+
+            if (dangNhap.ShowDialog() == DialogResult.OK)
+            {
+                if (dangNhap.radioButtonQuanLy.Checked == true)
+                {
+                    // Application.Run(new Progressbar());
+                    Application.Run(new MainForm());
+                }
+
+            }
+            else
+            {
+                Application.Exit();
+            }
+
+
+            // Application.Run(new DangNhapForm());
         }
     }
 }

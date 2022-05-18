@@ -32,9 +32,8 @@ namespace QuanLyNhaHang
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhapForm));
             this.radioButtonQuanLy = new System.Windows.Forms.RadioButton();
             this.radioButtonNhanVien = new System.Windows.Forms.RadioButton();
-            this.buttonThemTaiKhoan = new System.Windows.Forms.Button();
+            this.buttonDangKy = new System.Windows.Forms.Button();
             this.linkLabelTaiKhoanDangNhap = new System.Windows.Forms.LinkLabel();
-            this.pictureBoxLogoDangNhap = new System.Windows.Forms.PictureBox();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonDangNhap = new System.Windows.Forms.Button();
             this.textBoxMatKhau = new System.Windows.Forms.TextBox();
@@ -43,13 +42,14 @@ namespace QuanLyNhaHang
             this.labelTaiKhoan = new System.Windows.Forms.Label();
             this.groupBoxChucVu = new System.Windows.Forms.GroupBox();
             this.groupBoxCaLamViec = new System.Windows.Forms.GroupBox();
-            this.radioButtonCa1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonCa2 = new System.Windows.Forms.RadioButton();
             this.radioButtonCa3 = new System.Windows.Forms.RadioButton();
             this.radioButtonTamNghi = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).BeginInit();
+            this.radioButtonCa1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCa2 = new System.Windows.Forms.RadioButton();
+            this.pictureBoxLogoDangNhap = new System.Windows.Forms.PictureBox();
             this.groupBoxChucVu.SuspendLayout();
             this.groupBoxCaLamViec.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButtonQuanLy
@@ -77,19 +77,19 @@ namespace QuanLyNhaHang
             this.radioButtonNhanVien.Text = "Nhân Viên";
             this.radioButtonNhanVien.UseVisualStyleBackColor = true;
             // 
-            // buttonThemTaiKhoan
+            // buttonDangKy
             // 
-            this.buttonThemTaiKhoan.AutoSize = true;
-            this.buttonThemTaiKhoan.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.buttonThemTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemTaiKhoan.ForeColor = System.Drawing.Color.Blue;
-            this.buttonThemTaiKhoan.Location = new System.Drawing.Point(85, 435);
-            this.buttonThemTaiKhoan.Name = "buttonThemTaiKhoan";
-            this.buttonThemTaiKhoan.Size = new System.Drawing.Size(194, 54);
-            this.buttonThemTaiKhoan.TabIndex = 32;
-            this.buttonThemTaiKhoan.Text = "Thêm Tài Khoản";
-            this.buttonThemTaiKhoan.UseVisualStyleBackColor = false;
-            this.buttonThemTaiKhoan.Click += new System.EventHandler(this.buttonThemTaiKhoan_Click);
+            this.buttonDangKy.AutoSize = true;
+            this.buttonDangKy.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.buttonDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDangKy.ForeColor = System.Drawing.Color.Blue;
+            this.buttonDangKy.Location = new System.Drawing.Point(85, 435);
+            this.buttonDangKy.Name = "buttonDangKy";
+            this.buttonDangKy.Size = new System.Drawing.Size(194, 54);
+            this.buttonDangKy.TabIndex = 32;
+            this.buttonDangKy.Text = "Đăng Ký";
+            this.buttonDangKy.UseVisualStyleBackColor = false;
+            this.buttonDangKy.Click += new System.EventHandler(this.buttonDangKy_Click);
             // 
             // linkLabelTaiKhoanDangNhap
             // 
@@ -104,24 +104,13 @@ namespace QuanLyNhaHang
             this.linkLabelTaiKhoanDangNhap.TabStop = true;
             this.linkLabelTaiKhoanDangNhap.Text = "Tài Khoản Đăng Nhập";
             // 
-            // pictureBoxLogoDangNhap
-            // 
-            this.pictureBoxLogoDangNhap.Image = global::QuanLyNhaHang.Properties.Resources.mau_sac_logo_1024x640;
-            this.pictureBoxLogoDangNhap.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoDangNhap.InitialImage")));
-            this.pictureBoxLogoDangNhap.Location = new System.Drawing.Point(90, 37);
-            this.pictureBoxLogoDangNhap.Name = "pictureBoxLogoDangNhap";
-            this.pictureBoxLogoDangNhap.Size = new System.Drawing.Size(116, 77);
-            this.pictureBoxLogoDangNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogoDangNhap.TabIndex = 30;
-            this.pictureBoxLogoDangNhap.TabStop = false;
-            // 
             // buttonThoat
             // 
             this.buttonThoat.AutoSize = true;
             this.buttonThoat.BackColor = System.Drawing.Color.Silver;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonThoat.Location = new System.Drawing.Point(514, 435);
+            this.buttonThoat.Location = new System.Drawing.Point(519, 435);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(194, 54);
             this.buttonThoat.TabIndex = 29;
@@ -212,30 +201,6 @@ namespace QuanLyNhaHang
             this.groupBoxCaLamViec.TabStop = false;
             this.groupBoxCaLamViec.Text = "Ca Làm Việc";
             // 
-            // radioButtonCa1
-            // 
-            this.radioButtonCa1.AutoSize = true;
-            this.radioButtonCa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCa1.Location = new System.Drawing.Point(44, 19);
-            this.radioButtonCa1.Name = "radioButtonCa1";
-            this.radioButtonCa1.Size = new System.Drawing.Size(57, 22);
-            this.radioButtonCa1.TabIndex = 33;
-            this.radioButtonCa1.TabStop = true;
-            this.radioButtonCa1.Text = "Ca 1";
-            this.radioButtonCa1.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonCa2
-            // 
-            this.radioButtonCa2.AutoSize = true;
-            this.radioButtonCa2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCa2.Location = new System.Drawing.Point(123, 19);
-            this.radioButtonCa2.Name = "radioButtonCa2";
-            this.radioButtonCa2.Size = new System.Drawing.Size(57, 22);
-            this.radioButtonCa2.TabIndex = 34;
-            this.radioButtonCa2.TabStop = true;
-            this.radioButtonCa2.Text = "Ca 2";
-            this.radioButtonCa2.UseVisualStyleBackColor = true;
-            // 
             // radioButtonCa3
             // 
             this.radioButtonCa3.AutoSize = true;
@@ -260,6 +225,41 @@ namespace QuanLyNhaHang
             this.radioButtonTamNghi.Text = "Tạm Nghĩ";
             this.radioButtonTamNghi.UseVisualStyleBackColor = true;
             // 
+            // radioButtonCa1
+            // 
+            this.radioButtonCa1.AutoSize = true;
+            this.radioButtonCa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCa1.Location = new System.Drawing.Point(44, 19);
+            this.radioButtonCa1.Name = "radioButtonCa1";
+            this.radioButtonCa1.Size = new System.Drawing.Size(57, 22);
+            this.radioButtonCa1.TabIndex = 33;
+            this.radioButtonCa1.TabStop = true;
+            this.radioButtonCa1.Text = "Ca 1";
+            this.radioButtonCa1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCa2
+            // 
+            this.radioButtonCa2.AutoSize = true;
+            this.radioButtonCa2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCa2.Location = new System.Drawing.Point(123, 19);
+            this.radioButtonCa2.Name = "radioButtonCa2";
+            this.radioButtonCa2.Size = new System.Drawing.Size(57, 22);
+            this.radioButtonCa2.TabIndex = 34;
+            this.radioButtonCa2.TabStop = true;
+            this.radioButtonCa2.Text = "Ca 2";
+            this.radioButtonCa2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxLogoDangNhap
+            // 
+            this.pictureBoxLogoDangNhap.Image = global::QuanLyNhaHang.Properties.Resources.mau_sac_logo_1024x640;
+            this.pictureBoxLogoDangNhap.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoDangNhap.InitialImage")));
+            this.pictureBoxLogoDangNhap.Location = new System.Drawing.Point(90, 37);
+            this.pictureBoxLogoDangNhap.Name = "pictureBoxLogoDangNhap";
+            this.pictureBoxLogoDangNhap.Size = new System.Drawing.Size(116, 77);
+            this.pictureBoxLogoDangNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogoDangNhap.TabIndex = 30;
+            this.pictureBoxLogoDangNhap.TabStop = false;
+            // 
             // DangNhapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +268,7 @@ namespace QuanLyNhaHang
             this.ClientSize = new System.Drawing.Size(793, 536);
             this.Controls.Add(this.groupBoxCaLamViec);
             this.Controls.Add(this.groupBoxChucVu);
-            this.Controls.Add(this.buttonThemTaiKhoan);
+            this.Controls.Add(this.buttonDangKy);
             this.Controls.Add(this.linkLabelTaiKhoanDangNhap);
             this.Controls.Add(this.pictureBoxLogoDangNhap);
             this.Controls.Add(this.buttonThoat);
@@ -281,11 +281,11 @@ namespace QuanLyNhaHang
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangNhapForm";
             this.Load += new System.EventHandler(this.DangNhapForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).EndInit();
             this.groupBoxChucVu.ResumeLayout(false);
             this.groupBoxChucVu.PerformLayout();
             this.groupBoxCaLamViec.ResumeLayout(false);
             this.groupBoxCaLamViec.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +295,7 @@ namespace QuanLyNhaHang
 
         public System.Windows.Forms.RadioButton radioButtonQuanLy;
         public System.Windows.Forms.RadioButton radioButtonNhanVien;
-        private System.Windows.Forms.Button buttonThemTaiKhoan;
+        private System.Windows.Forms.Button buttonDangKy;
         private System.Windows.Forms.LinkLabel linkLabelTaiKhoanDangNhap;
         private System.Windows.Forms.PictureBox pictureBoxLogoDangNhap;
         private System.Windows.Forms.Button buttonThoat;
