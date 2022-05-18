@@ -19,13 +19,12 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\bin\Deb
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.AssemblyReference.cache
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DangNhapForm.resources
-C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.QuanLyNhanVienForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
-C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemUserNewForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.cache
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
-C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemTaiKhoanForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DangKyForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.MainForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.OrderForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChinhSuaNhanSuForm.resources

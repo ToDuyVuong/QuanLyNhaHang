@@ -21,17 +21,20 @@ namespace QuanLyNhaHang
 
             if (dangNhap.ShowDialog() == DialogResult.OK)
             {
-                if (dangNhap.radioButtonQuanLy.Checked == true)
+                if (dangNhap.radioButtonQuanLy.Checked == true && dangNhap.radioButtonMucDichQuanLy.Checked == true)
                 {
                     // Application.Run(new Progressbar());
                     Application.Run(new MainForm());
                 }
-
+                else
+                {
+                    Application.Run(new OrderForm());
+                }    
             }
-            else
+            /*else
             {
                 Application.Exit();
-            }
+            }*/
 
 
             // Application.Run(new DangNhapForm());

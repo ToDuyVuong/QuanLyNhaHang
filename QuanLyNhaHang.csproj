@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NHANVIEN\ChinhSuaNhanSuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NHANVIEN\ChinhSuaNhanSuForm.Designer.cs">
+      <DependentUpon>ChinhSuaNhanSuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANGNHAP\DangKyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,67 +65,37 @@
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DANGNHAP\TAIKHOAN.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="File CS\Program.cs" />
     <Compile Include="File CS\MY_NH.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="DANGNHAP\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="DANGNHAP\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NHANVIEN\NHANVIEN.cs" />
+    <Compile Include="DANGNHAP\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGNHAP\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUANLY\QUANLY.cs" />
-    <Compile Include="QuanLyBanAnForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyBanAnForm.Designer.cs">
-      <DependentUpon>QuanLyBanAnForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyMonAnForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyMonAnForm.Designer.cs">
-      <DependentUpon>QuanLyMonAnForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NHANVIEN\QuanLyNhanVienForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NHANVIEN\QuanLyNhanVienForm.Designer.cs">
-      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DANGNHAP\ThemTaiKhoanForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DANGNHAP\ThemTaiKhoanForm.Designer.cs">
-      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemUserNewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemUserNewForm.Designer.cs">
-      <DependentUpon>ThemUserNewForm.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="NHANVIEN\ChinhSuaNhanSuForm.resx">
+      <DependentUpon>ChinhSuaNhanSuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANGNHAP\DangKyForm.resx">
       <DependentUpon>DangKyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANGNHAP\DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DANGNHAP\ThemTaiKhoanForm.resx">
-      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="DANGNHAP\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NHANVIEN\QuanLyNhanVienForm.resx">
-      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    <EmbeddedResource Include="DANGNHAP\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,9 +107,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ThemUserNewForm.resx">
-      <DependentUpon>ThemUserNewForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -16,5 +16,17 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+        private void thêmNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DangKyForm dangKyForm = new DangKyForm();
+            dangKyForm.Show(this);
+        }
+
+        private void chỉnhSủaNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChinhSuaNhanSuForm chinhSuForm = new ChinhSuaNhanSuForm();      
+            chinhSuForm.Show(this); 
+        }
     }
 }

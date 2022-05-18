@@ -21,6 +21,18 @@ namespace QuanLyNhaHang
 
 
         //
+        public DataTable GetNhanVien(SqlCommand command)
+        {
+            command.Connection = mynh.GetConnection;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+
+
+        //
         public bool InsertNhanVien(int id, string hoten, string gioitinh, DateTime ngaysinh,
             string matkhau, string diachi, string sdt, MemoryStream hinh)
         {
@@ -49,8 +61,52 @@ namespace QuanLyNhaHang
         }
 
 
+        //
+        public bool UpdateNhanVien(int id, string hoten, string gioitinh, DateTime ngaysinh,
+            string matkhau, string diachi, string sdt, MemoryStream hinh)
+        {
+            SqlCommand command = new SqlCommand("UPDATE nhanvien SET ho_ten = @hoten, gioi_tinh = @gioitinh, " +
+                "dia_chi = @diachi, sdt =@sdt, hinh =@hinh WHERE id_nhanvien = @id", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@hoten", SqlDbType.VarChar).Value = hoten;
+            command.Parameters.Add("@gioitinh", SqlDbType.VarChar).Value = gioitinh;
+            command.Parameters.Add("@ngaysinh", SqlDbType.DateTime).Value = ngaysinh;
+            command.Parameters.Add("@diachi", SqlDbType.VarChar).Value = diachi;
+            command.Parameters.Add("@sdt", SqlDbType.VarChar).Value = sdt;
+            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = matkhau;
+            command.Parameters.Add("@hinh", SqlDbType.Image).Value = hinh.ToArray();
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
 
 
+        // Xóa 
+        public bool DeleteNhanVien(int id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM nhanvien WHERE id_nhanvien= @id", mynh.GetConnection);
+
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
 
         /*
                 // Thêm Student

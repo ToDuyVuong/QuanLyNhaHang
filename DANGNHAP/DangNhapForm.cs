@@ -23,8 +23,8 @@ namespace QuanLyNhaHang
         // Load Form thêm tài khỏa
         private void buttonThemTaiKhoan_Click(object sender, EventArgs e)
         {
-            ThemTaiKhoanForm themTaiKhoan = new ThemTaiKhoanForm();
-            themTaiKhoan.Show(this);
+           /* ThemTaiKhoanForm themTaiKhoan = new ThemTaiKhoanForm();
+            themTaiKhoan.Show(this);*/
         }
 
 
@@ -36,7 +36,9 @@ namespace QuanLyNhaHang
             MY_NH mynh = new MY_NH();
 
             if(textBoxTaiKhoan.Text != "" && textBoxMatKhau.Text != "" &&
-                (radioButtonQuanLy.Checked != true || radioButtonNhanVien.Checked != true))
+                (radioButtonQuanLy.Checked != true || radioButtonNhanVien.Checked != true) &&
+                (radioButtonMucDichOrder.Checked != true || radioButtonMucDichQuanLy.Checked != true ||
+                radioButtonChamCong.Checked != true))
             {
                 SqlDataAdapter ad = new SqlDataAdapter();
                 DataTable dt = new DataTable();
@@ -53,9 +55,15 @@ namespace QuanLyNhaHang
                     if ((dt.Rows.Count > 0))
                     {
                         //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
-                        // Globals.SetGlobalUserId(userid);
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.DialogResult = DialogResult.OK;
+                        //Globals.SetGlobalUserId(userid);
+                        if (radioButtonChamCong.Checked)
+                            MessageBox.Show("Check In thành công", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                        {
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //if(radioButtonMucDichQuanLy.Checked == true)                        
+                            this.DialogResult = DialogResult.OK;
+                        }
                     }
                     else
                     {
@@ -76,8 +84,16 @@ namespace QuanLyNhaHang
                     if ((dt.Rows.Count > 0))
                     {
                         //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
+                        if(radioButtonChamCong.Checked)
                         MessageBox.Show("Check In thành công", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.DialogResult = DialogResult.OK;
+                        else if(radioButtonMucDichOrder.Checked)    
+                        {
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.DialogResult = DialogResult.OK;
+                        }  
+                        else
+                            MessageBox.Show("Đăng nhập thất bại", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     else
                     {
