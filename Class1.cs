@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhaHang
 {
-     class TAIKHOAN
+    class Class1
     {
     }
 }

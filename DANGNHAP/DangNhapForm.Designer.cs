@@ -48,9 +48,9 @@ namespace QuanLyNhaHang
             this.radioButtonCa2 = new System.Windows.Forms.RadioButton();
             this.pictureBoxLogoDangNhap = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonChamCong = new System.Windows.Forms.RadioButton();
             this.radioButtonMucDichOrder = new System.Windows.Forms.RadioButton();
             this.radioButtonMucDichQuanLy = new System.Windows.Forms.RadioButton();
-            this.radioButtonChamCong = new System.Windows.Forms.RadioButton();
             this.groupBoxChucVu.SuspendLayout();
             this.groupBoxCaLamViec.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).BeginInit();
@@ -278,6 +278,18 @@ namespace QuanLyNhaHang
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mục Đích";
             // 
+            // radioButtonChamCong
+            // 
+            this.radioButtonChamCong.AutoSize = true;
+            this.radioButtonChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonChamCong.Location = new System.Drawing.Point(109, 19);
+            this.radioButtonChamCong.Name = "radioButtonChamCong";
+            this.radioButtonChamCong.Size = new System.Drawing.Size(106, 22);
+            this.radioButtonChamCong.TabIndex = 35;
+            this.radioButtonChamCong.TabStop = true;
+            this.radioButtonChamCong.Text = "Chấm Công";
+            this.radioButtonChamCong.UseVisualStyleBackColor = true;
+            // 
             // radioButtonMucDichOrder
             // 
             this.radioButtonMucDichOrder.AutoSize = true;
@@ -289,6 +301,7 @@ namespace QuanLyNhaHang
             this.radioButtonMucDichOrder.TabStop = true;
             this.radioButtonMucDichOrder.Text = "Order";
             this.radioButtonMucDichOrder.UseVisualStyleBackColor = true;
+            this.radioButtonMucDichOrder.CheckedChanged += new System.EventHandler(this.radioButtonMucDichOrder_CheckedChanged);
             // 
             // radioButtonMucDichQuanLy
             // 
@@ -301,18 +314,7 @@ namespace QuanLyNhaHang
             this.radioButtonMucDichQuanLy.TabStop = true;
             this.radioButtonMucDichQuanLy.Text = "Quản Lý";
             this.radioButtonMucDichQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonChamCong
-            // 
-            this.radioButtonChamCong.AutoSize = true;
-            this.radioButtonChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonChamCong.Location = new System.Drawing.Point(109, 19);
-            this.radioButtonChamCong.Name = "radioButtonChamCong";
-            this.radioButtonChamCong.Size = new System.Drawing.Size(106, 22);
-            this.radioButtonChamCong.TabIndex = 35;
-            this.radioButtonChamCong.TabStop = true;
-            this.radioButtonChamCong.Text = "Chấm Công";
-            this.radioButtonChamCong.UseVisualStyleBackColor = true;
+            this.radioButtonMucDichQuanLy.CheckedChanged += new System.EventHandler(this.radioButtonMucDichQuanLy_CheckedChanged);
             // 
             // DangNhapForm
             // 

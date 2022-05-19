@@ -57,9 +57,17 @@
             this.textBoxTaiKhoan = new System.Windows.Forms.TextBox();
             this.labelTaiKhoan = new System.Windows.Forms.Label();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.dataGridViewChinhSuaNhanSu = new System.Windows.Forms.DataGridView();
+            this.groupBoxLocTheoChucVu = new System.Windows.Forms.GroupBox();
+            this.radioButtonChucVuNhanVien = new System.Windows.Forms.RadioButton();
+            this.radioButtonChucVuQuanLy = new System.Windows.Forms.RadioButton();
+            this.buttonTaiLai = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPictureHinh)).BeginInit();
             this.groupBoxChucVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaNhanSu)).BeginInit();
+            this.groupBoxLocTheoChucVu.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButtonGioiTinhNu
@@ -153,6 +161,7 @@
             this.buttonTaiHinhLen.TabIndex = 92;
             this.buttonTaiHinhLen.Text = "Tải Hình Lên";
             this.buttonTaiHinhLen.UseVisualStyleBackColor = true;
+            this.buttonTaiHinhLen.Click += new System.EventHandler(this.buttonTaiHinhLen_Click);
             // 
             // pictureBoxPictureHinh
             // 
@@ -268,12 +277,13 @@
             this.buttonThemTaiKhoan.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.buttonThemTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThemTaiKhoan.ForeColor = System.Drawing.Color.Blue;
-            this.buttonThemTaiKhoan.Location = new System.Drawing.Point(184, 865);
+            this.buttonThemTaiKhoan.Location = new System.Drawing.Point(368, 865);
             this.buttonThemTaiKhoan.Name = "buttonThemTaiKhoan";
             this.buttonThemTaiKhoan.Size = new System.Drawing.Size(194, 54);
             this.buttonThemTaiKhoan.TabIndex = 83;
             this.buttonThemTaiKhoan.Text = "Chỉnh Sửa";
             this.buttonThemTaiKhoan.UseVisualStyleBackColor = false;
+            this.buttonThemTaiKhoan.Click += new System.EventHandler(this.buttonChinhSuaTaiKhoan_Click);
             // 
             // linkLabelChinhSuaNhanSu
             // 
@@ -305,12 +315,13 @@
             this.buttonThoat.BackColor = System.Drawing.Color.Red;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.Black;
-            this.buttonThoat.Location = new System.Drawing.Point(463, 865);
+            this.buttonThoat.Location = new System.Drawing.Point(608, 865);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(194, 54);
             this.buttonThoat.TabIndex = 80;
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.UseVisualStyleBackColor = false;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // textBoxMatKhau
             // 
@@ -341,6 +352,7 @@
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
             this.textBoxTaiKhoan.Size = new System.Drawing.Size(156, 30);
             this.textBoxTaiKhoan.TabIndex = 77;
+            this.textBoxTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTaiKhoan_KeyPress);
             // 
             // labelTaiKhoan
             // 
@@ -355,20 +367,100 @@
             // 
             // buttonTimKiem
             // 
+            this.buttonTimKiem.BackColor = System.Drawing.Color.Blue;
             this.buttonTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTimKiem.Location = new System.Drawing.Point(471, 117);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(91, 30);
             this.buttonTimKiem.TabIndex = 100;
             this.buttonTimKiem.Text = "Tìm Kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
+            // 
+            // dataGridViewChinhSuaNhanSu
+            // 
+            this.dataGridViewChinhSuaNhanSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChinhSuaNhanSu.Location = new System.Drawing.Point(608, 81);
+            this.dataGridViewChinhSuaNhanSu.Name = "dataGridViewChinhSuaNhanSu";
+            this.dataGridViewChinhSuaNhanSu.Size = new System.Drawing.Size(1030, 737);
+            this.dataGridViewChinhSuaNhanSu.TabIndex = 101;
+            this.dataGridViewChinhSuaNhanSu.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChinhSuaNhanSu_CellContentDoubleClick);
+            this.dataGridViewChinhSuaNhanSu.DoubleClick += new System.EventHandler(this.dataGridViewChinhSuaNhanSu_DoubleClick);
+            // 
+            // groupBoxLocTheoChucVu
+            // 
+            this.groupBoxLocTheoChucVu.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.groupBoxLocTheoChucVu.Controls.Add(this.radioButtonChucVuNhanVien);
+            this.groupBoxLocTheoChucVu.Controls.Add(this.radioButtonChucVuQuanLy);
+            this.groupBoxLocTheoChucVu.Location = new System.Drawing.Point(608, 12);
+            this.groupBoxLocTheoChucVu.Name = "groupBoxLocTheoChucVu";
+            this.groupBoxLocTheoChucVu.Size = new System.Drawing.Size(336, 62);
+            this.groupBoxLocTheoChucVu.TabIndex = 85;
+            this.groupBoxLocTheoChucVu.TabStop = false;
+            this.groupBoxLocTheoChucVu.Text = "Lọc Theo chức vụ";
+            // 
+            // radioButtonChucVuNhanVien
+            // 
+            this.radioButtonChucVuNhanVien.AutoSize = true;
+            this.radioButtonChucVuNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonChucVuNhanVien.Location = new System.Drawing.Point(31, 19);
+            this.radioButtonChucVuNhanVien.Name = "radioButtonChucVuNhanVien";
+            this.radioButtonChucVuNhanVien.Size = new System.Drawing.Size(93, 22);
+            this.radioButtonChucVuNhanVien.TabIndex = 33;
+            this.radioButtonChucVuNhanVien.TabStop = true;
+            this.radioButtonChucVuNhanVien.Text = "Nhân Viên";
+            this.radioButtonChucVuNhanVien.UseVisualStyleBackColor = true;
+            this.radioButtonChucVuNhanVien.CheckedChanged += new System.EventHandler(this.radioButtonChucVuNhanVien_CheckedChanged);
+            // 
+            // radioButtonChucVuQuanLy
+            // 
+            this.radioButtonChucVuQuanLy.AutoSize = true;
+            this.radioButtonChucVuQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonChucVuQuanLy.Location = new System.Drawing.Point(168, 19);
+            this.radioButtonChucVuQuanLy.Name = "radioButtonChucVuQuanLy";
+            this.radioButtonChucVuQuanLy.Size = new System.Drawing.Size(81, 22);
+            this.radioButtonChucVuQuanLy.TabIndex = 34;
+            this.radioButtonChucVuQuanLy.TabStop = true;
+            this.radioButtonChucVuQuanLy.Text = "Quản Lý";
+            this.radioButtonChucVuQuanLy.UseVisualStyleBackColor = true;
+            this.radioButtonChucVuQuanLy.CheckedChanged += new System.EventHandler(this.radioButtonChucVuQuanLy_CheckedChanged);
+            // 
+            // buttonTaiLai
+            // 
+            this.buttonTaiLai.BackColor = System.Drawing.Color.YellowGreen;
+            this.buttonTaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTaiLai.Location = new System.Drawing.Point(967, 16);
+            this.buttonTaiLai.Name = "buttonTaiLai";
+            this.buttonTaiLai.Size = new System.Drawing.Size(127, 55);
+            this.buttonTaiLai.TabIndex = 102;
+            this.buttonTaiLai.Text = "Tải Lại";
+            this.buttonTaiLai.UseVisualStyleBackColor = false;
+            this.buttonTaiLai.Click += new System.EventHandler(this.buttonTaiLai_Click);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.AutoSize = true;
+            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.ForeColor = System.Drawing.Color.Black;
+            this.buttonXoa.Location = new System.Drawing.Point(120, 865);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(194, 54);
+            this.buttonXoa.TabIndex = 103;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // ChinhSuaNhanSuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 957);
+            this.ClientSize = new System.Drawing.Size(1668, 957);
+            this.Controls.Add(this.buttonXoa);
+            this.Controls.Add(this.buttonTaiLai);
+            this.Controls.Add(this.groupBoxLocTheoChucVu);
+            this.Controls.Add(this.dataGridViewChinhSuaNhanSu);
             this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.radioButtonGioiTinhNu);
             this.Controls.Add(this.radioButtonGioiTinhNam);
@@ -398,10 +490,14 @@
             this.Name = "ChinhSuaNhanSuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChinhSuaNhanSuForm";
+            this.Load += new System.EventHandler(this.ChinhSuaNhanSuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPictureHinh)).EndInit();
             this.groupBoxChucVu.ResumeLayout(false);
             this.groupBoxChucVu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaNhanSu)).EndInit();
+            this.groupBoxLocTheoChucVu.ResumeLayout(false);
+            this.groupBoxLocTheoChucVu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +533,11 @@
         private System.Windows.Forms.TextBox textBoxTaiKhoan;
         private System.Windows.Forms.Label labelTaiKhoan;
         private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.DataGridView dataGridViewChinhSuaNhanSu;
+        private System.Windows.Forms.GroupBox groupBoxLocTheoChucVu;
+        public System.Windows.Forms.RadioButton radioButtonChucVuNhanVien;
+        public System.Windows.Forms.RadioButton radioButtonChucVuQuanLy;
+        private System.Windows.Forms.Button buttonTaiLai;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }

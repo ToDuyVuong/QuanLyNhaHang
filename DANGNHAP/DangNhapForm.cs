@@ -40,14 +40,23 @@ namespace QuanLyNhaHang
                 (radioButtonMucDichOrder.Checked != true || radioButtonMucDichQuanLy.Checked != true ||
                 radioButtonChamCong.Checked != true))
             {
+                /*string chucvu = "";
+                if(radioButtonQuanLy.Checked)
+                {
+                    chucvu = "Quan ly";
+                }
+                else
+                {
+                    chucvu = "Nhan vien";
+                }*/
                 SqlDataAdapter ad = new SqlDataAdapter();
                 DataTable dt = new DataTable();
                 if (radioButtonQuanLy.Checked) // Dành cho quản lý
                 {
-                    SqlCommand command = new SqlCommand("SELECT * FROM quanly WHERE id_quanly = @id AND password =@password", mynh.GetConnection);
+                    SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE id = @id AND matkhau = @matkhau", mynh.GetConnection);
 
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = textBoxTaiKhoan.Text;
-                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
+                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
 
                     ad.SelectCommand = command;
                     ad.Fill(dt);
@@ -73,10 +82,10 @@ namespace QuanLyNhaHang
                 }
                 else   // Dành cho nhân viên
                 {
-                    SqlCommand command = new SqlCommand("SELECT * FROM nhanvien WHERE id_nhanvien = @id AND password =@password", mynh.GetConnection);
+                    SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE id = @id AND matkhau = @matkhau", mynh.GetConnection);
 
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = textBoxTaiKhoan.Text;
-                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
+                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
 
                     ad.SelectCommand = command;
                     ad.Fill(dt);
@@ -135,6 +144,7 @@ namespace QuanLyNhaHang
         private void DangNhapForm_Load(object sender, EventArgs e)
         {
                 textBoxTaiKhoan.Focus();
+
         }
 
 
@@ -151,6 +161,32 @@ namespace QuanLyNhaHang
         {
             DangKyForm dangKy = new DangKyForm();
             dangKy.Show(this);
+        }
+
+
+      
+        // Order
+        private void radioButtonMucDichOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        // Main Form Nhanh
+        private void radioButtonMucDichQuanLy_CheckedChanged(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

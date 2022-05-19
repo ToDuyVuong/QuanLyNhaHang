@@ -93,6 +93,7 @@
             this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
             this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.danhSáchNhânViênToolStripMenuItem.Text = "Danh Sách Nhân Sự";
+            this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
             // 
             // danhSáchQuảnLýToolStripMenuItem
             // 

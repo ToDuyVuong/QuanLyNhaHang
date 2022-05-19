@@ -18,8 +18,7 @@ namespace QuanLyNhaHang
             InitializeComponent();
         }
 
-        QUANLY quanly = new QUANLY();
-        NHANVIEN nhanvien = new NHANVIEN();
+        NHANSU nhansu = new NHANSU();
 
 
         //
@@ -36,6 +35,11 @@ namespace QuanLyNhaHang
             if (radioButtonGioiTinhNu.Checked)
             {
                 gioitinh = "Nu";
+            }
+            string chucvu = "NhanVien";
+            if(radioButtonQuanLy.Checked)
+            {
+                chucvu = "QuanLy";
             }
             DateTime ngaysinh = dateTimePickerNgaySinh.Value;
             string diachi = textBoxDiaChi.Text;
@@ -67,16 +71,16 @@ namespace QuanLyNhaHang
                         if (radioButtonQuanLy.Checked == true)
                         {
                             pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
-                            if (quanly.InsertQuanLy(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh))
-                                MessageBox.Show("Đăng ký quản lý mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
+                                MessageBox.Show("Đăng ký tài khoản quản lý mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
                                 MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
                             pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
-                            if (nhanvien.InsertNhanVien(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh))
-                                MessageBox.Show("Thêm nhân viên mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
+                                MessageBox.Show("Đăng ký tài khoản nhanvien mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
                                 MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }

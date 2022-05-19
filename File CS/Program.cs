@@ -19,7 +19,29 @@ namespace QuanLyNhaHang
 
             DangNhapForm dangNhap = new DangNhapForm();
 
+
             if (dangNhap.ShowDialog() == DialogResult.OK)
+            {
+                if (dangNhap.radioButtonMucDichOrder.Checked)
+                {
+                    // Application.Run(new Progressbar());
+                    Application.Run(new OrderForm());
+                }
+                else
+                {
+                    Application.Run(new MainForm());
+                }
+            }
+            /*else
+            {
+                Application.Exit();
+            }*/
+
+
+
+
+
+            /*if (dangNhap.ShowDialog() == DialogResult.OK)
             {
                 if (dangNhap.radioButtonQuanLy.Checked == true && dangNhap.radioButtonMucDichQuanLy.Checked == true)
                 {
@@ -31,10 +53,16 @@ namespace QuanLyNhaHang
                     Application.Run(new OrderForm());
                 }    
             }
-            /*else
+            *//*else
             {
                 Application.Exit();
             }*/
+
+
+
+
+
+
 
 
             // Application.Run(new DangNhapForm());

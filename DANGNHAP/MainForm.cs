@@ -28,5 +28,11 @@ namespace QuanLyNhaHang
             ChinhSuaNhanSuForm chinhSuForm = new ChinhSuaNhanSuForm();      
             chinhSuForm.Show(this); 
         }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachNhanSuForm danhSachNhanSuForm = new DanhSachNhanSuForm();
+            danhSachNhanSuForm.Show(this);
+        }
     }
 }
