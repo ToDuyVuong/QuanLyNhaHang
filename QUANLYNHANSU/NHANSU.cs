@@ -104,6 +104,57 @@ namespace QuanLyNhaHang
             }
         }
 
+        // Hàm đếm số lượng 
+        string execCount(string query)
+        {
+            mynh.openConnection();
+            SqlCommand command = new SqlCommand(query, mynh.GetConnection);
+            string count = command.ExecuteScalar().ToString();
+            mynh.closeConnection();
+            return count;
+        }
+
+
+        /// Đếm tổng số Nam
+        public string DemSoLuongNam(int n)
+        {
+            if (n == 0)
+            {
+                return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nam' AND chucvu = 'NhanVien'");
+            }
+            else
+            {
+                if (n == 2)
+                {
+                    return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nam'");
+                }
+                else
+                {
+                    return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nam' AND chucvu = 'QuanLy'");
+                }
+            }
+        }
+
+
+        // Đếm tổng số Nữ
+        public string DemSoLuongNu(int n)
+        {
+            if(n == 0)
+            {
+                return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nu'AND chucvu = 'NhanVien'");
+            }
+            else
+            {
+                if(n == 2)
+                {
+                    return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nu' ");
+                }
+                else
+                {
+                    return execCount("SELECT count(*) FROM nhansu WHERE gioitinh = 'Nu' AND chucvu = 'QuanLy'");
+                }
+            }
+        }
 
 
 
@@ -115,7 +166,8 @@ namespace QuanLyNhaHang
 
 
 
-
+    }
+}
 
         /* //
          public DataTable getUser(SqlCommand command)
@@ -230,7 +282,3 @@ namespace QuanLyNhaHang
 
 
 
-
-
-    }
-}

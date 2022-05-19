@@ -29,22 +29,25 @@ namespace QuanLyNhaHang
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxLocTheoChucVu = new System.Windows.Forms.GroupBox();
             this.radioButtonTatCa = new System.Windows.Forms.RadioButton();
             this.radioButtonChucVuNhanVien = new System.Windows.Forms.RadioButton();
             this.radioButtonChucVuQuanLy = new System.Windows.Forms.RadioButton();
             this.dataGridViewDanhSachNhanSu = new System.Windows.Forms.DataGridView();
-            this.labelSoLuong = new System.Windows.Forms.Label();
+            this.labelTongSoLuong = new System.Windows.Forms.Label();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonXuatFileWord = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelSoLuongNam = new System.Windows.Forms.Label();
+            this.labelSoLuongNu = new System.Windows.Forms.Label();
+            this.chartBieuDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelTongSoLuongNhanSu = new System.Windows.Forms.Label();
             this.groupBoxLocTheoChucVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachNhanSu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBieuDo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxLocTheoChucVu
@@ -108,16 +111,16 @@ namespace QuanLyNhaHang
             this.dataGridViewDanhSachNhanSu.TabIndex = 103;
             this.dataGridViewDanhSachNhanSu.DoubleClick += new System.EventHandler(this.dataGridViewDanhSachNhanSu_DoubleClick);
             // 
-            // labelSoLuong
+            // labelTongSoLuong
             // 
-            this.labelSoLuong.AutoSize = true;
-            this.labelSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoLuong.ForeColor = System.Drawing.Color.Lime;
-            this.labelSoLuong.Location = new System.Drawing.Point(925, 849);
-            this.labelSoLuong.Name = "labelSoLuong";
-            this.labelSoLuong.Size = new System.Drawing.Size(106, 24);
-            this.labelSoLuong.TabIndex = 104;
-            this.labelSoLuong.Text = "Số Luong:";
+            this.labelTongSoLuong.AutoSize = true;
+            this.labelTongSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongSoLuong.ForeColor = System.Drawing.Color.Lime;
+            this.labelTongSoLuong.Location = new System.Drawing.Point(959, 846);
+            this.labelTongSoLuong.Name = "labelTongSoLuong";
+            this.labelTongSoLuong.Size = new System.Drawing.Size(155, 24);
+            this.labelTongSoLuong.TabIndex = 104;
+            this.labelTongSoLuong.Text = "Tổng Số Lượng";
             // 
             // buttonThoat
             // 
@@ -131,6 +134,7 @@ namespace QuanLyNhaHang
             this.buttonThoat.TabIndex = 105;
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.UseVisualStyleBackColor = false;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // buttonPrint
             // 
@@ -160,21 +164,55 @@ namespace QuanLyNhaHang
             this.buttonXuatFileWord.UseVisualStyleBackColor = false;
             this.buttonXuatFileWord.Click += new System.EventHandler(this.buttonXuatFileWord_Click);
             // 
-            // chart1
+            // labelSoLuongNam
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1174, 279);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(546, 559);
-            this.chart1.TabIndex = 108;
-            this.chart1.Text = "chart1";
+            this.labelSoLuongNam.AutoSize = true;
+            this.labelSoLuongNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoLuongNam.ForeColor = System.Drawing.Color.Lime;
+            this.labelSoLuongNam.Location = new System.Drawing.Point(1272, 173);
+            this.labelSoLuongNam.Name = "labelSoLuongNam";
+            this.labelSoLuongNam.Size = new System.Drawing.Size(155, 24);
+            this.labelSoLuongNam.TabIndex = 109;
+            this.labelSoLuongNam.Text = "Số Lượng Nam:";
+            // 
+            // labelSoLuongNu
+            // 
+            this.labelSoLuongNu.AutoSize = true;
+            this.labelSoLuongNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoLuongNu.ForeColor = System.Drawing.Color.Lime;
+            this.labelSoLuongNu.Location = new System.Drawing.Point(1272, 218);
+            this.labelSoLuongNu.Name = "labelSoLuongNu";
+            this.labelSoLuongNu.Size = new System.Drawing.Size(139, 24);
+            this.labelSoLuongNu.TabIndex = 110;
+            this.labelSoLuongNu.Text = "Số Lượng Nư:";
+            // 
+            // chartBieuDo
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartBieuDo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartBieuDo.Legends.Add(legend2);
+            this.chartBieuDo.Location = new System.Drawing.Point(1192, 310);
+            this.chartBieuDo.Name = "chartBieuDo";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "NhanSu";
+            this.chartBieuDo.Series.Add(series2);
+            this.chartBieuDo.Size = new System.Drawing.Size(518, 519);
+            this.chartBieuDo.TabIndex = 111;
+            this.chartBieuDo.Text = "Biều Đồ Thống Kê Nhân Sự";
+            // 
+            // labelTongSoLuongNhanSu
+            // 
+            this.labelTongSoLuongNhanSu.AutoSize = true;
+            this.labelTongSoLuongNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongSoLuongNhanSu.ForeColor = System.Drawing.Color.Lime;
+            this.labelTongSoLuongNhanSu.Location = new System.Drawing.Point(1272, 122);
+            this.labelTongSoLuongNhanSu.Name = "labelTongSoLuongNhanSu";
+            this.labelTongSoLuongNhanSu.Size = new System.Drawing.Size(155, 24);
+            this.labelTongSoLuongNhanSu.TabIndex = 112;
+            this.labelTongSoLuongNhanSu.Text = "Tổng Số Lượng";
             // 
             // DanhSachNhanSuForm
             // 
@@ -182,11 +220,14 @@ namespace QuanLyNhaHang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1761, 960);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.labelTongSoLuongNhanSu);
+            this.Controls.Add(this.chartBieuDo);
+            this.Controls.Add(this.labelSoLuongNu);
+            this.Controls.Add(this.labelSoLuongNam);
             this.Controls.Add(this.buttonXuatFileWord);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonThoat);
-            this.Controls.Add(this.labelSoLuong);
+            this.Controls.Add(this.labelTongSoLuong);
             this.Controls.Add(this.groupBoxLocTheoChucVu);
             this.Controls.Add(this.dataGridViewDanhSachNhanSu);
             this.Name = "DanhSachNhanSuForm";
@@ -196,7 +237,7 @@ namespace QuanLyNhaHang
             this.groupBoxLocTheoChucVu.ResumeLayout(false);
             this.groupBoxLocTheoChucVu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachNhanSu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBieuDo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,10 +250,13 @@ namespace QuanLyNhaHang
         public System.Windows.Forms.RadioButton radioButtonChucVuNhanVien;
         public System.Windows.Forms.RadioButton radioButtonChucVuQuanLy;
         private System.Windows.Forms.DataGridView dataGridViewDanhSachNhanSu;
-        private System.Windows.Forms.Label labelSoLuong;
+        private System.Windows.Forms.Label labelTongSoLuong;
         private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Button buttonXuatFileWord;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label labelSoLuongNam;
+        private System.Windows.Forms.Label labelSoLuongNu;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBieuDo;
+        private System.Windows.Forms.Label labelTongSoLuongNhanSu;
     }
 }
