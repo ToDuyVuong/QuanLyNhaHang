@@ -29,3 +29,7 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Deb
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChinhSuaNhanSuForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachNhanSuForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.ResolveComReference.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\Winform\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.PrintForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\Winform\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\Winform\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.SuaMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\Winform\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeMonAnForm.resources

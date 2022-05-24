@@ -49,6 +49,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="File CS\DGVPrinter.cs" />
+    <Compile Include="MONAN---- CHƯA TEST\MONAN.cs" />
+    <Compile Include="MONAN---- CHƯA TEST\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QUANLYNHANSU\DanhSachNhanSuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,7 +95,6 @@
     <Compile Include="DANGNHAP\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NHANVIEN\NHANVIEN.cs" />
     <Compile Include="DANGNHAP\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +102,27 @@
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUANLY\QUANLY.cs" />
+    <Compile Include="MONAN---- CHƯA TEST\ThemMonAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\ThemMonAnForm.Designer.cs">
+      <DependentUpon>ThemMonAnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\SuaMonAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\SuaMonAnForm.Designer.cs">
+      <DependentUpon>SuaMonAnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.Designer.cs">
+      <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MONAN---- CHƯA TEST\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QUANLYNHANSU\ChinhSuaNhanSuForm.resx">
       <DependentUpon>ChinhSuaNhanSuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +150,15 @@
     </Compile>
     <EmbeddedResource Include="QUANLYNHANSU\DanhSachNhanSuForm.resx">
       <DependentUpon>DanhSachNhanSuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MONAN---- CHƯA TEST\ThemMonAnForm.resx">
+      <DependentUpon>ThemMonAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MONAN---- CHƯA TEST\SuaMonAnForm.resx">
+      <DependentUpon>SuaMonAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.resx">
+      <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

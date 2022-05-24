@@ -57,8 +57,7 @@ namespace QuanLyNhaHang
                     chartBieuDo.Series["NhanSu"].Points.AddXY("Nu", phantramnu);
                 }
             }
-        }
-            
+        }           
 
 
         

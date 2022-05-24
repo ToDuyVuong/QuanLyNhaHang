@@ -34,5 +34,29 @@ namespace QuanLyNhaHang
             DanhSachNhanSuForm danhSachNhanSuForm = new DanhSachNhanSuForm();
             danhSachNhanSuForm.Show(this);
         }
+
+        private void thêmMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemMonAnForm themMonAnForm = new ThemMonAnForm();
+            themMonAnForm.Show(this);
+        }
+
+        private void chỉnhSửaMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaMonAnForm suaMonAnForm = new SuaMonAnForm();
+            suaMonAnForm.Show(this);
+        }
+
+        private void thốngKêMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeMonAnForm thongKeMonAnForm = new ThongKeMonAnForm();
+            thongKeMonAnForm.Show(this);
+        }
+
+        private void xuấtDanhSáchMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintForm printForm = new PrintForm();
+            printForm.Show(this);
+        }
     }
 }
