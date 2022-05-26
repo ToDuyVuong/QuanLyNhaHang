@@ -69,5 +69,17 @@ namespace QuanLyNhaHang
             ThemBanAnForm themBanAnForm = new ThemBanAnForm();
             themBanAnForm.Show(this);
         }
+
+        private void chỉnhSửaBànĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChinhSuaBanAnForm chinhSuaBanAnForm = new ChinhSuaBanAnForm();
+            chinhSuaBanAnForm.Show(this);
+        }
+
+        private void danhSáchBànĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachBanAnForm danhSachBanAnForm = new DanhSachBanAnForm();
+            danhSachBanAnForm.Show(this);
+        }
     }
 }

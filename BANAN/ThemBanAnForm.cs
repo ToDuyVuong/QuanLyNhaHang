@@ -42,7 +42,7 @@ namespace QuanLyNhaHang
                 int id = Convert.ToInt32(textBoxIdBanAn.Text);
                 int soluongghe = Convert.ToInt32(textBoxSoLuongGhe.Text);
                 bool trangthai = true;
-                if (radioButtonSuDung.Checked)
+                if (radioButtonTrong.Checked)
                     trangthai = false;
                 if(banan.InsertBanAn(id, soluongghe, trangthai))
                 {

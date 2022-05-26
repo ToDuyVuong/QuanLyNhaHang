@@ -29,9 +29,9 @@ namespace QuanLyNhaHang
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxLocTheoChucVu = new System.Windows.Forms.GroupBox();
             this.radioButtonTatCa = new System.Windows.Forms.RadioButton();
             this.radioButtonChucVuNhanVien = new System.Windows.Forms.RadioButton();
@@ -45,6 +45,7 @@ namespace QuanLyNhaHang
             this.labelSoLuongNu = new System.Windows.Forms.Label();
             this.chartBieuDo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelTongSoLuongNhanSu = new System.Windows.Forms.Label();
+            this.labelDanhSach = new System.Windows.Forms.Label();
             this.groupBoxLocTheoChucVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachNhanSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBieuDo)).BeginInit();
@@ -188,17 +189,17 @@ namespace QuanLyNhaHang
             // 
             // chartBieuDo
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartBieuDo.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartBieuDo.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartBieuDo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartBieuDo.Legends.Add(legend1);
             this.chartBieuDo.Location = new System.Drawing.Point(1192, 310);
             this.chartBieuDo.Name = "chartBieuDo";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "NhanSu";
-            this.chartBieuDo.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "NhanSu";
+            this.chartBieuDo.Series.Add(series1);
             this.chartBieuDo.Size = new System.Drawing.Size(518, 519);
             this.chartBieuDo.TabIndex = 111;
             this.chartBieuDo.Text = "Biều Đồ Thống Kê Nhân Sự";
@@ -214,12 +215,24 @@ namespace QuanLyNhaHang
             this.labelTongSoLuongNhanSu.TabIndex = 112;
             this.labelTongSoLuongNhanSu.Text = "Tổng Số Lượng";
             // 
+            // labelDanhSach
+            // 
+            this.labelDanhSach.AutoSize = true;
+            this.labelDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDanhSach.ForeColor = System.Drawing.Color.Black;
+            this.labelDanhSach.Location = new System.Drawing.Point(802, 27);
+            this.labelDanhSach.Name = "labelDanhSach";
+            this.labelDanhSach.Size = new System.Drawing.Size(346, 39);
+            this.labelDanhSach.TabIndex = 113;
+            this.labelDanhSach.Text = "Danh Sách Nhân Sự";
+            // 
             // DanhSachNhanSuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1761, 960);
+            this.Controls.Add(this.labelDanhSach);
             this.Controls.Add(this.labelTongSoLuongNhanSu);
             this.Controls.Add(this.chartBieuDo);
             this.Controls.Add(this.labelSoLuongNu);
@@ -258,5 +271,6 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Label labelSoLuongNu;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBieuDo;
         private System.Windows.Forms.Label labelTongSoLuongNhanSu;
+        private System.Windows.Forms.Label labelDanhSach;
     }
 }

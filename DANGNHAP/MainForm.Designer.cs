@@ -200,12 +200,14 @@
             this.chỉnhSửaBànĂnToolStripMenuItem.Name = "chỉnhSửaBànĂnToolStripMenuItem";
             this.chỉnhSửaBànĂnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.chỉnhSửaBànĂnToolStripMenuItem.Text = "Chỉnh Sửa Bàn Ăn";
+            this.chỉnhSửaBànĂnToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaBànĂnToolStripMenuItem_Click);
             // 
             // danhSáchBànĂnToolStripMenuItem
             // 
             this.danhSáchBànĂnToolStripMenuItem.Name = "danhSáchBànĂnToolStripMenuItem";
             this.danhSáchBànĂnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.danhSáchBànĂnToolStripMenuItem.Text = "Danh Sách Bàn Ăn";
+            this.danhSáchBànĂnToolStripMenuItem.Click += new System.EventHandler(this.danhSáchBànĂnToolStripMenuItem_Click);
             // 
             // trạngTháiBànĂnToolStripMenuItem
             // 

@@ -48,7 +48,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BANAN\BANAN.cs" />
+    <Compile Include="BANAN\ChinhSuaBanAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANAN\ChinhSuaBanAnForm.Designer.cs">
+      <DependentUpon>ChinhSuaBanAnForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="BANAN\DanhSachBanAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANAN\DanhSachBanAnForm.Designer.cs">
+      <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="File CS\DGVPrinter.cs" />
     <Compile Include="MONAN---- CHƯA TEST\MONAN.cs" />
     <Compile Include="MONAN---- CHƯA TEST\PrintForm.cs">
@@ -128,6 +140,12 @@
     <Compile Include="BANAN\ThemBanAnForm.Designer.cs">
       <DependentUpon>ThemBanAnForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BANAN\ChinhSuaBanAnForm.resx">
+      <DependentUpon>ChinhSuaBanAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BANAN\DanhSachBanAnForm.resx">
+      <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MONAN---- CHƯA TEST\PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
