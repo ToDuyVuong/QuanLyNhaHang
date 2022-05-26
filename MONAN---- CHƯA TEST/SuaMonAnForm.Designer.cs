@@ -100,7 +100,7 @@ namespace QuanLyNhaHang
             // textboxGia
             // 
             this.textboxGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxGia.Location = new System.Drawing.Point(131, 144);
+            this.textboxGia.Location = new System.Drawing.Point(131, 99);
             this.textboxGia.Margin = new System.Windows.Forms.Padding(2);
             this.textboxGia.Name = "textboxGia";
             this.textboxGia.Size = new System.Drawing.Size(218, 29);
@@ -109,7 +109,7 @@ namespace QuanLyNhaHang
             // textboxSoLuong
             // 
             this.textboxSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxSoLuong.Location = new System.Drawing.Point(132, 94);
+            this.textboxSoLuong.Location = new System.Drawing.Point(131, 148);
             this.textboxSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.textboxSoLuong.Name = "textboxSoLuong";
             this.textboxSoLuong.Size = new System.Drawing.Size(218, 29);
@@ -117,7 +117,7 @@ namespace QuanLyNhaHang
             // 
             // comboxTenMon
             // 
-            this.comboxTenMon.DisplayMember = "ten_mon";
+            this.comboxTenMon.DisplayMember = "tenmon";
             this.comboxTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboxTenMon.FormattingEnabled = true;
             this.comboxTenMon.Location = new System.Drawing.Point(131, 45);
@@ -125,7 +125,7 @@ namespace QuanLyNhaHang
             this.comboxTenMon.Name = "comboxTenMon";
             this.comboxTenMon.Size = new System.Drawing.Size(218, 32);
             this.comboxTenMon.TabIndex = 8;
-            this.comboxTenMon.ValueMember = "ten_mon";
+            this.comboxTenMon.ValueMember = "tenmon";
             // 
             // SuaMonAnForm
             // 

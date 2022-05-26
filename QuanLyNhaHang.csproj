@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANAN\BANAN.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="File CS\DGVPrinter.cs" />
     <Compile Include="MONAN---- CHƯA TEST\MONAN.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="MONAN---- CHƯA TEST\PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NGUYENLIEU\NGUYENLIEU.cs" />
     <Compile Include="QUANLYNHANSU\DanhSachNhanSuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +122,12 @@
     <Compile Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.Designer.cs">
       <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BANAN\ThemBanAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANAN\ThemBanAnForm.Designer.cs">
+      <DependentUpon>ThemBanAnForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MONAN---- CHƯA TEST\PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +168,9 @@
     <EmbeddedResource Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.resx">
       <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BANAN\ThemBanAnForm.resx">
+      <DependentUpon>ThemBanAnForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,9 +193,7 @@
   <ItemGroup>
     <None Include="Resources\mau-sac-logo-1024x640.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="a\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
@@ -213,6 +222,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -58,5 +58,16 @@ namespace QuanLyNhaHang
             PrintForm printForm = new PrintForm();
             printForm.Show(this);
         }
+
+        private void danhSáchMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thêmBànĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemBanAnForm themBanAnForm = new ThemBanAnForm();
+            themBanAnForm.Show(this);
+        }
     }
 }
