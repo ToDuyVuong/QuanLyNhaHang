@@ -31,8 +31,9 @@ namespace QuanLyNhaHang
         //
         private void DanhSachBanAnForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM banan");
+            SqlCommand command = new SqlCommand("SELECT id AS 'Ban An So', soluongghe AS 'So Luong Ghe Cua Ban', trangthai AS 'Trang Thai'  FROM banan");
             fillGrid(command);
+            labelTongSoLuongBanAn.Text = ("Tổng Số Lượng Bàn Ăn: " + (dataGridViewDanhSachBanAn.Rows.Count));
         }
 
 

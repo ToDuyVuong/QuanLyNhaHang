@@ -41,6 +41,10 @@ namespace QuanLyNhaHang
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonChinhSuaBanAn = new System.Windows.Forms.Button();
             this.dataGridViewChinhSuaBanAn = new System.Windows.Forms.DataGridView();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.labelTongSoLuongBanAn = new System.Windows.Forms.Label();
+            this.buttonTaiLai = new System.Windows.Forms.Button();
+            this.buttonThemBanAn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChinhSuaBanAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,9 +145,9 @@ namespace QuanLyNhaHang
             // 
             this.buttonThoat.BackColor = System.Drawing.Color.Red;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThoat.Location = new System.Drawing.Point(377, 315);
+            this.buttonThoat.Location = new System.Drawing.Point(815, 392);
             this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(173, 46);
+            this.buttonThoat.Size = new System.Drawing.Size(158, 46);
             this.buttonThoat.TabIndex = 12;
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.UseVisualStyleBackColor = false;
@@ -153,9 +157,9 @@ namespace QuanLyNhaHang
             // 
             this.buttonChinhSuaBanAn.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonChinhSuaBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChinhSuaBanAn.Location = new System.Drawing.Point(128, 315);
+            this.buttonChinhSuaBanAn.Location = new System.Drawing.Point(214, 315);
             this.buttonChinhSuaBanAn.Name = "buttonChinhSuaBanAn";
-            this.buttonChinhSuaBanAn.Size = new System.Drawing.Size(224, 46);
+            this.buttonChinhSuaBanAn.Size = new System.Drawing.Size(190, 46);
             this.buttonChinhSuaBanAn.TabIndex = 11;
             this.buttonChinhSuaBanAn.Text = "Chỉnh Sửa Bàn Ăn";
             this.buttonChinhSuaBanAn.UseVisualStyleBackColor = false;
@@ -164,18 +168,68 @@ namespace QuanLyNhaHang
             // dataGridViewChinhSuaBanAn
             // 
             this.dataGridViewChinhSuaBanAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChinhSuaBanAn.Location = new System.Drawing.Point(609, 94);
+            this.dataGridViewChinhSuaBanAn.Location = new System.Drawing.Point(606, 94);
             this.dataGridViewChinhSuaBanAn.Name = "dataGridViewChinhSuaBanAn";
-            this.dataGridViewChinhSuaBanAn.Size = new System.Drawing.Size(349, 267);
+            this.dataGridViewChinhSuaBanAn.Size = new System.Drawing.Size(367, 267);
             this.dataGridViewChinhSuaBanAn.TabIndex = 22;
             this.dataGridViewChinhSuaBanAn.DoubleClick += new System.EventHandler(this.dataGridViewChinhSuaBanAn_DoubleClick);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.Location = new System.Drawing.Point(424, 315);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(126, 46);
+            this.buttonXoa.TabIndex = 23;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
+            // labelTongSoLuongBanAn
+            // 
+            this.labelTongSoLuongBanAn.AutoSize = true;
+            this.labelTongSoLuongBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongSoLuongBanAn.Location = new System.Drawing.Point(605, 41);
+            this.labelTongSoLuongBanAn.Name = "labelTongSoLuongBanAn";
+            this.labelTongSoLuongBanAn.Size = new System.Drawing.Size(235, 24);
+            this.labelTongSoLuongBanAn.TabIndex = 24;
+            this.labelTongSoLuongBanAn.Text = "Tổng Số Lượng Bàn Ăn:";
+            // 
+            // buttonTaiLai
+            // 
+            this.buttonTaiLai.BackColor = System.Drawing.Color.Blue;
+            this.buttonTaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTaiLai.Location = new System.Drawing.Point(606, 392);
+            this.buttonTaiLai.Name = "buttonTaiLai";
+            this.buttonTaiLai.Size = new System.Drawing.Size(166, 46);
+            this.buttonTaiLai.TabIndex = 25;
+            this.buttonTaiLai.Text = "Tải Lại";
+            this.buttonTaiLai.UseVisualStyleBackColor = false;
+            this.buttonTaiLai.Click += new System.EventHandler(this.buttonTaiLai_Click);
+            // 
+            // buttonThemBanAn
+            // 
+            this.buttonThemBanAn.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.buttonThemBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThemBanAn.Location = new System.Drawing.Point(43, 315);
+            this.buttonThemBanAn.Name = "buttonThemBanAn";
+            this.buttonThemBanAn.Size = new System.Drawing.Size(147, 46);
+            this.buttonThemBanAn.TabIndex = 26;
+            this.buttonThemBanAn.Text = "Thêm Bàn Ăn";
+            this.buttonThemBanAn.UseVisualStyleBackColor = false;
+            this.buttonThemBanAn.Click += new System.EventHandler(this.buttonThemBanAn_Click);
             // 
             // ChinhSuaBanAnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
-            this.ClientSize = new System.Drawing.Size(994, 450);
+            this.ClientSize = new System.Drawing.Size(1011, 450);
+            this.Controls.Add(this.buttonThemBanAn);
+            this.Controls.Add(this.buttonTaiLai);
+            this.Controls.Add(this.labelTongSoLuongBanAn);
+            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.dataGridViewChinhSuaBanAn);
             this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.labelChinhSuaBanAn);
@@ -212,5 +266,9 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonChinhSuaBanAn;
         private System.Windows.Forms.DataGridView dataGridViewChinhSuaBanAn;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Label labelTongSoLuongBanAn;
+        private System.Windows.Forms.Button buttonTaiLai;
+        private System.Windows.Forms.Button buttonThemBanAn;
     }
 }
