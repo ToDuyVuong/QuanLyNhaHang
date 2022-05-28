@@ -16,5 +16,11 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+        private void orderNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddOrderForm orderForm = new AddOrderForm();
+            orderForm.Show(this);
+        }
     }
 }

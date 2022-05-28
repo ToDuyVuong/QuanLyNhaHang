@@ -32,6 +32,8 @@
             this.bànĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +41,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bànĂnToolStripMenuItem,
-            this.thanhToánToolStripMenuItem});
+            this.thanhToánToolStripMenuItem,
+            this.orderToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(570, 24);
@@ -66,6 +69,21 @@
             this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.thanhToánToolStripMenuItem.Text = "Thanh Toán";
             // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.orderNewToolStripMenuItem});
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.orderToolStripMenuItem.Text = "Order";
+            // 
+            // orderNewToolStripMenuItem
+            // 
+            this.orderNewToolStripMenuItem.Name = "orderNewToolStripMenuItem";
+            this.orderNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.orderNewToolStripMenuItem.Text = "Order New";
+            this.orderNewToolStripMenuItem.Click += new System.EventHandler(this.orderNewToolStripMenuItem_Click);
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,5 +108,7 @@
         private System.Windows.Forms.ToolStripMenuItem bànĂnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhSáchBànToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderNewToolStripMenuItem;
     }
 }

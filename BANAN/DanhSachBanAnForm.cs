@@ -37,7 +37,7 @@ namespace QuanLyNhaHang
         }
 
 
-        //
+        
         // Nạp dữ liệu
         public void fillGrid(SqlCommand command)
         {
