@@ -95,7 +95,6 @@ namespace QuanLyNhaHang
         public bool DeleteBanAn(int id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM banan WHERE id = @id", mynh.GetConnection);
-
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
@@ -115,7 +114,6 @@ namespace QuanLyNhaHang
         public bool CheckBanAn(int id)
         {
             SqlCommand command = new SqlCommand("SELECT id FROM banan WHERE id = @id", mynh.GetConnection);
-
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
@@ -133,17 +131,21 @@ namespace QuanLyNhaHang
         // Check 
         public bool CheckTrangThaiBanAn(int id)
         {
-            SqlCommand command = new SqlCommand("SELECT id FROM banan WHERE id = @id AND trangthai = 'true'", mynh.GetConnection);
+            bool trangthai = true;
+            SqlCommand command = new SqlCommand("SELECT id FROM banan WHERE id = @id AND trangthai = @trangthai", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            mynh.openConnection();
-            if (command.ExecuteNonQuery() == 1)
+            command.Parameters.Add("@trangthai", SqlDbType.Bit).Value = trangthai;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
             {
-                mynh.closeConnection();
+                //phat hien trung
                 return false;
             }
             else
             {
-                mynh.closeConnection();
                 return true;
             }
         }

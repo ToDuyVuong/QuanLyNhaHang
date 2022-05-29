@@ -52,12 +52,13 @@ namespace QuanLyNhaHang
 
 
         // Chỉnh sửa 
-        public bool UpdateOrderMon(int id, int idban, int idmon, int soluong)
+        public bool UpdateOrderMon(int id, int idban, int idmon, int soluong, int gia)
         {
-            SqlCommand command = new SqlCommand("UPDATE od SET soluong = @soluong WHERE id = @id AND idban = @idban AND idmon = @idmon", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("UPDATE od SET soluong = @soluong, gia = @gia WHERE id = @id AND idban = @idban AND idmon = @idmon", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
             command.Parameters.Add("@idmon", SqlDbType.Int).Value = idmon;
+            command.Parameters.Add("@gia", SqlDbType.Int).Value = gia;
             command.Parameters.Add("@soluong", SqlDbType.Int).Value = soluong;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
@@ -138,7 +139,6 @@ namespace QuanLyNhaHang
         public bool CheckOrderMon(int id, int idban, int idmon)
         {
             SqlCommand command = new SqlCommand("SELECT id FROM od WHERE id = @id AND idban = @idban AND idmon = @idmon ", mynh.GetConnection);
-
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
             command.Parameters.Add("@idmon", SqlDbType.Int).Value = idmon;
@@ -157,9 +157,28 @@ namespace QuanLyNhaHang
 
 
 
+        // Check Id Order
+        public bool CheckIdOder(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM od WHERE id = @id ", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
 
         // Hàm đếm số lượng 
-      public  string execCount(string query)
+        public  string execCount(string query)
         {
             mynh.openConnection();
             SqlCommand command = new SqlCommand(query, mynh.GetConnection);

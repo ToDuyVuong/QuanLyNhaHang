@@ -54,7 +54,7 @@ namespace QuanLyNhaHang
             this.buttonOrder = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
-            this.buttonXoaOrder = new System.Windows.Forms.Button();
+            this.buttonCheckOrder = new System.Windows.Forms.Button();
             this.buttonXoaBan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMonAn)).BeginInit();
@@ -66,7 +66,7 @@ namespace QuanLyNhaHang
             this.dataGridViewBanAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBanAn.Location = new System.Drawing.Point(894, 65);
             this.dataGridViewBanAn.Name = "dataGridViewBanAn";
-            this.dataGridViewBanAn.Size = new System.Drawing.Size(358, 153);
+            this.dataGridViewBanAn.Size = new System.Drawing.Size(373, 153);
             this.dataGridViewBanAn.TabIndex = 0;
             this.dataGridViewBanAn.DoubleClick += new System.EventHandler(this.dataGridViewBanAn_DoubleClick);
             // 
@@ -220,7 +220,7 @@ namespace QuanLyNhaHang
             // 
             this.labelTamTinh.AutoSize = true;
             this.labelTamTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTamTinh.Location = new System.Drawing.Point(55, 562);
+            this.labelTamTinh.Location = new System.Drawing.Point(44, 561);
             this.labelTamTinh.Name = "labelTamTinh";
             this.labelTamTinh.Size = new System.Drawing.Size(105, 24);
             this.labelTamTinh.TabIndex = 18;
@@ -250,11 +250,11 @@ namespace QuanLyNhaHang
             // 
             this.buttonThemMon.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemMon.Location = new System.Drawing.Point(407, 646);
+            this.buttonThemMon.Location = new System.Drawing.Point(382, 646);
             this.buttonThemMon.Name = "buttonThemMon";
-            this.buttonThemMon.Size = new System.Drawing.Size(157, 44);
+            this.buttonThemMon.Size = new System.Drawing.Size(208, 44);
             this.buttonThemMon.TabIndex = 21;
-            this.buttonThemMon.Text = "Thêm Món";
+            this.buttonThemMon.Text = "Thêm/Sửa Món";
             this.buttonThemMon.UseVisualStyleBackColor = false;
             this.buttonThemMon.Click += new System.EventHandler(this.buttonThemMon_Click);
             // 
@@ -297,34 +297,35 @@ namespace QuanLyNhaHang
             // dataGridViewOrder
             // 
             this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(59, 229);
+            this.dataGridViewOrder.Location = new System.Drawing.Point(48, 229);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
             this.dataGridViewOrder.Size = new System.Drawing.Size(356, 302);
             this.dataGridViewOrder.TabIndex = 25;
             this.dataGridViewOrder.DoubleClick += new System.EventHandler(this.dataGridViewOrder_DoubleClick);
             // 
-            // buttonXoaOrder
+            // buttonCheckOrder
             // 
-            this.buttonXoaOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonXoaOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaOrder.Location = new System.Drawing.Point(382, 77);
-            this.buttonXoaOrder.Name = "buttonXoaOrder";
-            this.buttonXoaOrder.Size = new System.Drawing.Size(106, 39);
-            this.buttonXoaOrder.TabIndex = 26;
-            this.buttonXoaOrder.Text = "Xóa Order";
-            this.buttonXoaOrder.UseVisualStyleBackColor = false;
-            this.buttonXoaOrder.Click += new System.EventHandler(this.buttonXoaOrder_Click);
+            this.buttonCheckOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonCheckOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckOrder.Location = new System.Drawing.Point(382, 78);
+            this.buttonCheckOrder.Name = "buttonCheckOrder";
+            this.buttonCheckOrder.Size = new System.Drawing.Size(128, 33);
+            this.buttonCheckOrder.TabIndex = 26;
+            this.buttonCheckOrder.Text = "Check Order";
+            this.buttonCheckOrder.UseVisualStyleBackColor = false;
+            this.buttonCheckOrder.Click += new System.EventHandler(this.buttonCheckOrder_Click);
             // 
             // buttonXoaBan
             // 
             this.buttonXoaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonXoaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaBan.Location = new System.Drawing.Point(382, 139);
+            this.buttonXoaBan.Location = new System.Drawing.Point(382, 137);
             this.buttonXoaBan.Name = "buttonXoaBan";
-            this.buttonXoaBan.Size = new System.Drawing.Size(106, 36);
+            this.buttonXoaBan.Size = new System.Drawing.Size(128, 31);
             this.buttonXoaBan.TabIndex = 27;
             this.buttonXoaBan.Text = "Xóa Bàn";
             this.buttonXoaBan.UseVisualStyleBackColor = false;
+            this.buttonXoaBan.Click += new System.EventHandler(this.buttonXoaBan_Click);
             // 
             // AddOrderForm
             // 
@@ -333,7 +334,7 @@ namespace QuanLyNhaHang
             this.BackColor = System.Drawing.Color.LawnGreen;
             this.ClientSize = new System.Drawing.Size(1515, 822);
             this.Controls.Add(this.buttonXoaBan);
-            this.Controls.Add(this.buttonXoaOrder);
+            this.Controls.Add(this.buttonCheckOrder);
             this.Controls.Add(this.dataGridViewOrder);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOrder);
@@ -398,7 +399,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Button buttonOrder;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.DataGridView dataGridViewOrder;
-        private System.Windows.Forms.Button buttonXoaOrder;
+        private System.Windows.Forms.Button buttonCheckOrder;
         private System.Windows.Forms.Button buttonXoaBan;
     }
 }
