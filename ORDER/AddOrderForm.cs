@@ -35,7 +35,7 @@ namespace QuanLyNhaHang
 
 
 
-        //
+        //  + giảm số lượng ở table món ăn
         private void buttonThemMon_Click(object sender, EventArgs e)
         {
             try
@@ -227,10 +227,30 @@ namespace QuanLyNhaHang
         }
 
 
-        // Order xuất hóa đơn + xác nhận + giảm số lượng ở table món ăn
+        // Order xuất hóa đơn + xác nhận
         private void buttonOrder_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlCommand command = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', gia AS 'Gia' FROM od  WHERE id = @id", mynh.GetConnection);
+                command.Parameters.Add("@id", SqlDbType.Int).Value = 0;
+                dataGridViewOrder.DataSource = order.GetOrder(command);
 
+                MessageBox.Show("Order thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+                textBoxIdOrder.Text = "";
+                textBoxIdMon.Text = "";
+                textBoxSoLuongMon.Text = "";
+                textBoxTenMon.Text = "";
+                textBoxGia.Text = "";
+                textBoxBanAn.Text = "";
+                textBoxLoaiThucAn.Text = "";
+                labelTamTinh.Text = ("Tạm tính: ");
+            }
+            catch
+            {
+                MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
@@ -277,7 +297,19 @@ namespace QuanLyNhaHang
 
 
                     AddOrderForm_Load(sender, e);
-                    MessageBox.Show("Dã xóa món!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+                    // Số tiền tạm tính.
+                    int tamtinh = 0;
+                    DataTable table1 = new DataTable();
+                    table1 = order.GetOrder(command);
+                    int n = table1.Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        tamtinh += Convert.ToInt32(table1.Rows[i]["gia"].ToString());
+                    }
+                    labelTamTinh.Text = ("Tạm tính: " + tamtinh + " VND");
+
+                    MessageBox.Show("Đã xóa món!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
                 else
                 {
@@ -333,7 +365,7 @@ namespace QuanLyNhaHang
         }
 
 
-        //
+        // Check Id order
         private void buttonCheckOrder_Click(object sender, EventArgs e)
         {
            try
