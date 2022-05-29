@@ -73,6 +73,32 @@ namespace QuanLyNhaHang
             }
         }
 
+        // Chỉnh sửa 
+        public bool UpdateTrangThaiOrder(int id, int idban, string trangthai)
+        {
+
+            if (trangthai == "order" || trangthai == "")
+            {
+                SqlCommand command = new SqlCommand("UPDATE od SET trangthai = @trangthai WHERE id = @id AND idban = @idban ", mynh.GetConnection);
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+                command.Parameters.Add("@trangthai", SqlDbType.NVarChar).Value = trangthai;
+                mynh.openConnection();
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    mynh.closeConnection();
+                    return true;
+                }
+                else
+                {
+                    mynh.closeConnection();
+                    return false;
+                }
+            }
+            else
+                return false;
+            
+        }
 
 
         // Xóa món trong Order
@@ -98,9 +124,10 @@ namespace QuanLyNhaHang
 
 
         // Xóa Order của bàn
-        public bool DeleteOrdeBan(int idban)
+        public bool DeleteOrdeBan(int id, int idban)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM od WHERE idban = @idban ", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM od WHERE idban = @idban AND id = @id", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)

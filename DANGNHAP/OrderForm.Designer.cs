@@ -34,6 +34,7 @@
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhSáchOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // danhSáchBànToolStripMenuItem
             // 
             this.danhSáchBànToolStripMenuItem.Name = "danhSáchBànToolStripMenuItem";
-            this.danhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.danhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.danhSáchBànToolStripMenuItem.Text = "Danh Sách bàn";
             // 
             // thanhToánToolStripMenuItem
@@ -72,7 +73,8 @@
             // orderToolStripMenuItem
             // 
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.orderNewToolStripMenuItem});
+            this.orderNewToolStripMenuItem,
+            this.danhSáchOrderToolStripMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
             this.orderToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.orderToolStripMenuItem.Text = "Order";
@@ -83,6 +85,13 @@
             this.orderNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.orderNewToolStripMenuItem.Text = "Order New";
             this.orderNewToolStripMenuItem.Click += new System.EventHandler(this.orderNewToolStripMenuItem_Click);
+            // 
+            // danhSáchOrderToolStripMenuItem
+            // 
+            this.danhSáchOrderToolStripMenuItem.Name = "danhSáchOrderToolStripMenuItem";
+            this.danhSáchOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.danhSáchOrderToolStripMenuItem.Text = "Danh Sách Order";
+            this.danhSáchOrderToolStripMenuItem.Click += new System.EventHandler(this.danhSáchOrderToolStripMenuItem_Click);
             // 
             // OrderForm
             // 
@@ -110,5 +119,6 @@
         private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderNewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem danhSáchOrderToolStripMenuItem;
     }
 }

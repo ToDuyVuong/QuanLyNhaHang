@@ -17,10 +17,20 @@ namespace QuanLyNhaHang
             InitializeComponent();
         }
 
+
+        //
         private void orderNewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddOrderForm orderForm = new AddOrderForm();
             orderForm.Show(this);
+        }
+
+
+        //
+        private void danhSáchOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachOrderForm danhSachOrderForm = new DanhSachOrderForm();
+            danhSachOrderForm.Show(this);
         }
     }
 }
