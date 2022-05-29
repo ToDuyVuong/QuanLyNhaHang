@@ -70,6 +70,26 @@ namespace QuanLyNhaHang
         }
 
 
+        // Chỉnh sửa trang thai
+        public bool UpdateTrangThaiBanAn(int id, bool trangthai)
+        {
+            SqlCommand command = new SqlCommand("UPDATE banan SET id = @id, trangthai = @trangthai WHERE id = @id", mynh.GetConnection);
+            command.Parameters.Add("@trangthai", SqlDbType.Bit).Value = trangthai;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
+
+
 
         // Xóa 
         public bool DeleteBanAn(int id)
@@ -110,7 +130,23 @@ namespace QuanLyNhaHang
             }
         }
 
-
+        // Check 
+        public bool CheckTrangThaiBanAn(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT id FROM banan WHERE id = @id AND trangthai = 'true'", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return false;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return true;
+            }
+        }
 
 
         // Hàm đếm số lượng 

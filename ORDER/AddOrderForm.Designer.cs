@@ -40,12 +40,12 @@ namespace QuanLyNhaHang
             this.labelIdMon = new System.Windows.Forms.Label();
             this.textBoxTenMon = new System.Windows.Forms.TextBox();
             this.labelTenMon = new System.Windows.Forms.Label();
-            this.textBoxSoLuong = new System.Windows.Forms.TextBox();
+            this.textBoxSoLuongMon = new System.Windows.Forms.TextBox();
             this.labelSoLuong = new System.Windows.Forms.Label();
             this.textBoxGia = new System.Windows.Forms.TextBox();
             this.labelGia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxLoaiThucAn = new System.Windows.Forms.TextBox();
+            this.labelLoaiThucAn = new System.Windows.Forms.Label();
             this.labelTamTinh = new System.Windows.Forms.Label();
             this.labelBanAn = new System.Windows.Forms.Label();
             this.labelMonAn = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@ namespace QuanLyNhaHang
             this.buttonOrder = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
+            this.buttonXoaOrder = new System.Windows.Forms.Button();
+            this.buttonXoaBan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
@@ -62,24 +64,26 @@ namespace QuanLyNhaHang
             // dataGridViewBanAn
             // 
             this.dataGridViewBanAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBanAn.Location = new System.Drawing.Point(885, 69);
+            this.dataGridViewBanAn.Location = new System.Drawing.Point(894, 65);
             this.dataGridViewBanAn.Name = "dataGridViewBanAn";
             this.dataGridViewBanAn.Size = new System.Drawing.Size(358, 153);
             this.dataGridViewBanAn.TabIndex = 0;
+            this.dataGridViewBanAn.DoubleClick += new System.EventHandler(this.dataGridViewBanAn_DoubleClick);
             // 
             // dataGridViewMonAn
             // 
             this.dataGridViewMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMonAn.Location = new System.Drawing.Point(885, 319);
+            this.dataGridViewMonAn.Location = new System.Drawing.Point(894, 315);
             this.dataGridViewMonAn.Name = "dataGridViewMonAn";
             this.dataGridViewMonAn.Size = new System.Drawing.Size(561, 422);
             this.dataGridViewMonAn.TabIndex = 1;
+            this.dataGridViewMonAn.DoubleClick += new System.EventHandler(this.dataGridViewMonAn_DoubleClick);
             // 
             // labelOrder
             // 
             this.labelOrder.AutoSize = true;
             this.labelOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrder.Location = new System.Drawing.Point(592, 23);
+            this.labelOrder.Location = new System.Drawing.Point(610, 18);
             this.labelOrder.Name = "labelOrder";
             this.labelOrder.Size = new System.Drawing.Size(149, 54);
             this.labelOrder.TabIndex = 3;
@@ -89,7 +93,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdOrder.AutoSize = true;
             this.labelIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdOrder.Location = new System.Drawing.Point(55, 55);
+            this.labelIdOrder.Location = new System.Drawing.Point(56, 83);
             this.labelIdOrder.Name = "labelIdOrder";
             this.labelIdOrder.Size = new System.Drawing.Size(104, 24);
             this.labelIdOrder.TabIndex = 4;
@@ -98,7 +102,7 @@ namespace QuanLyNhaHang
             // textBoxIdOrder
             // 
             this.textBoxIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdOrder.Location = new System.Drawing.Point(213, 50);
+            this.textBoxIdOrder.Location = new System.Drawing.Point(214, 78);
             this.textBoxIdOrder.Name = "textBoxIdOrder";
             this.textBoxIdOrder.Size = new System.Drawing.Size(147, 29);
             this.textBoxIdOrder.TabIndex = 5;
@@ -106,7 +110,7 @@ namespace QuanLyNhaHang
             // textBoxBanAn
             // 
             this.textBoxBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBanAn.Location = new System.Drawing.Point(213, 111);
+            this.textBoxBanAn.Location = new System.Drawing.Point(214, 139);
             this.textBoxBanAn.Name = "textBoxBanAn";
             this.textBoxBanAn.Size = new System.Drawing.Size(147, 29);
             this.textBoxBanAn.TabIndex = 7;
@@ -115,7 +119,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdBanAn.AutoSize = true;
             this.labelIdBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdBanAn.Location = new System.Drawing.Point(55, 116);
+            this.labelIdBanAn.Location = new System.Drawing.Point(56, 144);
             this.labelIdBanAn.Name = "labelIdBanAn";
             this.labelIdBanAn.Size = new System.Drawing.Size(118, 24);
             this.labelIdBanAn.TabIndex = 6;
@@ -124,7 +128,7 @@ namespace QuanLyNhaHang
             // textBoxIdMon
             // 
             this.textBoxIdMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdMon.Location = new System.Drawing.Point(618, 229);
+            this.textBoxIdMon.Location = new System.Drawing.Point(619, 229);
             this.textBoxIdMon.Name = "textBoxIdMon";
             this.textBoxIdMon.Size = new System.Drawing.Size(223, 29);
             this.textBoxIdMon.TabIndex = 9;
@@ -133,7 +137,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdMon.AutoSize = true;
             this.labelIdMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdMon.Location = new System.Drawing.Point(460, 234);
+            this.labelIdMon.Location = new System.Drawing.Point(449, 234);
             this.labelIdMon.Name = "labelIdMon";
             this.labelIdMon.Size = new System.Drawing.Size(91, 24);
             this.labelIdMon.TabIndex = 8;
@@ -142,7 +146,7 @@ namespace QuanLyNhaHang
             // textBoxTenMon
             // 
             this.textBoxTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTenMon.Location = new System.Drawing.Point(618, 288);
+            this.textBoxTenMon.Location = new System.Drawing.Point(619, 296);
             this.textBoxTenMon.Name = "textBoxTenMon";
             this.textBoxTenMon.Size = new System.Drawing.Size(223, 29);
             this.textBoxTenMon.TabIndex = 11;
@@ -151,34 +155,35 @@ namespace QuanLyNhaHang
             // 
             this.labelTenMon.AutoSize = true;
             this.labelTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenMon.Location = new System.Drawing.Point(460, 293);
+            this.labelTenMon.Location = new System.Drawing.Point(449, 301);
             this.labelTenMon.Name = "labelTenMon";
             this.labelTenMon.Size = new System.Drawing.Size(100, 24);
             this.labelTenMon.TabIndex = 10;
             this.labelTenMon.Text = "Tên Món:";
             // 
-            // textBoxSoLuong
+            // textBoxSoLuongMon
             // 
-            this.textBoxSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoLuong.Location = new System.Drawing.Point(618, 345);
-            this.textBoxSoLuong.Name = "textBoxSoLuong";
-            this.textBoxSoLuong.Size = new System.Drawing.Size(223, 29);
-            this.textBoxSoLuong.TabIndex = 13;
+            this.textBoxSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSoLuongMon.Location = new System.Drawing.Point(619, 363);
+            this.textBoxSoLuongMon.Name = "textBoxSoLuongMon";
+            this.textBoxSoLuongMon.Size = new System.Drawing.Size(223, 29);
+            this.textBoxSoLuongMon.TabIndex = 13;
+            this.textBoxSoLuongMon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoLuong_KeyPress);
             // 
             // labelSoLuong
             // 
             this.labelSoLuong.AutoSize = true;
             this.labelSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoLuong.Location = new System.Drawing.Point(460, 350);
+            this.labelSoLuong.Location = new System.Drawing.Point(449, 368);
             this.labelSoLuong.Name = "labelSoLuong";
-            this.labelSoLuong.Size = new System.Drawing.Size(106, 24);
+            this.labelSoLuong.Size = new System.Drawing.Size(153, 24);
             this.labelSoLuong.TabIndex = 12;
-            this.labelSoLuong.Text = "Số Lượng:";
+            this.labelSoLuong.Text = "Số Lượng Mon:";
             // 
             // textBoxGia
             // 
             this.textBoxGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGia.Location = new System.Drawing.Point(618, 410);
+            this.textBoxGia.Location = new System.Drawing.Point(619, 435);
             this.textBoxGia.Name = "textBoxGia";
             this.textBoxGia.Size = new System.Drawing.Size(223, 29);
             this.textBoxGia.TabIndex = 15;
@@ -187,29 +192,29 @@ namespace QuanLyNhaHang
             // 
             this.labelGia.AutoSize = true;
             this.labelGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGia.Location = new System.Drawing.Point(460, 415);
+            this.labelGia.Location = new System.Drawing.Point(449, 440);
             this.labelGia.Name = "labelGia";
             this.labelGia.Size = new System.Drawing.Size(47, 24);
             this.labelGia.TabIndex = 14;
             this.labelGia.Text = "Giá:";
             // 
-            // textBox1
+            // textBoxLoaiThucAn
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(618, 473);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 29);
-            this.textBox1.TabIndex = 17;
+            this.textBoxLoaiThucAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLoaiThucAn.Location = new System.Drawing.Point(619, 502);
+            this.textBoxLoaiThucAn.Name = "textBoxLoaiThucAn";
+            this.textBoxLoaiThucAn.Size = new System.Drawing.Size(223, 29);
+            this.textBoxLoaiThucAn.TabIndex = 17;
             // 
-            // label1
+            // labelLoaiThucAn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(460, 478);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 24);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Mã Order:";
+            this.labelLoaiThucAn.AutoSize = true;
+            this.labelLoaiThucAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoaiThucAn.Location = new System.Drawing.Point(449, 507);
+            this.labelLoaiThucAn.Name = "labelLoaiThucAn";
+            this.labelLoaiThucAn.Size = new System.Drawing.Size(141, 24);
+            this.labelLoaiThucAn.TabIndex = 16;
+            this.labelLoaiThucAn.Text = "Loại Thức Ăn:";
             // 
             // labelTamTinh
             // 
@@ -225,7 +230,7 @@ namespace QuanLyNhaHang
             // 
             this.labelBanAn.AutoSize = true;
             this.labelBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBanAn.Location = new System.Drawing.Point(881, 20);
+            this.labelBanAn.Location = new System.Drawing.Point(890, 16);
             this.labelBanAn.Name = "labelBanAn";
             this.labelBanAn.Size = new System.Drawing.Size(108, 31);
             this.labelBanAn.TabIndex = 19;
@@ -235,7 +240,7 @@ namespace QuanLyNhaHang
             // 
             this.labelMonAn.AutoSize = true;
             this.labelMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMonAn.Location = new System.Drawing.Point(881, 248);
+            this.labelMonAn.Location = new System.Drawing.Point(890, 259);
             this.labelMonAn.Name = "labelMonAn";
             this.labelMonAn.Size = new System.Drawing.Size(112, 31);
             this.labelMonAn.TabIndex = 20;
@@ -245,7 +250,7 @@ namespace QuanLyNhaHang
             // 
             this.buttonThemMon.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemMon.Location = new System.Drawing.Point(429, 644);
+            this.buttonThemMon.Location = new System.Drawing.Point(407, 646);
             this.buttonThemMon.Name = "buttonThemMon";
             this.buttonThemMon.Size = new System.Drawing.Size(157, 44);
             this.buttonThemMon.TabIndex = 21;
@@ -257,23 +262,25 @@ namespace QuanLyNhaHang
             // 
             this.buttonXoaMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonXoaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaMon.Location = new System.Drawing.Point(658, 644);
+            this.buttonXoaMon.Location = new System.Drawing.Point(636, 646);
             this.buttonXoaMon.Name = "buttonXoaMon";
             this.buttonXoaMon.Size = new System.Drawing.Size(157, 44);
             this.buttonXoaMon.TabIndex = 22;
             this.buttonXoaMon.Text = "Xóa Món";
             this.buttonXoaMon.UseVisualStyleBackColor = false;
+            this.buttonXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
             // 
             // buttonOrder
             // 
             this.buttonOrder.BackColor = System.Drawing.Color.Aquamarine;
             this.buttonOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrder.Location = new System.Drawing.Point(203, 644);
+            this.buttonOrder.Location = new System.Drawing.Point(179, 646);
             this.buttonOrder.Name = "buttonOrder";
             this.buttonOrder.Size = new System.Drawing.Size(157, 44);
             this.buttonOrder.TabIndex = 23;
             this.buttonOrder.Text = "Order";
             this.buttonOrder.UseVisualStyleBackColor = false;
+            this.buttonOrder.Click += new System.EventHandler(this.buttonOrder_Click);
             // 
             // buttonCancel
             // 
@@ -290,10 +297,34 @@ namespace QuanLyNhaHang
             // dataGridViewOrder
             // 
             this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(23, 229);
+            this.dataGridViewOrder.Location = new System.Drawing.Point(59, 229);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
-            this.dataGridViewOrder.Size = new System.Drawing.Size(404, 302);
+            this.dataGridViewOrder.Size = new System.Drawing.Size(356, 302);
             this.dataGridViewOrder.TabIndex = 25;
+            this.dataGridViewOrder.DoubleClick += new System.EventHandler(this.dataGridViewOrder_DoubleClick);
+            // 
+            // buttonXoaOrder
+            // 
+            this.buttonXoaOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonXoaOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoaOrder.Location = new System.Drawing.Point(382, 77);
+            this.buttonXoaOrder.Name = "buttonXoaOrder";
+            this.buttonXoaOrder.Size = new System.Drawing.Size(106, 39);
+            this.buttonXoaOrder.TabIndex = 26;
+            this.buttonXoaOrder.Text = "Xóa Order";
+            this.buttonXoaOrder.UseVisualStyleBackColor = false;
+            this.buttonXoaOrder.Click += new System.EventHandler(this.buttonXoaOrder_Click);
+            // 
+            // buttonXoaBan
+            // 
+            this.buttonXoaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonXoaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoaBan.Location = new System.Drawing.Point(382, 139);
+            this.buttonXoaBan.Name = "buttonXoaBan";
+            this.buttonXoaBan.Size = new System.Drawing.Size(106, 36);
+            this.buttonXoaBan.TabIndex = 27;
+            this.buttonXoaBan.Text = "Xóa Bàn";
+            this.buttonXoaBan.UseVisualStyleBackColor = false;
             // 
             // AddOrderForm
             // 
@@ -301,6 +332,8 @@ namespace QuanLyNhaHang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LawnGreen;
             this.ClientSize = new System.Drawing.Size(1515, 822);
+            this.Controls.Add(this.buttonXoaBan);
+            this.Controls.Add(this.buttonXoaOrder);
             this.Controls.Add(this.dataGridViewOrder);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOrder);
@@ -309,11 +342,11 @@ namespace QuanLyNhaHang
             this.Controls.Add(this.labelMonAn);
             this.Controls.Add(this.labelBanAn);
             this.Controls.Add(this.labelTamTinh);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxLoaiThucAn);
+            this.Controls.Add(this.labelLoaiThucAn);
             this.Controls.Add(this.textBoxGia);
             this.Controls.Add(this.labelGia);
-            this.Controls.Add(this.textBoxSoLuong);
+            this.Controls.Add(this.textBoxSoLuongMon);
             this.Controls.Add(this.labelSoLuong);
             this.Controls.Add(this.textBoxTenMon);
             this.Controls.Add(this.labelTenMon);
@@ -351,12 +384,12 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Label labelIdMon;
         private System.Windows.Forms.TextBox textBoxTenMon;
         private System.Windows.Forms.Label labelTenMon;
-        private System.Windows.Forms.TextBox textBoxSoLuong;
+        private System.Windows.Forms.TextBox textBoxSoLuongMon;
         private System.Windows.Forms.Label labelSoLuong;
         private System.Windows.Forms.TextBox textBoxGia;
         private System.Windows.Forms.Label labelGia;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxLoaiThucAn;
+        private System.Windows.Forms.Label labelLoaiThucAn;
         private System.Windows.Forms.Label labelTamTinh;
         private System.Windows.Forms.Label labelBanAn;
         private System.Windows.Forms.Label labelMonAn;
@@ -365,5 +398,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Button buttonOrder;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.DataGridView dataGridViewOrder;
+        private System.Windows.Forms.Button buttonXoaOrder;
+        private System.Windows.Forms.Button buttonXoaBan;
     }
 }

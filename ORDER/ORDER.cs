@@ -27,9 +27,9 @@ namespace QuanLyNhaHang
 
 
         // Thêm mới
-        public bool InsertOrderMon(int id, int idban, int idmon, int soluong, int gia, string tenmon)
+        public bool InsertOrderMon(int id, int idban, int idmon, string tenmon, int soluong, int gia)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO order " +
+            SqlCommand command = new SqlCommand("INSERT INTO od " +
                 "(id, idban, idmon, tenmon, soluong, gia) VALUES (@id, @idban, @idmon, @tenmon, @soluong, @gia)", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
@@ -52,9 +52,9 @@ namespace QuanLyNhaHang
 
 
         // Chỉnh sửa 
-        public bool UpdateOrderMon(int id, int soluong, int idban, int idmon)
+        public bool UpdateOrderMon(int id, int idban, int idmon, int soluong)
         {
-            SqlCommand command = new SqlCommand("UPDATE order SET soluong = @soluong WHERE id = @id AND idban = @idban AND idmon = @idmon", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("UPDATE od SET soluong = @soluong WHERE id = @id AND idban = @idban AND idmon = @idmon", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
             command.Parameters.Add("@idmon", SqlDbType.Int).Value = idmon;
@@ -74,10 +74,10 @@ namespace QuanLyNhaHang
 
 
 
-        // Xóa 
+        // Xóa món trong Order
         public bool DeleteOrderMon(int id, int idban, int idmon)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM order WHERE id = @id AND idban = @idban AND idmon = @idmon ", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM od WHERE id = @id AND idban = @idban AND idmon = @idmon ", mynh.GetConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
@@ -96,12 +96,52 @@ namespace QuanLyNhaHang
         }
 
 
-        /*// Check 
-        public bool CheckOrderMon(int id)
+        // Xóa Order của bàn
+        public bool DeleteOrdeBan(int idban)
         {
-            SqlCommand command = new SqlCommand("SELECT id FROM banan WHERE id = @id", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM od WHERE idban = @idban ", mynh.GetConnection);
+            command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
+
+
+        // Xóa Order
+        public bool DeleteOrder(int id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM od WHERE id = @id", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            mynh.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
+
+
+        // Check 
+        public bool CheckOrderMon(int id, int idban, int idmon)
+        {
+            SqlCommand command = new SqlCommand("SELECT id FROM od WHERE id = @id AND idban = @idban AND idmon = @idmon ", mynh.GetConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+            command.Parameters.Add("@idmon", SqlDbType.Int).Value = idmon;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -113,13 +153,13 @@ namespace QuanLyNhaHang
                 mynh.closeConnection();
                 return true;
             }
-        }*/
+        }
 
 
 
 
         // Hàm đếm số lượng 
-        string execCount(string query)
+      public  string execCount(string query)
         {
             mynh.openConnection();
             SqlCommand command = new SqlCommand(query, mynh.GetConnection);

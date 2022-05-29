@@ -73,6 +73,31 @@ namespace QuanLyNhaHang
                 return false;
             }
         }
+
+
+
+        //
+        public bool UpdateSoLuongMonAn(string MonAn, int SoLuong)
+        {
+            SqlCommand command = new SqlCommand("update monan set soluong = @soluong where tenmon = @monan", mynh.GetConnection);
+            command.Parameters.Add("@soluong", SqlDbType.Int).Value = SoLuong;
+            command.Parameters.Add("@monan", SqlDbType.Char).Value = MonAn;
+            mynh.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
+
+
+
         String ExecCount(String query)
         {
             SqlCommand command = new SqlCommand(query, mynh.GetConnection);
