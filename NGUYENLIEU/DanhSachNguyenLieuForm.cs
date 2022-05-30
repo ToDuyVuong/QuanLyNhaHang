@@ -23,16 +23,7 @@ namespace QuanLyNhaHang
         {
             Close();
         }
-        private void DanhSachNguyenLieuForm_Load(object sender, EventArgs e)
-        {
-            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS 'Đơn Vị'  FROM nguyenlieu ", mynh.GetConnection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-            dataGridView1.ReadOnly = true;
-            comboBoxTimTheoLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-        }
+     
 
         private void buttonTimTheoTen_Click(object sender, EventArgs e)
         {
@@ -69,6 +60,17 @@ namespace QuanLyNhaHang
             adapter.Fill(table);
             dataGridView1.DataSource = table;
             dataGridView1.ReadOnly = true;
+        }
+
+        private void DanhSachNguyenLieuForm_Load_1(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS 'Đơn Vị'  FROM nguyenlieu ", mynh.GetConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+            dataGridView1.ReadOnly = true;
+            comboBoxTimTheoLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         }
     }
 }

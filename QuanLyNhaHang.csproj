@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhSachNguyenLieuForm.cs">
+    <Compile Include="NGUYENLIEU\DanhSachNguyenLieuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachNguyenLieuForm.Designer.cs">
+    <Compile Include="NGUYENLIEU\DanhSachNguyenLieuForm.Designer.cs">
       <DependentUpon>DanhSachNguyenLieuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.cs">
@@ -78,7 +78,6 @@
     <Compile Include="BANAN\ChinhSuaBanAnForm.Designer.cs">
       <DependentUpon>ChinhSuaBanAnForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="BANAN\DanhSachBanAnForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +99,6 @@
     </Compile>
     <Compile Include="QUANLYNHANSU\DanhSachNhanSuForm.Designer.cs">
       <DependentUpon>DanhSachNhanSuForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="QUANLYNHANSU\NHANSU.cs" />
     <Compile Include="QUANLYNHANSU\ChinhSuaNhanSuForm.cs">
@@ -177,13 +170,25 @@
     <Compile Include="NGUYENLIEU\ThemNguyenLieuForm.Designer.cs">
       <DependentUpon>ThemNguyenLieuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NGUYENLIEU\ThongKeNguyenLieuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NGUYENLIEU\ThongKeNguyenLieuForm.Designer.cs">
+      <DependentUpon>ThongKeNguyenLieuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.Designer.cs">
+      <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BANAN\ChinhSuaBanAnForm.resx">
       <DependentUpon>ChinhSuaBanAnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BANAN\DanhSachBanAnForm.resx">
       <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhSachNguyenLieuForm.resx">
+    <EmbeddedResource Include="NGUYENLIEU\DanhSachNguyenLieuForm.resx">
       <DependentUpon>DanhSachNguyenLieuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.resx">
@@ -243,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\ThemNguyenLieuForm.resx">
       <DependentUpon>ThemNguyenLieuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NGUYENLIEU\ThongKeNguyenLieuForm.resx">
+      <DependentUpon>ThongKeNguyenLieuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.resx">
+      <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

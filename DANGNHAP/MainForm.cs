@@ -81,5 +81,35 @@ namespace QuanLyNhaHang
             DanhSachBanAnForm danhSachBanAnForm = new DanhSachBanAnForm();
             danhSachBanAnForm.Show(this);
         }
+
+        private void thêmNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemNguyenLieuForm themnguyenlieuform = new ThemNguyenLieuForm();
+            themnguyenlieuform.Show();
+        }
+
+        private void chỉnhSửaNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChinhSuaNguyenLieuForm chinhsuanguyenlieuform = new ChinhSuaNguyenLieuForm();
+            chinhsuanguyenlieuform.Show();
+        }
+
+        private void danhSáchNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachNguyenLieuForm danhsachnguyenlieuform = new DanhSachNguyenLieuForm();
+            danhsachnguyenlieuform.Show();
+        }
+
+        private void thôngKêNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeNguyenLieuForm thongkenguyenlieuform = new ThongKeNguyenLieuForm();
+            thongkenguyenlieuform.Show();
+        }
+
+        private void xuấtDánhSáchNguyênLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuatDanhSachNguyenLieuForm xuatdanhsachnguyenlieuform = new XuatDanhSachNguyenLieuForm();
+            xuatdanhsachnguyenlieuform.Show();
+        }
     }
 }
