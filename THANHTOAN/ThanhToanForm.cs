@@ -43,7 +43,7 @@ namespace QuanLyNhaHang
             textBoxBanAn.Enabled = false;
             textBoxIdOrder.Enabled = false;*/
 
-            int id = Convert.ToInt32(danhsachorder.textBoxIdOrder.Text);
+            int id = Convert.ToInt32(danhsachorder.textBoxIdOrder.Text);/////////////////////////////////////////////// Loi
             int idban = Convert.ToInt32(danhsachorder.textBoxBanAn.Text);
             SqlCommand command = new SqlCommand("SELECT id AS 'Ma Order' idban AS 'Ma Ban' tenmon AS 'Ten Mon', soluong AS 'So Luong', gia AS 'Gia' " +
                 "FROM od  WHERE id = @id, idban = @idban", mynh.GetConnection);
