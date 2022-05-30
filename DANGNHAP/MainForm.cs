@@ -111,5 +111,29 @@ namespace QuanLyNhaHang
             XuatDanhSachNguyenLieuForm xuatdanhsachnguyenlieuform = new XuatDanhSachNguyenLieuForm();
             xuatdanhsachnguyenlieuform.Show();
         }
+
+        private void newOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddOrderForm orderForm = new AddOrderForm();
+            orderForm.Show(this);
+        }
+
+        private void danhSáchOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachOrderForm danhSachOrderForm = new DanhSachOrderForm();
+            danhSachOrderForm.Show(this);
+        }
+
+        private void thanhToánToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ThanhToanForm thanhToanForm = new ThanhToanForm();
+            thanhToanForm.Show(this);
+        }
+
+        private void danhSáchDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoanhThuForm dOANHTHU = new DoanhThuForm();
+            dOANHTHU.Show(this);
+        }
     }
 }

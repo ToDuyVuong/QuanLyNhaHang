@@ -379,7 +379,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Label labelOrder;
         private System.Windows.Forms.Label labelIdOrder;
         private System.Windows.Forms.TextBox textBoxIdOrder;
-        private System.Windows.Forms.TextBox textBoxBanAn;
+        public System.Windows.Forms.TextBox textBoxBanAn;
         private System.Windows.Forms.Label labelIdBanAn;
         private System.Windows.Forms.TextBox textBoxIdMon;
         private System.Windows.Forms.Label labelIdMon;
@@ -398,7 +398,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Button buttonXoaMon;
         private System.Windows.Forms.Button buttonOrder;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.DataGridView dataGridViewOrder;
+        public System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.Button buttonCheckOrder;
         private System.Windows.Forms.Button buttonXoaBan;
     }

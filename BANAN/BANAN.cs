@@ -73,7 +73,7 @@ namespace QuanLyNhaHang
         // Chỉnh sửa trang thai
         public bool UpdateTrangThaiBanAn(int id, bool trangthai)
         {
-            SqlCommand command = new SqlCommand("UPDATE banan SET id = @id, trangthai = @trangthai WHERE id = @id", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("UPDATE banan SET trangthai = @trangthai WHERE id = @id", mynh.GetConnection);
             command.Parameters.Add("@trangthai", SqlDbType.Bit).Value = trangthai;
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             mynh.openConnection();

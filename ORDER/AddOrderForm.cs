@@ -397,9 +397,47 @@ namespace QuanLyNhaHang
         }
 
 
-        //
+        // Xóa Order Bàn
         private void buttonXoaBan_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id = Convert.ToInt32(textBoxIdOrder.Text);
+                int idban = Convert.ToInt32(textBoxBanAn.Text);
+
+                order.DeleteOrdeBan(id, idban);
+
+                textBoxBanAn.Enabled = true;
+                textBoxIdOrder.Enabled = true;
+
+               /* SqlCommand command3 = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban'" +
+                    ", trangthai AS 'Trang Thai' FROM od WHERE idban = @idban GROUP BY id, idban, trangthai", mynh.GetConnection);
+                command3.Parameters.Add("@idban", SqlDbType.Int).Value = 0;
+              //  dataGridViewOrderBan.DataSource = order.GetOrder(command3);*/
+
+                SqlCommand command = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', gia AS 'Gia' FROM od  WHERE id = @id AND idban = @idban", mynh.GetConnection);
+                command.Parameters.Add("@id", SqlDbType.Int).Value = 0;
+                command.Parameters.Add("@idban", SqlDbType.Int).Value = 0;
+                dataGridViewOrder.DataSource = order.GetOrder(command);
+
+                AddOrderForm_Load(sender, e);
+
+                MessageBox.Show("Xóa bàn order thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+                textBoxIdOrder.Text = "";
+                textBoxIdMon.Text = "";
+                textBoxSoLuongMon.Text = "";
+                textBoxTenMon.Text = "";
+                textBoxGia.Text = "";
+                textBoxBanAn.Text = "";
+                textBoxLoaiThucAn.Text = "";
+                labelTamTinh.Text = ("Tạm tính: ");
+            }
+            catch
+            {
+                MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
         }
     }

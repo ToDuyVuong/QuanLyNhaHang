@@ -29,14 +29,16 @@ namespace QuanLyNhaHang
         // Thêm mới
         public bool InsertOrderMon(int id, int idban, int idmon, string tenmon, int soluong, int gia)
         {
+            string trangthai = "cho";
             SqlCommand command = new SqlCommand("INSERT INTO od " +
-                "(id, idban, idmon, tenmon, soluong, gia) VALUES (@id, @idban, @idmon, @tenmon, @soluong, @gia)", mynh.GetConnection);
+                "(id, idban, idmon, tenmon, soluong, gia, trangthai) VALUES (@id, @idban, @idmon, @tenmon, @soluong, @gia, @trangthai)", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
             command.Parameters.Add("@idmon", SqlDbType.Int).Value = idmon;
             command.Parameters.Add("@soluong", SqlDbType.Int).Value = soluong;
             command.Parameters.Add("@gia", SqlDbType.Int).Value = gia;
             command.Parameters.Add("@tenmon", SqlDbType.NVarChar).Value = tenmon;
+            command.Parameters.Add("@trangthai", SqlDbType.NChar).Value = trangthai;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -54,6 +56,7 @@ namespace QuanLyNhaHang
         // Chỉnh sửa 
         public bool UpdateOrderMon(int id, int idban, int idmon, int soluong, int gia)
         {
+           
             SqlCommand command = new SqlCommand("UPDATE od SET soluong = @soluong, gia = @gia WHERE id = @id AND idban = @idban AND idmon = @idmon", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
@@ -96,7 +99,23 @@ namespace QuanLyNhaHang
                 }
             }
             else
-                return false;
+            {
+                SqlCommand command = new SqlCommand("UPDATE od SET trangthai = @trangthai WHERE id = @id AND idban = @idban ", mynh.GetConnection);
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+                command.Parameters.Add("@trangthai", SqlDbType.NVarChar).Value = trangthai;
+                mynh.openConnection();
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    mynh.closeConnection();
+                    return true;
+                }
+                else
+                {
+                    mynh.closeConnection();
+                    return false;
+                }
+            }    
             
         }
 

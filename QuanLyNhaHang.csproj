@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoanhThuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhThuForm.Designer.cs">
+      <DependentUpon>DoanhThuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOANHTHU\DOANHTHU.cs" />
     <Compile Include="NGUYENLIEU\DanhSachNguyenLieuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +165,7 @@
     <Compile Include="BANAN\ThemBanAnForm.Designer.cs">
       <DependentUpon>ThemBanAnForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="THANHTOAN\THANHTOAN.cs" />
     <Compile Include="THANHTOAN\ThanhToanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BANAN\DanhSachBanAnForm.resx">
       <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThuForm.resx">
+      <DependentUpon>DoanhThuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\DanhSachNguyenLieuForm.resx">
       <DependentUpon>DanhSachNguyenLieuForm.cs</DependentUpon>

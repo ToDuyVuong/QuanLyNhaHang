@@ -27,7 +27,7 @@ namespace QuanLyNhaHang
 
         private void ChinhSuaNguyenLieuForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -37,19 +37,18 @@ namespace QuanLyNhaHang
 
         private void dataGridView_Click(object sender, EventArgs e)
         {
-            textBoxTenNguyenLieu.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
-            textBoxSoLuong.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
-            comboBoxDonVi.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
+            textBoxID.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            textBoxTenNguyenLieu.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            textBoxSoLuong.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
+            comboBoxDonVi.Text = dataGridView.CurrentRow.Cells[3].Value.ToString();
+            textBoxID.Enabled = false;
         }
 
         private void buttonCapNhat_Click(object sender, EventArgs e)
         {
             int soluong = Convert.ToInt32(textBoxSoLuong.Text);
-            if (nguyenlieu.Verif(textBoxTenNguyenLieu.Text))
-            {
-                MessageBox.Show("Tên nguyên liệu muốn sửa đã có sẵn", "Cập nhật nguyên liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (nguyenlieu.UpdateNguyenLieu(textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text))
+            int id = Convert.ToInt32(textBoxID.Text);
+            if (nguyenlieu.UpdateNguyenLieu(id, textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text))
             {
                 MessageBox.Show("Cập nhật thành công", "Cập nhật nguyên liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
@@ -61,7 +60,7 @@ namespace QuanLyNhaHang
         }
         void refresh()
         {
-            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS ' Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS ' Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -80,5 +79,7 @@ namespace QuanLyNhaHang
                 MessageBox.Show("Xóa thất bại", "Xóa nguyên liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

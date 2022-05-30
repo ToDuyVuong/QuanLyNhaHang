@@ -56,10 +56,11 @@ namespace QuanLyNhaHang
         }
 
         // Chỉnh sửa 
-        public bool UpdateNguyenLieu(string tennguyenlieu, int khoiluong, string donvi)
+        public bool UpdateNguyenLieu(int id, string tennguyenlieu, int khoiluong, string donvi)
         {
             SqlCommand command = new SqlCommand("UPDATE nguyenlieu SET" +
-                "tennguyenlieu = @tennguyenlieu, khoiluong = @khoiluong, donvi = @donvi", mynh.GetConnection);
+                " tennguyenlieu = @tennguyenlieu, khoiluong = @khoiluong, donvi = @donvi where id = @id", mynh.GetConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@tennguyenlieu", SqlDbType.VarChar).Value = tennguyenlieu;
             command.Parameters.Add("@khoiluong", SqlDbType.Int).Value = khoiluong;
             command.Parameters.Add("@donvi", SqlDbType.VarChar).Value = donvi;
