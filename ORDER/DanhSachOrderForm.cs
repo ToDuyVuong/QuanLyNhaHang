@@ -43,18 +43,15 @@ namespace QuanLyNhaHang
             SqlCommand command2 = new SqlCommand("SELECT id AS 'Ma Mon An', tenmon AS 'Ten Mon An', gia AS 'Gia', " +
                 " soluong AS 'So Luong', loaithucan AS 'Loai Thuc An' FROM monan");
             dataGridViewMonAn.DataSource = monan.GetMonAn(command2);
+
             textBoxBanAn.Enabled = false;
             textBoxIdOrder.Enabled = false;
             try
             {
-
                 SqlCommand command3 = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban'" +
                     ", trangthai AS 'Trang Thai' FROM od  WHERE trangthai = 'cho' OR trangthai = 'order'" +
                     " GROUP BY id, idban, trangthai");
                 dataGridViewOrderBan.DataSource = order.GetOrder(command3);
-
-
-
             }
             catch
             {

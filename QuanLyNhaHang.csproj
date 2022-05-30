@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoanhThuForm.cs">
+    <Compile Include="DOANHTHU\DoanhThuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoanhThuForm.Designer.cs">
+    <Compile Include="DOANHTHU\DoanhThuForm.Designer.cs">
       <DependentUpon>DoanhThuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DOANHTHU\DOANHTHU.cs" />
@@ -65,6 +65,12 @@
     </Compile>
     <Compile Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.Designer.cs">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDanhSachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDanhSachForm.Designer.cs">
+      <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ORDER\DanhSachOrderForm.cs">
       <SubType>Form</SubType>
@@ -196,7 +202,7 @@
     <EmbeddedResource Include="BANAN\DanhSachBanAnForm.resx">
       <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuForm.resx">
+    <EmbeddedResource Include="DOANHTHU\DoanhThuForm.resx">
       <DependentUpon>DoanhThuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\DanhSachNguyenLieuForm.resx">
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.resx">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDanhSachForm.resx">
+      <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER\DanhSachOrderForm.resx">
       <DependentUpon>DanhSachOrderForm.cs</DependentUpon>
