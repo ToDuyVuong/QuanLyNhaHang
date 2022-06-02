@@ -29,10 +29,18 @@ namespace QuanLyNhaHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ThongKeDoanhThuForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "ThongKeDoanhThuForm";
             this.Text = "ThongKeDoanhThuForm";
+            this.Load += new System.EventHandler(this.ThongKeDoanhThuForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -28,6 +28,7 @@ namespace QuanLyNhaHang
         ORDER order = new ORDER();
 
 
+
         //
         private void DoanhThuForm_Load(object sender, EventArgs e)
         {
@@ -50,6 +51,7 @@ namespace QuanLyNhaHang
             dateTimePickerNgayBatDau.Enabled = false;
             dateTimePickerNgayKetThuc.Enabled = false;
         }
+
 
 
         //
@@ -106,6 +108,7 @@ namespace QuanLyNhaHang
                 MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
 
         //
@@ -224,13 +227,15 @@ namespace QuanLyNhaHang
 
         
 
-
         //
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+
+
+        //
         private void radioButtonTheoNgay_CheckedChanged(object sender, EventArgs e)
         {
             textBoxMucTienBatDau.Enabled = false;
@@ -239,6 +244,9 @@ namespace QuanLyNhaHang
             dateTimePickerNgayKetThuc.Enabled = true;
         }
 
+
+
+        //
         private void radioButtonTheoMucTien_CheckedChanged(object sender, EventArgs e)
         {
             textBoxMucTienBatDau.Enabled = true;
@@ -247,6 +255,9 @@ namespace QuanLyNhaHang
             dateTimePickerNgayKetThuc.Enabled = false;
         }
 
+
+
+        //
         private void buttonInFile_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn Muốn In File Này Chứ?", "Thông Báo.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -288,6 +299,9 @@ namespace QuanLyNhaHang
             }
         }
 
+
+
+        //
         private void dataGridViewDoanhThu_DoubleClick(object sender, EventArgs e)
         {
             try

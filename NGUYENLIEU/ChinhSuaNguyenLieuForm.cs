@@ -27,7 +27,8 @@ namespace QuanLyNhaHang
 
         private void ChinhSuaNguyenLieuForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị'," +
+                " sotien AS 'Số Tiền' FROM nguyenlieu", mynh.GetConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -41,6 +42,7 @@ namespace QuanLyNhaHang
             textBoxTenNguyenLieu.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
             textBoxSoLuong.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
             comboBoxDonVi.Text = dataGridView.CurrentRow.Cells[3].Value.ToString();
+            textBoxSoTien.Text = dataGridView.CurrentRow.Cells[4].Value.ToString();
             textBoxID.Enabled = false;
         }
 
@@ -48,7 +50,8 @@ namespace QuanLyNhaHang
         {
             int soluong = Convert.ToInt32(textBoxSoLuong.Text);
             int id = Convert.ToInt32(textBoxID.Text);
-            if (nguyenlieu.UpdateNguyenLieu(id, textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text))
+            int sotien = Convert.ToInt32(textBoxSoTien.Text);
+            if (nguyenlieu.UpdateNguyenLieu(id, textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text, sotien))
             {
                 MessageBox.Show("Cập nhật thành công", "Cập nhật nguyên liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
@@ -60,7 +63,7 @@ namespace QuanLyNhaHang
         }
         void refresh()
         {
-            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS ' Đơn Vị' FROM nguyenlieu", mynh.GetConnection);
+            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu', tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS ' Đơn Vị',sotien AS 'Số Tiền' FROM nguyenlieu", mynh.GetConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -80,6 +83,6 @@ namespace QuanLyNhaHang
             }
         }
 
-        
+
     }
 }

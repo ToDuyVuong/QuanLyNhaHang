@@ -28,14 +28,15 @@ namespace QuanLyNhaHang
         {
             int id = nguyenlieu.TaoID();
             int soluong = Convert.ToInt32(textBoxKhoiLuong.Text);
+            int sotien = Convert.ToInt32(textBoxSoTien.Text);
             if (Verif(textBoxTenNguyenLieu.Text))
             {
                 MessageBox.Show("Tên nguyên liệu đã có sẵn, Vui lòng qua update", "Thêm Nguyên Liệu",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (nguyenlieu.InsertNguyenLieu(id, textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text))
+            else if (nguyenlieu.InsertNguyenLieu(id, textBoxTenNguyenLieu.Text, soluong, comboBoxDonVi.Text, sotien))
             {
-                MessageBox.Show("Nguyên liệu " + textBoxTenNguyenLieu.Text + " Được thêm thành công với id = " + (id + 1), "Thêm Nguyên Liệu",
+                MessageBox.Show("Nguyên liệu " + textBoxTenNguyenLieu.Text + " Được thêm thành công với id = " + id, "Thêm Nguyên Liệu",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

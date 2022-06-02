@@ -66,10 +66,10 @@
     <Compile Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.Designer.cs">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDanhSachForm.cs">
+    <Compile Include="ORDER\OrderDanhSachForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderDanhSachForm.Designer.cs">
+    <Compile Include="ORDER\OrderDanhSachForm.Designer.cs">
       <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ORDER\DanhSachOrderForm.cs">
@@ -196,6 +196,12 @@
     <Compile Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.Designer.cs">
       <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="THONGKE\ThongKeDoanhThuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THONGKE\ThongKeDoanhThuForm.Designer.cs">
+      <DependentUpon>ThongKeDoanhThuForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BANAN\ChinhSuaBanAnForm.resx">
       <DependentUpon>ChinhSuaBanAnForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,7 +217,7 @@
     <EmbeddedResource Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.resx">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderDanhSachForm.resx">
+    <EmbeddedResource Include="ORDER\OrderDanhSachForm.resx">
       <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER\DanhSachOrderForm.resx">
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.resx">
       <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THONGKE\ThongKeDoanhThuForm.resx">
+      <DependentUpon>ThongKeDoanhThuForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

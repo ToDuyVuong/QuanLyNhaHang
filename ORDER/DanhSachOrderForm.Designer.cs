@@ -135,6 +135,7 @@ namespace QuanLyNhaHang
             this.buttonXoaMon.TabIndex = 49;
             this.buttonXoaMon.Text = "Xóa Món";
             this.buttonXoaMon.UseVisualStyleBackColor = false;
+            this.buttonXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
             // 
             // buttonThemMon
             // 

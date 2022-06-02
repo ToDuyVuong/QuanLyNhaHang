@@ -16,5 +16,10 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+        private void ThongKeDoanhThuForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

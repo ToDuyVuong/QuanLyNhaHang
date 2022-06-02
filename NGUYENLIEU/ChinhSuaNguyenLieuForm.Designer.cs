@@ -42,6 +42,8 @@ namespace QuanLyNhaHang
             this.labelStatus = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxSoTien = new System.Windows.Forms.TextBox();
+            this.labelSoTien = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,6 @@ namespace QuanLyNhaHang
             this.comboBoxDonVi.Name = "comboBoxDonVi";
             this.comboBoxDonVi.Size = new System.Drawing.Size(202, 32);
             this.comboBoxDonVi.TabIndex = 20;
-//            this.comboBoxDonVi.SelectedIndexChanged += new System.EventHandler(this.comboBoxDonVi_SelectedIndexChanged);
             // 
             // labelDonVi
             // 
@@ -160,7 +161,7 @@ namespace QuanLyNhaHang
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(428, 318);
+            this.dataGridView.Size = new System.Drawing.Size(575, 318);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.Click += new System.EventHandler(this.dataGridView_Click);
             // 
@@ -195,12 +196,34 @@ namespace QuanLyNhaHang
             this.textBoxID.Size = new System.Drawing.Size(202, 29);
             this.textBoxID.TabIndex = 22;
             // 
+            // textBoxSoTien
+            // 
+            this.textBoxSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSoTien.Location = new System.Drawing.Point(276, 360);
+            this.textBoxSoTien.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSoTien.Name = "textBoxSoTien";
+            this.textBoxSoTien.Size = new System.Drawing.Size(202, 29);
+            this.textBoxSoTien.TabIndex = 27;
+            // 
+            // labelSoTien
+            // 
+            this.labelSoTien.AutoSize = true;
+            this.labelSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoTien.Location = new System.Drawing.Point(62, 364);
+            this.labelSoTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSoTien.Name = "labelSoTien";
+            this.labelSoTien.Size = new System.Drawing.Size(89, 24);
+            this.labelSoTien.TabIndex = 26;
+            this.labelSoTien.Text = "Số Tiền:";
+            // 
             // ChinhSuaNguyenLieuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
-            this.ClientSize = new System.Drawing.Size(988, 526);
+            this.ClientSize = new System.Drawing.Size(1138, 526);
+            this.Controls.Add(this.textBoxSoTien);
+            this.Controls.Add(this.labelSoTien);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelStatus);
@@ -239,5 +262,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxSoTien;
+        private System.Windows.Forms.Label labelSoTien;
     }
 }

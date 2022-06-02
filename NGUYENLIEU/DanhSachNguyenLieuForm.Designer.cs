@@ -34,12 +34,13 @@ namespace QuanLyNhaHang
             this.textBoxMocCuoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxMocDau = new System.Windows.Forms.TextBox();
-            this.buttonTimTheoKhoang = new System.Windows.Forms.Button();
             this.textBoxTen = new System.Windows.Forms.TextBox();
             this.buttonTimTheoTen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonTimTheoKhoang = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,17 +74,17 @@ namespace QuanLyNhaHang
             // textBoxMocCuoi
             // 
             this.textBoxMocCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMocCuoi.Location = new System.Drawing.Point(507, 290);
+            this.textBoxMocCuoi.Location = new System.Drawing.Point(554, 300);
             this.textBoxMocCuoi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMocCuoi.Name = "textBoxMocCuoi";
-            this.textBoxMocCuoi.Size = new System.Drawing.Size(162, 29);
+            this.textBoxMocCuoi.Size = new System.Drawing.Size(255, 29);
             this.textBoxMocCuoi.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(636, 256);
+            this.label3.Location = new System.Drawing.Point(776, 266);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 24);
@@ -93,24 +94,11 @@ namespace QuanLyNhaHang
             // textBoxMocDau
             // 
             this.textBoxMocDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMocDau.Location = new System.Drawing.Point(507, 253);
+            this.textBoxMocDau.Location = new System.Drawing.Point(554, 263);
             this.textBoxMocDau.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMocDau.Name = "textBoxMocDau";
-            this.textBoxMocDau.Size = new System.Drawing.Size(115, 29);
+            this.textBoxMocDau.Size = new System.Drawing.Size(206, 29);
             this.textBoxMocDau.TabIndex = 20;
-            // 
-            // buttonTimTheoKhoang
-            // 
-            this.buttonTimTheoKhoang.AutoSize = true;
-            this.buttonTimTheoKhoang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTimTheoKhoang.Location = new System.Drawing.Point(507, 204);
-            this.buttonTimTheoKhoang.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTimTheoKhoang.Name = "buttonTimTheoKhoang";
-            this.buttonTimTheoKhoang.Size = new System.Drawing.Size(162, 34);
-            this.buttonTimTheoKhoang.TabIndex = 19;
-            this.buttonTimTheoKhoang.Text = "Tìm theo khoảng";
-            this.buttonTimTheoKhoang.UseVisualStyleBackColor = true;
-            this.buttonTimTheoKhoang.Click += new System.EventHandler(this.buttonTimTheoKhoang_Click);
             // 
             // textBoxTen
             // 
@@ -166,21 +154,48 @@ namespace QuanLyNhaHang
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(436, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(473, 207);
             this.dataGridView1.TabIndex = 14;
+            // 
+            // buttonTimTheoKhoang
+            // 
+            this.buttonTimTheoKhoang.AutoSize = true;
+            this.buttonTimTheoKhoang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTimTheoKhoang.Location = new System.Drawing.Point(554, 204);
+            this.buttonTimTheoKhoang.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTimTheoKhoang.Name = "buttonTimTheoKhoang";
+            this.buttonTimTheoKhoang.Size = new System.Drawing.Size(255, 34);
+            this.buttonTimTheoKhoang.TabIndex = 25;
+            this.buttonTimTheoKhoang.Text = "Tìm theo khoảng khối lượng";
+            this.buttonTimTheoKhoang.UseVisualStyleBackColor = true;
+            this.buttonTimTheoKhoang.Click += new System.EventHandler(this.buttonTimTheoKhoang_Click);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.Brown;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(38, 435);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(99, 35);
+            this.buttonRefresh.TabIndex = 26;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // DanhSachNguyenLieuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(731, 490);
+            this.ClientSize = new System.Drawing.Size(853, 490);
+            this.Controls.Add(this.buttonRefresh);
+            this.Controls.Add(this.buttonTimTheoKhoang);
             this.Controls.Add(this.comboBoxTimTheoLoai);
             this.Controls.Add(this.buttonTimTheoLoai);
             this.Controls.Add(this.textBoxMocCuoi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxMocDau);
-            this.Controls.Add(this.buttonTimTheoKhoang);
             this.Controls.Add(this.textBoxTen);
             this.Controls.Add(this.buttonTimTheoTen);
             this.Controls.Add(this.label1);
@@ -202,11 +217,12 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.TextBox textBoxMocCuoi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxMocDau;
-        private System.Windows.Forms.Button buttonTimTheoKhoang;
         private System.Windows.Forms.TextBox textBoxTen;
         private System.Windows.Forms.Button buttonTimTheoTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonTimTheoKhoang;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

@@ -524,5 +524,13 @@ namespace QuanLyNhaHang
         {
             DanhSachOrderForm_Load(sender, e);
         }
+
+
+
+        //
+        private void buttonXoaMon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Printing;
 using Word = Microsoft.Office.Interop.Word;
-using Microsoft.Office.Interop.Word;
+
 
 namespace QuanLyNhaHang
 {
@@ -123,21 +123,21 @@ namespace QuanLyNhaHang
             }
         }
 
-        
+
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-           /* PrintDialog printDlg = new PrintDialog();
-            PrintDocument printDoc = new PrintDocument();
-            printDoc.DocumentName = "Print Document";
-            printDlg.Document = printDoc;
-            printDlg.AllowSelection = true;
-            printDlg.AllowSomePages = true;
-            if (printDlg.ShowDialog() == DialogResult.OK)
-                printDoc.Print();*/
+            /* PrintDialog printDlg = new PrintDialog();
+             PrintDocument printDoc = new PrintDocument();
+             printDoc.DocumentName = "Print Document";
+             printDlg.Document = printDoc;
+             printDlg.AllowSelection = true;
+             printDlg.AllowSomePages = true;
+             if (printDlg.ShowDialog() == DialogResult.OK)
+                 printDoc.Print();*/
 
             DGVPrinter print = new DGVPrinter();
-             print.Title = "Danh Sách Nguyên Liệu.";
+            print.Title = "Danh Sách Nguyên Liệu.";
 
             print.SubTitle = String.Format("Data: {0}", DateTime.Now.Date);
             print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
@@ -148,47 +148,17 @@ namespace QuanLyNhaHang
             print.Footer = "Foxlearn";
             print.FooterSpacing = 15;
             print.PrintDataGridView(dataGridView1);
-        
-    }
+
+        }
 
         private void XuatDanhSachNguyenLieuForm_Load(object sender, EventArgs e)
         {
-            string strSQL = "SELECT id AS 'Mã Nguyên Liệu', tennguyenlieu AS 'Tên nguyên liệu',khoiluong AS 'Số lượng',donvi AS 'Đơn vị' from nguyenlieu";
-            string strCon = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=myNH;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = strCon;
-
-
-            dataGridView1.RowTemplate.Height = 80;
-            DataGridViewImageColumn picCol = new DataGridViewImageColumn();
-
-            try
-            {
-                con.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(strSQL, con);
-                DataSet ds = new DataSet("nguyenlieu");
-                adapter.Fill(ds, "nguyenlieu");
-                System.Data.DataTable table = ds.Tables["nguyenlieu"];
-                dataGridView1.DataSource = table;
-
-
-
-                dataGridView1.AllowUserToAddRows = false;
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error", ex.Message);
-                if (con.State != ConnectionState.Closed)
-                    con.Close();
-
-            }
-            finally
-            {
-                con.Dispose();
-            }
+            SqlCommand command = new SqlCommand("SELECT id AS 'ID Nguyên Liệu'," +
+                "tennguyenlieu AS 'Tên Nguyên Liệu', khoiluong AS 'Khối Lượng',donvi AS 'Đơn Vị',sotien AS 'Số Tiền'  FROM nguyenlieu", mynh.GetConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
             dataGridView1.ReadOnly = true;
         }
     }

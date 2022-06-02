@@ -24,14 +24,15 @@ namespace QuanLyNhaHang
 
 
         // Thêm mới
-        public bool InsertNguyenLieu(int id, string tennguyenlieu, int khoiluong, string donvi)
+        public bool InsertNguyenLieu(int id, string tennguyenlieu, int khoiluong, string donvi, int sotien)
         {
             SqlCommand command = new SqlCommand("INSERT INTO nguyenlieu " +
-                "(id,tennguyenlieu, khoiluong, donvi) VALUES (@id, @tennguyenlieu, @khoiluong,@donvi)", mynh.GetConnection);
+                "(id,tennguyenlieu, khoiluong, donvi, sotien) VALUES (@id, @tennguyenlieu, @khoiluong,@donvi,@sotien)", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@tennguyenlieu", SqlDbType.VarChar).Value = tennguyenlieu;
             command.Parameters.Add("@khoiluong", SqlDbType.Int).Value = khoiluong;
             command.Parameters.Add("@donvi", SqlDbType.VarChar).Value = donvi;
+            command.Parameters.Add("@sotien", SqlDbType.Int).Value = sotien;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -56,14 +57,15 @@ namespace QuanLyNhaHang
         }
 
         // Chỉnh sửa 
-        public bool UpdateNguyenLieu(int id, string tennguyenlieu, int khoiluong, string donvi)
+        public bool UpdateNguyenLieu(int id, string tennguyenlieu, int khoiluong, string donvi, int sotien)
         {
             SqlCommand command = new SqlCommand("UPDATE nguyenlieu SET" +
-                " tennguyenlieu = @tennguyenlieu, khoiluong = @khoiluong, donvi = @donvi where id = @id", mynh.GetConnection);
+                " tennguyenlieu = @tennguyenlieu, khoiluong = @khoiluong, donvi = @donvi, sotien = @sotien where id = @id", mynh.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@tennguyenlieu", SqlDbType.VarChar).Value = tennguyenlieu;
             command.Parameters.Add("@khoiluong", SqlDbType.Int).Value = khoiluong;
             command.Parameters.Add("@donvi", SqlDbType.VarChar).Value = donvi;
+            command.Parameters.Add("@sotien", SqlDbType.Int).Value = sotien;
             mynh.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -98,7 +100,7 @@ namespace QuanLyNhaHang
 
         public DataTable TimTheoTen(string ten)
         {
-            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu',khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị' FROM " +
+            SqlCommand command = new SqlCommand("SELECT tennguyenlieu AS 'Tên Nguyên Liệu',khoiluong AS 'Khối Lượng', donvi AS 'Đơn Vị, sotien AS 'Số Tiền' FROM " +
                 "nguyenlieu where tennguyenlieu = @tennguyenlieu", mynh.GetConnection);
             command.Parameters.Add("@tennguyenlieu", SqlDbType.NVarChar).Value = ten;
             SqlDataAdapter adapter = new SqlDataAdapter(command);

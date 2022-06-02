@@ -30,6 +30,7 @@ namespace QuanLyNhaHang
         private void InitializeComponent()
         {
             System.Windows.Forms.Label labelDonVi;
+            System.Windows.Forms.Label labelSoTien;
             this.comboBoxDonVi = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
@@ -38,8 +39,21 @@ namespace QuanLyNhaHang
             this.labelTenNguyenLieu = new System.Windows.Forms.Label();
             this.textBoxKhoiLuong = new System.Windows.Forms.TextBox();
             this.textBoxTenNguyenLieu = new System.Windows.Forms.TextBox();
+            this.textBoxSoTien = new System.Windows.Forms.TextBox();
             labelDonVi = new System.Windows.Forms.Label();
+            labelSoTien = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // labelDonVi
+            // 
+            labelDonVi.AutoSize = true;
+            labelDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelDonVi.Location = new System.Drawing.Point(39, 210);
+            labelDonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            labelDonVi.Name = "labelDonVi";
+            labelDonVi.Size = new System.Drawing.Size(79, 24);
+            labelDonVi.TabIndex = 17;
+            labelDonVi.Text = "Đơn Vị:";
             // 
             // comboBoxDonVi
             // 
@@ -56,22 +70,11 @@ namespace QuanLyNhaHang
             this.comboBoxDonVi.Size = new System.Drawing.Size(204, 32);
             this.comboBoxDonVi.TabIndex = 18;
             // 
-            // labelDonVi
-            // 
-            labelDonVi.AutoSize = true;
-            labelDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelDonVi.Location = new System.Drawing.Point(39, 210);
-            labelDonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            labelDonVi.Name = "labelDonVi";
-            labelDonVi.Size = new System.Drawing.Size(79, 24);
-            labelDonVi.TabIndex = 17;
-            labelDonVi.Text = "Đơn Vị:";
-            // 
             // buttonCancel
             // 
             this.buttonCancel.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(303, 276);
+            this.buttonCancel.Location = new System.Drawing.Point(303, 342);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(135, 50);
@@ -84,7 +87,7 @@ namespace QuanLyNhaHang
             // 
             this.buttonThem.BackColor = System.Drawing.Color.Firebrick;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.Location = new System.Drawing.Point(131, 276);
+            this.buttonThem.Location = new System.Drawing.Point(131, 342);
             this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(135, 50);
@@ -144,12 +147,34 @@ namespace QuanLyNhaHang
             this.textBoxTenNguyenLieu.Size = new System.Drawing.Size(204, 29);
             this.textBoxTenNguyenLieu.TabIndex = 10;
             // 
+            // textBoxSoTien
+            // 
+            this.textBoxSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSoTien.Location = new System.Drawing.Point(234, 264);
+            this.textBoxSoTien.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSoTien.Name = "textBoxSoTien";
+            this.textBoxSoTien.Size = new System.Drawing.Size(204, 29);
+            this.textBoxSoTien.TabIndex = 23;
+            // 
+            // labelSoTien
+            // 
+            labelSoTien.AutoSize = true;
+            labelSoTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelSoTien.Location = new System.Drawing.Point(39, 268);
+            labelSoTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            labelSoTien.Name = "labelSoTien";
+            labelSoTien.Size = new System.Drawing.Size(83, 24);
+            labelSoTien.TabIndex = 22;
+            labelSoTien.Text = "Số Tiền";
+            // 
             // ThemNguyenLieuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(500, 368);
+            this.ClientSize = new System.Drawing.Size(500, 426);
+            this.Controls.Add(this.textBoxSoTien);
+            this.Controls.Add(labelSoTien);
             this.Controls.Add(this.comboBoxDonVi);
             this.Controls.Add(labelDonVi);
             this.Controls.Add(this.buttonCancel);
@@ -178,5 +203,6 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Label labelTenNguyenLieu;
         private System.Windows.Forms.TextBox textBoxKhoiLuong;
         private System.Windows.Forms.TextBox textBoxTenNguyenLieu;
+        private System.Windows.Forms.TextBox textBoxSoTien;
     }
 }
