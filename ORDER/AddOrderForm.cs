@@ -27,16 +27,18 @@ namespace QuanLyNhaHang
         //
         private void AddOrderForm_Load(object sender, EventArgs e)
         {
+            // Tải bàn ăn
             SqlCommand command1 = new SqlCommand("SELECT id AS 'Ma Ban An', soluongghe AS 'So Luong Ghe', trangthai AS 'Trang Thai' FROM banan");
             dataGridViewBanAn.DataSource = banan.GetBanAn(command1);
            
+            // Tải món ăn
             SqlCommand command2 = new SqlCommand("SELECT id AS 'Ma Mon An', tenmon AS 'Ten Mon An', gia AS 'Gia', " +
                 " soluong AS 'So Luong', loaithucan AS 'Loai Thuc An' FROM monan");
             dataGridViewMonAn.DataSource = monan.GetMonAn(command2);
-           
-            
-          
-            textBoxIdOrder.Focus();
+
+            //textBoxIdOrder.Text = order.TaoIdOrder().ToString();
+
+            textBoxIdOrder.Enabled = false;
         }
 
 
@@ -169,8 +171,7 @@ namespace QuanLyNhaHang
                     command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
                     dataGridViewOrder.DataSource = order.GetOrder(command);
-
-
+                    textBoxIdOrder.Text = order.TaoIdOrder().ToString();
                 }
                 else
                 {
@@ -240,6 +241,25 @@ namespace QuanLyNhaHang
             {
                 int id = Convert.ToInt32(textBoxIdOrder.Text);
                 int idban = Convert.ToInt32(textBoxBanAn.Text);
+
+                HoaDonForm orderDanhSachForm = new HoaDonForm();
+                SqlCommand command1 = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban', tenmon AS 'Ten Mon', soluong AS 'So Luong', " +
+                    "gia AS 'Gia' FROM od  WHERE id = @id ", mynh.GetConnection);
+                command1.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                orderDanhSachForm.dataGridViewOrder.DataSource = order.GetOrder(command1);
+
+                int tamtinh = 0;
+                DataTable table = new DataTable();
+                table = order.GetOrder(command1);
+                int n = table.Rows.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    tamtinh += Convert.ToInt32(table.Rows[i]["gia"].ToString());
+                }
+                orderDanhSachForm.labelTongHoaDon.Text = ("Tổng hóa đơn là: " + tamtinh + " VND");
+                orderDanhSachForm.Show(this);
+
+
                 string trangthai = "order";
                 order.UpdateTrangThaiOrder(id, idban, trangthai);
                 SqlCommand command = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', gia AS 'Gia' FROM od  WHERE id = @id", mynh.GetConnection);
@@ -256,12 +276,13 @@ namespace QuanLyNhaHang
                 textBoxBanAn.Text = "";
                 textBoxLoaiThucAn.Text = "";
                 labelTamTinh.Text = ("Tạm tính: ");
-        }
+
+            }
             catch
             {
                 MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-}
+        }
 
 
         // Xóa món

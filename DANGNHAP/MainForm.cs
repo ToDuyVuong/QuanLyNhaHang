@@ -135,5 +135,17 @@ namespace QuanLyNhaHang
             DoanhThuForm dOANHTHU = new DoanhThuForm();
             dOANHTHU.Show(this);
         }
+
+        private void thongKeDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeDoanhThuForm doanhThuForm = new ThongKeDoanhThuForm();
+            doanhThuForm.Show(this);
+        }
+
+        private void thốngKêMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeMonForm thongKeMonForm = new ThongKeMonForm();
+            thongKeMonForm.Show(this);
+        }
     }
 }

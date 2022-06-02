@@ -130,7 +130,7 @@ namespace QuanLyNhaHang
             // 
             this.radioButtonTheoNgay.AutoSize = true;
             this.radioButtonTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTheoNgay.Location = new System.Drawing.Point(152, 19);
+            this.radioButtonTheoNgay.Location = new System.Drawing.Point(306, 19);
             this.radioButtonTheoNgay.Name = "radioButtonTheoNgay";
             this.radioButtonTheoNgay.Size = new System.Drawing.Size(103, 24);
             this.radioButtonTheoNgay.TabIndex = 39;
@@ -143,7 +143,7 @@ namespace QuanLyNhaHang
             // 
             this.radioButtonTheoMucTien.AutoSize = true;
             this.radioButtonTheoMucTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTheoMucTien.Location = new System.Drawing.Point(277, 19);
+            this.radioButtonTheoMucTien.Location = new System.Drawing.Point(159, 19);
             this.radioButtonTheoMucTien.Name = "radioButtonTheoMucTien";
             this.radioButtonTheoMucTien.Size = new System.Drawing.Size(131, 24);
             this.radioButtonTheoMucTien.TabIndex = 38;

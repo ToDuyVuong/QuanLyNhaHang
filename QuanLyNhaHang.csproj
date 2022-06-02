@@ -66,11 +66,11 @@
     <Compile Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.Designer.cs">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ORDER\OrderDanhSachForm.cs">
+    <Compile Include="ORDER\HoaDonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ORDER\OrderDanhSachForm.Designer.cs">
-      <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
+    <Compile Include="ORDER\HoaDonForm.Designer.cs">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ORDER\DanhSachOrderForm.cs">
       <SubType>Form</SubType>
@@ -98,11 +98,11 @@
       <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="File CS\DGVPrinter.cs" />
-    <Compile Include="MONAN---- CHƯA TEST\MONAN.cs" />
-    <Compile Include="MONAN---- CHƯA TEST\PrintForm.cs">
+    <Compile Include="MONAN\MONAN.cs" />
+    <Compile Include="MONAN\PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\PrintForm.Designer.cs">
+    <Compile Include="MONAN\PrintForm.Designer.cs">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NGUYENLIEU\NGUYENLIEU.cs" />
@@ -147,22 +147,22 @@
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MONAN---- CHƯA TEST\ThemMonAnForm.cs">
+    <Compile Include="MONAN\ThemMonAnForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\ThemMonAnForm.Designer.cs">
+    <Compile Include="MONAN\ThemMonAnForm.Designer.cs">
       <DependentUpon>ThemMonAnForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\SuaMonAnForm.cs">
+    <Compile Include="MONAN\SuaMonAnForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\SuaMonAnForm.Designer.cs">
+    <Compile Include="MONAN\SuaMonAnForm.Designer.cs">
       <DependentUpon>SuaMonAnForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.cs">
+    <Compile Include="MONAN\ThongKeMonAnForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.Designer.cs">
+    <Compile Include="MONAN\ThongKeMonAnForm.Designer.cs">
       <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BANAN\ThemBanAnForm.cs">
@@ -196,6 +196,13 @@
     <Compile Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.Designer.cs">
       <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="THONGKE\ThongKeMonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THONGKE\ThongKeMonForm.Designer.cs">
+      <DependentUpon>ThongKeMonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="THONGKE\THONGKE.cs" />
     <Compile Include="THONGKE\ThongKeDoanhThuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,13 +224,13 @@
     <EmbeddedResource Include="NGUYENLIEU\ChinhSuaNguyenLieuForm.resx">
       <DependentUpon>ChinhSuaNguyenLieuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ORDER\OrderDanhSachForm.resx">
-      <DependentUpon>OrderDanhSachForm.cs</DependentUpon>
+    <EmbeddedResource Include="ORDER\HoaDonForm.resx">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER\DanhSachOrderForm.resx">
       <DependentUpon>DanhSachOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MONAN---- CHƯA TEST\PrintForm.resx">
+    <EmbeddedResource Include="MONAN\PrintForm.resx">
       <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER\AddOrderForm.resx">
@@ -257,13 +264,13 @@
     <EmbeddedResource Include="QUANLYNHANSU\DanhSachNhanSuForm.resx">
       <DependentUpon>DanhSachNhanSuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MONAN---- CHƯA TEST\ThemMonAnForm.resx">
+    <EmbeddedResource Include="MONAN\ThemMonAnForm.resx">
       <DependentUpon>ThemMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MONAN---- CHƯA TEST\SuaMonAnForm.resx">
+    <EmbeddedResource Include="MONAN\SuaMonAnForm.resx">
       <DependentUpon>SuaMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MONAN---- CHƯA TEST\ThongKeMonAnForm.resx">
+    <EmbeddedResource Include="MONAN\ThongKeMonAnForm.resx">
       <DependentUpon>ThongKeMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BANAN\ThemBanAnForm.resx">
@@ -280,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NGUYENLIEU\XuatDanhSachNguyenLieuForm.resx">
       <DependentUpon>XuatDanhSachNguyenLieuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THONGKE\ThongKeMonForm.resx">
+      <DependentUpon>ThongKeMonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="THONGKE\ThongKeDoanhThuForm.resx">
       <DependentUpon>ThongKeDoanhThuForm.cs</DependentUpon>

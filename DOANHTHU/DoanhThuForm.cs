@@ -32,7 +32,9 @@ namespace QuanLyNhaHang
         //
         private void DoanhThuForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT id AS 'Ma Doanh Thu', tongsotien AS 'Tong So Tien', ngaythanhtoan AS 'Ngay Thanh Toan' FROM doanhthu");
+            //  SqlCommand command = new SqlCommand("SELECT id AS 'Ma Doanh Thu', tongsotien AS 'Tong So Tien', ngaythanhtoan AS 'Ngay Thanh Toan' FROM doanhthu  GROUP BY ");
+
+          SqlCommand command = new SqlCommand("SELECT id AS 'Ma Doanh Thu', tongsotien AS 'Tong So Tien', ngaythanhtoan AS 'Ngay Thanh Toan' FROM doanhthu  ");
             dataGridViewDoanhThu.DataSource = doanhthu.GetDoanhThu(command);
 
             // Số tiền tạm tính.
@@ -306,7 +308,7 @@ namespace QuanLyNhaHang
         {
             try
             {
-                OrderDanhSachForm orderDanhSachForm = new OrderDanhSachForm();
+                HoaDonForm orderDanhSachForm = new HoaDonForm();
                 int id = Convert.ToInt32(dataGridViewDoanhThu.CurrentRow.Cells[0].Value.ToString());
 
                 SqlCommand command = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban', tenmon AS 'Ten Mon', soluong AS 'So Luong', " +
@@ -322,7 +324,7 @@ namespace QuanLyNhaHang
                 {
                     tamtinh += Convert.ToInt32(table.Rows[i]["gia"].ToString());
                 }
-                orderDanhSachForm.labelTongDoanhThu.Text = ("Tạm tính: " + tamtinh + " VND");
+                orderDanhSachForm.labelTongHoaDon.Text = ("Tổng hóa đơn là: " + tamtinh + " VND");
                 orderDanhSachForm.Show(this);
             }
             catch

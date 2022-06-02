@@ -45,5 +45,6 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Deb
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeNguyenLieuForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.XuatDanhSachNguyenLieuForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DoanhThuForm.resources
-C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.OrderDanhSachForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeDoanhThuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeMonForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.HoaDonForm.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaHang
 {
-    public partial class OrderDanhSachForm : Form
+    public partial class HoaDonForm : Form
     {
-        public OrderDanhSachForm()
+        public HoaDonForm()
         {
             InitializeComponent();
         }
@@ -21,6 +21,16 @@ namespace QuanLyNhaHang
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void OrderDanhSachForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonXacNhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Order thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
     }
 }

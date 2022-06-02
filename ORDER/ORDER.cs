@@ -235,7 +235,25 @@ namespace QuanLyNhaHang
 
 
 
+        // Tạo Id Orde
+        public int TaoIdOrder()
+        {
+            int x;
 
+            SqlCommand command4 = new SqlCommand("SELECT id, idban FROM od GROUP BY id, idban");
+            DataTable table = new DataTable();
+            table = GetOrder(command4);
+            int n = table.Rows.Count - 1;     
+            if(n == - 1)
+            {
+                return 0;
+            }    
+            else
+            {
+                x = Convert.ToInt32(table.Rows[n]["id"].ToString()) + 1;
+                return x;
+            }    
+        }
 
 
     }

@@ -86,5 +86,26 @@ namespace QuanLyNhaHang
         }
 
 
+
+/*
+        public DataTable DoanhThu()
+        {
+            SqlCommand command = new SqlCommand("SELECT SUM(tongsotien) AS 'tongtien', ngaythanhtoan AS 'Ngay Thanh Toan' FROM doanhthu  GROUP BY ngaythanhtoan");
+            
+
+            // Số tiền tạm tính.
+            int tamtinh = 0;
+            System.Data.DataTable table = new System.Data.DataTable();
+            table = doanhthu.DoanhThu(command);
+            int n = table.Rows.Count;
+            for (int i = 0; i < n; i++)
+            {
+                tamtinh += Convert.ToInt32(table.Rows[i]["Tong So Tien"].ToString());
+            }
+            labelTongDoanhThu.Text = ("Tổng Doanh Thu:    " + tamtinh + " VND");
+        }*/
+
+
+
     }
 }
