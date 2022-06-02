@@ -43,7 +43,7 @@ namespace QuanLyNhaHang
                     SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE id = @id AND matkhau = @matkhau", mynh.GetConnection);
 
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = textBoxTaiKhoan.Text;
-                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;                  
+                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
 
                     DataTable table = new DataTable();
                     table = nhansu.GetNhanSu(command);
@@ -55,18 +55,20 @@ namespace QuanLyNhaHang
                         if (chucvu == "QuanLy") // Dành cho quản lý
                         {
 
-                            
-                                MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                MainForm mainForm = new MainForm();
-                                mainForm.Show(this);
 
-                            
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadingForm loading = new LoadingForm();
+                            loading.Show(this);
 
-
+                            MainForm mainForm = new MainForm();
+                            mainForm.Show(this);
                         }
                         else   // Dành cho nhân viên
                         {
                             MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadingForm loading = new LoadingForm();
+                            loading.Show(this);
+
                             OrderForm orderForm = new OrderForm();
                             orderForm.Show(this);
 
@@ -90,7 +92,7 @@ namespace QuanLyNhaHang
                 MessageBox.Show("Báo lỗi.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-        } 
+        }
 
 
         // Đóng chương trình
@@ -119,7 +121,7 @@ namespace QuanLyNhaHang
         //
         private void DangNhapForm_Load(object sender, EventArgs e)
         {
-                textBoxTaiKhoan.Focus();
+            textBoxTaiKhoan.Focus();
 
         }
 
@@ -140,7 +142,7 @@ namespace QuanLyNhaHang
         }
 
 
-      
+
         // Order
         private void radioButtonMucDichOrder_CheckedChanged(object sender, EventArgs e)
         {
@@ -244,6 +246,8 @@ namespace QuanLyNhaHang
         //
         private void buttonKhachOrder_Click(object sender, EventArgs e)
         {
+            LoadingForm loading = new LoadingForm();
+            loading.Show(this);
             AddOrderForm addOrderForm = new AddOrderForm();
             addOrderForm.Show(this);
         }

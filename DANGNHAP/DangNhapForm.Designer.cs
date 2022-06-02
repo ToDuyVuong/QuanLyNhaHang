@@ -29,6 +29,7 @@ namespace QuanLyNhaHang
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhapForm));
             this.buttonDangKy = new System.Windows.Forms.Button();
             this.linkLabelTaiKhoanDangNhap = new System.Windows.Forms.LinkLabel();
@@ -44,8 +45,11 @@ namespace QuanLyNhaHang
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.buttonKhachOrder = new System.Windows.Forms.Button();
+            this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBoxLogoDangNhap = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +64,7 @@ namespace QuanLyNhaHang
             this.buttonDangKy.Size = new System.Drawing.Size(168, 54);
             this.buttonDangKy.TabIndex = 32;
             this.buttonDangKy.Text = "Đăng Ký";
+            this.toolTipLogin.SetToolTip(this.buttonDangKy, "Đăng ký tài khoản mới");
             this.buttonDangKy.UseVisualStyleBackColor = false;
             this.buttonDangKy.Click += new System.EventHandler(this.buttonDangKy_Click);
             // 
@@ -87,6 +92,7 @@ namespace QuanLyNhaHang
             this.buttonThoat.Size = new System.Drawing.Size(158, 54);
             this.buttonThoat.TabIndex = 29;
             this.buttonThoat.Text = "Thoát";
+            this.toolTipLogin.SetToolTip(this.buttonThoat, "Thoát");
             this.buttonThoat.UseVisualStyleBackColor = false;
             this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
@@ -101,11 +107,13 @@ namespace QuanLyNhaHang
             this.buttonDangNhap.Size = new System.Drawing.Size(164, 54);
             this.buttonDangNhap.TabIndex = 28;
             this.buttonDangNhap.Text = "Đăng Nhập";
+            this.toolTipLogin.SetToolTip(this.buttonDangNhap, "Đăng nhập. Quản lý/ Nhân viên");
             this.buttonDangNhap.UseVisualStyleBackColor = false;
             this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // textBoxMatKhau
             // 
+            this.errorProvider.SetError(this.textBoxMatKhau, "Nhập mật khẩu");
             this.textBoxMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMatKhau.ForeColor = System.Drawing.Color.Black;
             this.textBoxMatKhau.Location = new System.Drawing.Point(265, 193);
@@ -113,6 +121,7 @@ namespace QuanLyNhaHang
             this.textBoxMatKhau.PasswordChar = '*';
             this.textBoxMatKhau.Size = new System.Drawing.Size(337, 30);
             this.textBoxMatKhau.TabIndex = 27;
+            this.toolTipLogin.SetToolTip(this.textBoxMatKhau, "Hãy nhập mật khẩu");
             this.textBoxMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMatKhau_KeyPress);
             // 
             // label2
@@ -128,12 +137,14 @@ namespace QuanLyNhaHang
             // 
             // textBoxTaiKhoan
             // 
+            this.errorProvider.SetError(this.textBoxTaiKhoan, "Nhập tài khoản");
             this.textBoxTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.textBoxTaiKhoan.Location = new System.Drawing.Point(265, 136);
             this.textBoxTaiKhoan.Name = "textBoxTaiKhoan";
             this.textBoxTaiKhoan.Size = new System.Drawing.Size(337, 30);
             this.textBoxTaiKhoan.TabIndex = 25;
+            this.toolTipLogin.SetToolTip(this.textBoxTaiKhoan, "Hãy nhập tài khoản");
             this.textBoxTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTaiKhoan_KeyPress);
             // 
             // labelTaiKhoan
@@ -152,7 +163,7 @@ namespace QuanLyNhaHang
             this.groupBox1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.groupBox1.Controls.Add(this.radioButtonMucDichOrder);
             this.groupBox1.Controls.Add(this.radioButtonMucDichQuanLy);
-            this.groupBox1.Location = new System.Drawing.Point(88, 482);
+            this.groupBox1.Location = new System.Drawing.Point(46, 441);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(214, 72);
             this.groupBox1.TabIndex = 36;
@@ -196,6 +207,7 @@ namespace QuanLyNhaHang
             this.buttonCheckOut.Size = new System.Drawing.Size(144, 54);
             this.buttonCheckOut.TabIndex = 40;
             this.buttonCheckOut.Text = "Check Out";
+            this.toolTipLogin.SetToolTip(this.buttonCheckOut, "Điểm danh đã rời ca làm");
             this.buttonCheckOut.UseVisualStyleBackColor = false;
             this.buttonCheckOut.Click += new System.EventHandler(this.buttonCheckOut_Click);
             // 
@@ -210,6 +222,7 @@ namespace QuanLyNhaHang
             this.buttonCheckIn.Size = new System.Drawing.Size(144, 54);
             this.buttonCheckIn.TabIndex = 39;
             this.buttonCheckIn.Text = "Check In";
+            this.toolTipLogin.SetToolTip(this.buttonCheckIn, "Điểm danh đã đến làm");
             this.buttonCheckIn.UseVisualStyleBackColor = false;
             this.buttonCheckIn.Click += new System.EventHandler(this.buttonCheckIn_Click);
             // 
@@ -219,13 +232,23 @@ namespace QuanLyNhaHang
             this.buttonKhachOrder.BackColor = System.Drawing.Color.Chartreuse;
             this.buttonKhachOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKhachOrder.ForeColor = System.Drawing.Color.Red;
-            this.buttonKhachOrder.Location = new System.Drawing.Point(326, 454);
+            this.buttonKhachOrder.Location = new System.Drawing.Point(299, 450);
             this.buttonKhachOrder.Name = "buttonKhachOrder";
-            this.buttonKhachOrder.Size = new System.Drawing.Size(204, 131);
+            this.buttonKhachOrder.Size = new System.Drawing.Size(267, 125);
             this.buttonKhachOrder.TabIndex = 41;
             this.buttonKhachOrder.Text = "Khách Order";
+            this.toolTipLogin.SetToolTip(this.buttonKhachOrder, "Khách hàng tự Order");
             this.buttonKhachOrder.UseVisualStyleBackColor = false;
             this.buttonKhachOrder.Click += new System.EventHandler(this.buttonKhachOrder_Click);
+            // 
+            // toolTipLogin
+            // 
+            this.toolTipLogin.IsBalloon = true;
+            this.toolTipLogin.ToolTipTitle = "Chú thích!!";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // pictureBoxLogoDangNhap
             // 
@@ -263,6 +286,7 @@ namespace QuanLyNhaHang
             this.Load += new System.EventHandler(this.DangNhapForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoDangNhap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,5 +309,7 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.Button buttonCheckOut;
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.Button buttonKhachOrder;
+        private System.Windows.Forms.ToolTip toolTipLogin;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

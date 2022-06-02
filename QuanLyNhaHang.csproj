@@ -54,6 +54,12 @@
     <Compile Include="CHAMCONG\ChamCongForm.Designer.cs">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANGNHAP\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGNHAP\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MONAN\DanhSachMonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CHAMCONG\ChamCongForm.resx">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANGNHAP\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MONAN\DanhSachMonForm.resx">
       <DependentUpon>DanhSachMonForm.cs</DependentUpon>
