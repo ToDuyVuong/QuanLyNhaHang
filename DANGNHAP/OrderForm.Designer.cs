@@ -28,97 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.bànĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.danhSáchBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.danhSáchOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.buttonDanhSachBanAn = new System.Windows.Forms.Button();
+            this.buttonDanhSachMon = new System.Windows.Forms.Button();
+            this.buttonOrderNew = new System.Windows.Forms.Button();
+            this.buttonDanhSachOrder = new System.Windows.Forms.Button();
+            this.buttonThanhToan = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // buttonDanhSachBanAn
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bànĂnToolStripMenuItem,
-            this.thanhToánToolStripMenuItem,
-            this.orderToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(570, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.buttonDanhSachBanAn.BackColor = System.Drawing.Color.Aquamarine;
+            this.buttonDanhSachBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDanhSachBanAn.Location = new System.Drawing.Point(50, 47);
+            this.buttonDanhSachBanAn.Name = "buttonDanhSachBanAn";
+            this.buttonDanhSachBanAn.Size = new System.Drawing.Size(193, 182);
+            this.buttonDanhSachBanAn.TabIndex = 1;
+            this.buttonDanhSachBanAn.Text = "Danh Sách Bàn";
+            this.buttonDanhSachBanAn.UseVisualStyleBackColor = false;
+            this.buttonDanhSachBanAn.Click += new System.EventHandler(this.buttonDanhSachBanAn_Click);
             // 
-            // bànĂnToolStripMenuItem
+            // buttonDanhSachMon
             // 
-            this.bànĂnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchBànToolStripMenuItem});
-            this.bànĂnToolStripMenuItem.Name = "bànĂnToolStripMenuItem";
-            this.bànĂnToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.bànĂnToolStripMenuItem.Text = "Bàn Ăn";
+            this.buttonDanhSachMon.BackColor = System.Drawing.Color.Aquamarine;
+            this.buttonDanhSachMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDanhSachMon.Location = new System.Drawing.Point(280, 47);
+            this.buttonDanhSachMon.Name = "buttonDanhSachMon";
+            this.buttonDanhSachMon.Size = new System.Drawing.Size(193, 182);
+            this.buttonDanhSachMon.TabIndex = 2;
+            this.buttonDanhSachMon.Text = "Danh Sách Món Ăn";
+            this.buttonDanhSachMon.UseVisualStyleBackColor = false;
+            this.buttonDanhSachMon.Click += new System.EventHandler(this.buttonDanhSachMon_Click);
             // 
-            // danhSáchBànToolStripMenuItem
+            // buttonOrderNew
             // 
-            this.danhSáchBànToolStripMenuItem.Name = "danhSáchBànToolStripMenuItem";
-            this.danhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.danhSáchBànToolStripMenuItem.Text = "Danh Sách bàn";
+            this.buttonOrderNew.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonOrderNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderNew.Location = new System.Drawing.Point(50, 269);
+            this.buttonOrderNew.Name = "buttonOrderNew";
+            this.buttonOrderNew.Size = new System.Drawing.Size(193, 182);
+            this.buttonOrderNew.TabIndex = 3;
+            this.buttonOrderNew.Text = "Order New";
+            this.buttonOrderNew.UseVisualStyleBackColor = false;
+            this.buttonOrderNew.Click += new System.EventHandler(this.buttonOrderNew_Click);
             // 
-            // thanhToánToolStripMenuItem
+            // buttonDanhSachOrder
             // 
-            this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.thanhToánToolStripMenuItem.Text = "Thanh Toán";
+            this.buttonDanhSachOrder.BackColor = System.Drawing.Color.Aquamarine;
+            this.buttonDanhSachOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDanhSachOrder.Location = new System.Drawing.Point(510, 47);
+            this.buttonDanhSachOrder.Name = "buttonDanhSachOrder";
+            this.buttonDanhSachOrder.Size = new System.Drawing.Size(193, 182);
+            this.buttonDanhSachOrder.TabIndex = 4;
+            this.buttonDanhSachOrder.Text = "Danh Sách Order";
+            this.buttonDanhSachOrder.UseVisualStyleBackColor = false;
+            this.buttonDanhSachOrder.Click += new System.EventHandler(this.buttonDanhSachOrder_Click);
             // 
-            // orderToolStripMenuItem
+            // buttonThanhToan
             // 
-            this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.orderNewToolStripMenuItem,
-            this.danhSáchOrderToolStripMenuItem});
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.orderToolStripMenuItem.Text = "Order";
+            this.buttonThanhToan.BackColor = System.Drawing.Color.Violet;
+            this.buttonThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThanhToan.Location = new System.Drawing.Point(280, 269);
+            this.buttonThanhToan.Name = "buttonThanhToan";
+            this.buttonThanhToan.Size = new System.Drawing.Size(193, 182);
+            this.buttonThanhToan.TabIndex = 5;
+            this.buttonThanhToan.Text = "Thanh Toán";
+            this.buttonThanhToan.UseVisualStyleBackColor = false;
+            this.buttonThanhToan.Click += new System.EventHandler(this.buttonThanhToan_Click);
             // 
-            // orderNewToolStripMenuItem
+            // buttonThoat
             // 
-            this.orderNewToolStripMenuItem.Name = "orderNewToolStripMenuItem";
-            this.orderNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.orderNewToolStripMenuItem.Text = "Order New";
-            this.orderNewToolStripMenuItem.Click += new System.EventHandler(this.orderNewToolStripMenuItem_Click);
-            // 
-            // danhSáchOrderToolStripMenuItem
-            // 
-            this.danhSáchOrderToolStripMenuItem.Name = "danhSáchOrderToolStripMenuItem";
-            this.danhSáchOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.danhSáchOrderToolStripMenuItem.Text = "Danh Sách Order";
-            this.danhSáchOrderToolStripMenuItem.Click += new System.EventHandler(this.danhSáchOrderToolStripMenuItem_Click);
+            this.buttonThoat.BackColor = System.Drawing.Color.Red;
+            this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoat.Location = new System.Drawing.Point(510, 269);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(193, 182);
+            this.buttonThoat.TabIndex = 6;
+            this.buttonThoat.Text = "Thoát";
+            this.buttonThoat.UseVisualStyleBackColor = false;
+            this.buttonThoat.Click += new System.EventHandler(this.button5_Click);
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LawnGreen;
-            this.ClientSize = new System.Drawing.Size(570, 358);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(759, 498);
+            this.Controls.Add(this.buttonThoat);
+            this.Controls.Add(this.buttonThanhToan);
+            this.Controls.Add(this.buttonDanhSachOrder);
+            this.Controls.Add(this.buttonOrderNew);
+            this.Controls.Add(this.buttonDanhSachMon);
+            this.Controls.Add(this.buttonDanhSachBanAn);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem bànĂnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem danhSáchBànToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderNewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem danhSáchOrderToolStripMenuItem;
+        private System.Windows.Forms.Button buttonDanhSachBanAn;
+        private System.Windows.Forms.Button buttonDanhSachMon;
+        private System.Windows.Forms.Button buttonOrderNew;
+        private System.Windows.Forms.Button buttonDanhSachOrder;
+        private System.Windows.Forms.Button buttonThanhToan;
+        private System.Windows.Forms.Button buttonThoat;
     }
 }

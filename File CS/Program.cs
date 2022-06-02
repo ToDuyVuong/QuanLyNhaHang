@@ -16,56 +16,7 @@ namespace QuanLyNhaHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            DangNhapForm dangNhap = new DangNhapForm();
-
-
-            if (dangNhap.ShowDialog() == DialogResult.OK)
-            {
-                if (dangNhap.radioButtonMucDichOrder.Checked)
-                {
-                    // Application.Run(new Progressbar());
-                    Application.Run(new OrderForm());
-                }
-                else
-                {
-                    Application.Run(new MainForm());
-                }
-            }
-            /*else
-            {
-                Application.Exit();
-            }*/
-
-
-
-
-
-            /*if (dangNhap.ShowDialog() == DialogResult.OK)
-            {
-                if (dangNhap.radioButtonQuanLy.Checked == true && dangNhap.radioButtonMucDichQuanLy.Checked == true)
-                {
-                    // Application.Run(new Progressbar());
-                    Application.Run(new MainForm());
-                }
-                else
-                {
-                    Application.Run(new OrderForm());
-                }    
-            }
-            *//*else
-            {
-                Application.Exit();
-            }*/
-
-
-
-
-
-
-
-
-            // Application.Run(new DangNhapForm());
+            Application.Run(new DangNhapForm());
         }
     }
 }

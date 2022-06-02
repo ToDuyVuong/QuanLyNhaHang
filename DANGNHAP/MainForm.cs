@@ -153,5 +153,16 @@ namespace QuanLyNhaHang
             ChamCongForm chamcongform = new ChamCongForm();
             chamcongform.Show(this);
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void danhSáchMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachMonForm printForm = new DanhSachMonForm();
+            printForm.Show(this);
+        }
     }
 }

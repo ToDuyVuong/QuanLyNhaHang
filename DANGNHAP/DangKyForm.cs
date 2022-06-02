@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -24,7 +25,17 @@ namespace QuanLyNhaHang
         //
         private void DangKyForm_Load(object sender, EventArgs e)
         {
+            SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE chucvu = 'QuanLy'");
 
+            
+
+            DataTable table = new DataTable();
+            table = nhansu.GetNhanSu(command);
+
+            if (table.Rows.Count == 2)
+            {
+                radioButtonQuanLy.Enabled = false;
+            }    
         }
 
         private void buttonThemTaiKhoan_Click(object sender, EventArgs e)

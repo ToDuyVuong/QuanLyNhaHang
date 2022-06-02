@@ -161,7 +161,8 @@ namespace QuanLyNhaHang
 
         private void PrintForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT *  FROM monan");
+            SqlCommand command = new SqlCommand("SELECT id AS 'Ma Mon', tenmon AS 'Ten Mon', gia AS 'Gia'" +
+                ", soluong AS 'So Luong', loaithucan AS 'Loai Thuc An'  FROM monan");
             fillGrid(command);
         }
 
@@ -174,6 +175,13 @@ namespace QuanLyNhaHang
             dataGridView1.RowTemplate.Height = 80;
             dataGridView1.DataSource = monan.GetMonAn(command);
             dataGridView1.AllowUserToAddRows = false;
+        }
+
+
+        //
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

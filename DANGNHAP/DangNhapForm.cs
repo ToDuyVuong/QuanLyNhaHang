@@ -18,13 +18,14 @@ namespace QuanLyNhaHang
             InitializeComponent();
         }
 
+        NHANSU nhansu = new NHANSU();
 
 
         // Load Form thêm tài khỏa
         private void buttonThemTaiKhoan_Click(object sender, EventArgs e)
         {
-           /* ThemTaiKhoanForm themTaiKhoan = new ThemTaiKhoanForm();
-            themTaiKhoan.Show(this);*/
+            /* ThemTaiKhoanForm themTaiKhoan = new ThemTaiKhoanForm();
+             themTaiKhoan.Show(this);*/
         }
 
 
@@ -35,85 +36,61 @@ namespace QuanLyNhaHang
         {
             MY_NH mynh = new MY_NH();
 
-            if(textBoxTaiKhoan.Text != "" && textBoxMatKhau.Text != "" &&
-                (radioButtonQuanLy.Checked != true || radioButtonNhanVien.Checked != true) &&
-                (radioButtonMucDichOrder.Checked != true || radioButtonMucDichQuanLy.Checked != true))
+            try
             {
-                /*string chucvu = "";
-                if(radioButtonQuanLy.Checked)
-                {
-                    chucvu = "Quan ly";
-                }
-                else
-                {
-                    chucvu = "Nhan vien";
-                }*/
-                SqlDataAdapter ad = new SqlDataAdapter();
-                DataTable dt = new DataTable();
-                if (radioButtonQuanLy.Checked) // Dành cho quản lý
+                if (textBoxTaiKhoan.Text != "" && textBoxMatKhau.Text != "")
                 {
                     SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE id = @id AND matkhau = @matkhau", mynh.GetConnection);
 
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = textBoxTaiKhoan.Text;
-                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
+                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;                  
 
-                    ad.SelectCommand = command;
-                    ad.Fill(dt);
+                    DataTable table = new DataTable();
+                    table = nhansu.GetNhanSu(command);
 
-                    if ((dt.Rows.Count > 0))
+                    if (table.Rows.Count > 0)
                     {
-                        //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
-                        //Globals.SetGlobalUserId(userid);
-                        if (radioButtonChamCong.Checked)
-                            MessageBox.Show("Check In thành công", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
+                        string chucvu = table.Rows[0]["chucvu"].ToString().Trim();
+
+                        if (chucvu == "QuanLy") // Dành cho quản lý
+                        {
+
+                            
+                                MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MainForm mainForm = new MainForm();
+                                mainForm.Show(this);
+
+                            
+
+
+                        }
+                        else   // Dành cho nhân viên
                         {
                             MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //if(radioButtonMucDichQuanLy.Checked == true)                        
-                            this.DialogResult = DialogResult.OK;
+                            OrderForm orderForm = new OrderForm();
+                            orderForm.Show(this);
+
                         }
                     }
                     else
                     {
                         MessageBox.Show("Tài khoản hoặc Mật khẩu đăng nhập không chính xác", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
 
+
                 }
-                else   // Dành cho nhân viên
+                else // Yêu cầu nhập đầy đủ thông tin
                 {
-                    SqlCommand command = new SqlCommand("SELECT * FROM nhansu WHERE id = @id AND matkhau = @matkhau", mynh.GetConnection);
-
-                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = textBoxTaiKhoan.Text;
-                    command.Parameters.Add("@matkhau", SqlDbType.VarChar).Value = textBoxMatKhau.Text;
-
-                    ad.SelectCommand = command;
-                    ad.Fill(dt);
-
-                    if ((dt.Rows.Count > 0))
-                    {
-                        //int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
-                        if(radioButtonChamCong.Checked)
-                        MessageBox.Show("Check In thành công", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else if(radioButtonMucDichOrder.Checked)    
-                        {
-                            MessageBox.Show("Đăng nhập thành công", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.DialogResult = DialogResult.OK;
-                        }  
-                        else
-                            MessageBox.Show("Đăng nhập thất bại", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản hoặc Mật khẩu đăng nhập không chính xác", "Thông báo Check In", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Tài khoản / Mật khẩu  chưa được nhập", "Thông báo đăng nhậpp", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else // Yêu cầu nhập đầy đủ thông tin
+            catch
             {
-                MessageBox.Show("Tài khoản / Mật khẩu / Chức vụ / Ca làm việc chưa được nhập", "Thông báo đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Báo lỗi.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-        }
+        } 
 
 
         // Đóng chương trình
@@ -135,7 +112,7 @@ namespace QuanLyNhaHang
         private void textBoxMatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
-                radioButtonQuanLy.Focus();
+                buttonDangNhap.Focus();
         }
 
 
@@ -167,31 +144,23 @@ namespace QuanLyNhaHang
         // Order
         private void radioButtonMucDichOrder_CheckedChanged(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            OrderForm orderForm = new OrderForm();
+            orderForm.Show(this);
         }
-
-        
-
-
-
-
-
-
-
-
-
 
 
         // Main Form Nhanh
         private void radioButtonMucDichQuanLy_CheckedChanged(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            MainForm mainForm = new MainForm();
+            mainForm.Show(this);
         }
 
 
         DateTime date = DateTime.Now;
         CHAMCONG chamcong = new CHAMCONG();
         MY_NH mynh = new MY_NH();
+
 
         //
         private void buttonCheckIn_Click(object sender, EventArgs e)
@@ -269,6 +238,14 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Check Out Không Thành Công ", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        //
+        private void buttonKhachOrder_Click(object sender, EventArgs e)
+        {
+            AddOrderForm addOrderForm = new AddOrderForm();
+            addOrderForm.Show(this);
         }
     }
 }
