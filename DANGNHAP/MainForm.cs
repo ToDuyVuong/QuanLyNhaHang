@@ -147,5 +147,11 @@ namespace QuanLyNhaHang
             ThongKeMonForm thongKeMonForm = new ThongKeMonForm();
             thongKeMonForm.Show(this);
         }
+
+        private void chấmCôngNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChamCongForm chamcongform = new ChamCongForm();
+            chamcongform.Show(this);
+        }
     }
 }

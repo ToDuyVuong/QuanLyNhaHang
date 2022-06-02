@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CHAMCONG\CHAMCONG.cs" />
+    <Compile Include="CHAMCONG\ChamCongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAMCONG\ChamCongForm.Designer.cs">
+      <DependentUpon>ChamCongForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DOANHTHU\DoanhThuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BANAN\DanhSachBanAnForm.resx">
       <DependentUpon>DanhSachBanAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAMCONG\ChamCongForm.resx">
+      <DependentUpon>ChamCongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DOANHTHU\DoanhThuForm.resx">
       <DependentUpon>DoanhThuForm.cs</DependentUpon>

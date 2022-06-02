@@ -75,7 +75,7 @@ namespace QuanLyNhaHang
                 {
                     textBoxIdOrder.Text = "";
                     string t = dataGridViewBanAn.CurrentRow.Cells[0].Value.ToString();
-                    
+
                     int idban = Convert.ToInt32(dataGridViewBanAn.CurrentRow.Cells[0].Value.ToString());
                     textBoxBanAn.Text = dataGridViewBanAn.CurrentRow.Cells[0].Value.ToString();
                     textBoxBanAn.Enabled = false;
@@ -83,6 +83,37 @@ namespace QuanLyNhaHang
                         ", trangthai AS 'Trang Thai' FROM od WHERE idban = @idban AND (trangthai ='order' OR trangthai = 'cho') GROUP BY id, idban, trangthai", mynh.GetConnection);
                     command3.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
                     dataGridViewOrderBan.DataSource = order.GetOrder(command3);
+
+                    try
+                    {
+                        textBoxIdOrder.Text = dataGridViewOrderBan.CurrentRow.Cells[0].Value.ToString();
+                        textBoxIdOrder.Enabled = false;
+
+                        int id = Convert.ToInt32(textBoxIdOrder.Text);
+
+                        SqlCommand command = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', " +
+                            "gia AS 'Gia' FROM od  WHERE id = @id AND idban = @idban", mynh.GetConnection);
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                        command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+                        dataGridViewOrder.DataSource = order.GetOrder(command);
+
+                        int tamtinh = 0;
+                        DataTable table = new DataTable();
+                        table = order.GetOrder(command);
+                        int n = table.Rows.Count;
+                        for (int i = 0; i < n; i++)
+                        {
+                            tamtinh += Convert.ToInt32(table.Rows[i]["gia"].ToString());
+                        }
+                        labelTamTinh.Text = ("Tạm tính: " + tamtinh + " VND");
+
+
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
@@ -425,6 +456,9 @@ namespace QuanLyNhaHang
 
                 DanhSachOrderForm_Load(sender, e);
 
+                // Updete lại trạng thái của bàn
+                banan.UpdateTrangThaiBanAn(idban, false);
+
                 MessageBox.Show("Xóa bàn order thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
 
                 textBoxIdOrder.Text = "";
@@ -440,7 +474,7 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
 
         }
 
@@ -512,7 +546,7 @@ namespace QuanLyNhaHang
         private void radioButtonDaOrder_CheckedChanged(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 textBoxBanAn.Enabled = false;
                 textBoxIdOrder.Enabled = false;
                 SqlCommand command3 = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban'" +
@@ -528,7 +562,7 @@ namespace QuanLyNhaHang
             }
         }
 
-        
+
 
         // Hiện tát cả order bàn
         private void radioButtonTatCa_CheckedChanged(object sender, EventArgs e)
@@ -539,7 +573,7 @@ namespace QuanLyNhaHang
                 textBoxIdOrder.Enabled = false;
                 SqlCommand command3 = new SqlCommand("SELECT id AS 'Ma Order', idban AS 'Ma Ban'" +
                     ", trangthai AS 'Trang Thai' FROM od  WHERE trangthai = 'cho' OR trangthai = 'order' GROUP BY id, idban, trangthai");
-                
+
                 dataGridViewOrderBan.DataSource = order.GetOrder(command3);
 
 
@@ -561,10 +595,89 @@ namespace QuanLyNhaHang
 
 
 
-        //
+        // Xóa món
         private void buttonXoaMon_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id = Convert.ToInt32(textBoxIdOrder.Text);
+                int idmon = Convert.ToInt32(textBoxIdMon.Text);
+                int idban = Convert.ToInt32(textBoxBanAn.Text);
+                int soluongmon = Convert.ToInt32(textBoxSoLuongMon.Text);
+                string tenmon = textBoxTenMon.Text;
 
+                // Xóa món
+                if (textBoxLoaiThucAn.Text == "")
+                {
+                    order.DeleteOrderMon(id, idban, idmon);
+
+
+                    textBoxIdMon.Text = "";
+                    textBoxSoLuongMon.Text = "";
+                    textBoxTenMon.Text = "";
+                    textBoxGia.Text = "";
+
+                    // Cập nhật lại Danh sách order
+                    SqlCommand command = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', gia AS 'Gia' FROM od  WHERE id = @id AND idban = @idban", mynh.GetConnection);
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                    command.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+                    dataGridViewOrder.DataSource = order.GetOrder(command);
+
+                    // Cập nhật lại số lượng món
+                    int soluong = Convert.ToInt32(dataGridViewMonAn.CurrentRow.Cells[3].Value.ToString());
+                    int soluongconlai = soluong + soluongmon;
+                    monan.UpdateSoLuongMonAn(tenmon, soluongconlai);
+
+                    // Cập nhật bàn nếu xóa hết món
+                    DataTable table = new DataTable();
+                    table = monan.GetMonAn(command);
+                    if (table.Rows.Count == 0)
+                    {
+                        banan.UpdateTrangThaiBanAn(idban, false);
+                    }
+
+
+                    // Danh sách bàn ăn
+                    SqlCommand command1 = new SqlCommand("SELECT id AS 'Ma Ban An', soluongghe AS 'So Luong Ghe', trangthai AS 'Trang Thai' FROM banan");
+                    dataGridViewBanAn.DataSource = banan.GetBanAn(command1);
+
+                    // Danh sách món
+                    SqlCommand command2 = new SqlCommand("SELECT id AS 'Ma Mon An', tenmon AS 'Ten Mon An', gia AS 'Gia', " +
+                        " soluong AS 'So Luong', loaithucan AS 'Loai Thuc An' FROM monan");
+                    dataGridViewMonAn.DataSource = monan.GetMonAn(command2);
+
+                    SqlCommand command3 = new SqlCommand("SELECT tenmon AS 'Ten Mon', soluong AS 'So Luong', " +
+                    "gia AS 'Gia' FROM od  WHERE id = @id AND idban = @idban", mynh.GetConnection);
+                    command3.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                    command3.Parameters.Add("@idban", SqlDbType.Int).Value = idban;
+                    dataGridViewOrder.DataSource = order.GetOrder(command3);
+
+                    // Số tiền tạm tính.
+                    int tamtinh = 0;
+                    DataTable table1 = new DataTable();
+                    table1 = order.GetOrder(command);
+                    int n = table1.Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        tamtinh += Convert.ToInt32(table1.Rows[i]["gia"].ToString());
+                    }
+                    labelTamTinh.Text = ("Tạm tính: " + tamtinh + " VND");
+
+                    MessageBox.Show("Đã xóa món!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else
+                {
+                    textBoxIdMon.Text = "";
+                    textBoxSoLuongMon.Text = "";
+                    textBoxTenMon.Text = "";
+                    textBoxGia.Text = "";
+                    textBoxLoaiThucAn.Text = "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Báo lỗi!!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

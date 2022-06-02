@@ -37,8 +37,7 @@ namespace QuanLyNhaHang
 
             if(textBoxTaiKhoan.Text != "" && textBoxMatKhau.Text != "" &&
                 (radioButtonQuanLy.Checked != true || radioButtonNhanVien.Checked != true) &&
-                (radioButtonMucDichOrder.Checked != true || radioButtonMucDichQuanLy.Checked != true ||
-                radioButtonChamCong.Checked != true))
+                (radioButtonMucDichOrder.Checked != true || radioButtonMucDichQuanLy.Checked != true))
             {
                 /*string chucvu = "";
                 if(radioButtonQuanLy.Checked)
@@ -187,6 +186,89 @@ namespace QuanLyNhaHang
         private void radioButtonMucDichQuanLy_CheckedChanged(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+
+        DateTime date = DateTime.Now;
+        CHAMCONG chamcong = new CHAMCONG();
+        MY_NH mynh = new MY_NH();
+
+        //
+        private void buttonCheckIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime checkin = Convert.ToDateTime(DateTime.Now.ToString());
+                int gio = date.Hour;
+                int phut = date.Minute;
+                int giay = date.Second;
+                int id = Convert.ToInt32(textBoxTaiKhoan.Text);
+                string hovaten = chamcong.HoVaTen(textBoxTaiKhoan.Text, textBoxMatKhau.Text);
+                if (textBoxTaiKhoan.Text == "")
+                {
+                    textBoxTaiKhoan.Focus();
+                }
+                else if (textBoxMatKhau.Text == "")
+                {
+                    textBoxMatKhau.Focus();
+                }
+                if (chamcong.DangNhap(textBoxTaiKhoan.Text, textBoxMatKhau.Text))
+                {
+                    if (chamcong.CheckIn(id, checkin, gio, phut, giay))
+                    {
+                        MessageBox.Show("check in thành công ", "checkin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Check In Không Thành Công ", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        //
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                SqlCommand command = new SqlCommand("SELECT hovaten FROM login WHERE id =@id, pasword=@pass", mynh.GetConnection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                DateTime checkout = Convert.ToDateTime(DateTime.Now.ToString());
+                int gio = date.Hour;
+                int phut = date.Minute;
+                int giay = date.Second;
+                int id = Convert.ToInt32(textBoxTaiKhoan.Text);
+                if (textBoxTaiKhoan.Text == "")
+                {
+                    textBoxTaiKhoan.Focus();
+                }
+                else if (textBoxMatKhau.Text == "")
+                {
+                    textBoxMatKhau.Focus();
+                }
+                else if (chamcong.DangNhap(textBoxTaiKhoan.Text, textBoxMatKhau.Text))
+                {
+                    if (chamcong.CheckOut(id, checkout, gio, phut, giay))
+                    {
+                        MessageBox.Show("Check Out Thành Công ", "CheckIn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Check Out Không Thành Công ", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
