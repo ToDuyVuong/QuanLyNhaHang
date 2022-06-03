@@ -164,5 +164,11 @@ namespace QuanLyNhaHang
             DanhSachMonForm printForm = new DanhSachMonForm();
             printForm.Show(this);
         }
+
+        private void chếBiếnMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheBienMonAnForm cheBienMonAnForm = new CheBienMonAnForm();
+            cheBienMonAnForm.Show(this);
+        }
     }
 }

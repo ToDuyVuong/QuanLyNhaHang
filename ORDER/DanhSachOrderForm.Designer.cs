@@ -61,6 +61,7 @@ namespace QuanLyNhaHang
             this.buttonThanhToan = new System.Windows.Forms.Button();
             this.radioButtonDaOrder = new System.Windows.Forms.RadioButton();
             this.radioButtonTatCa = new System.Windows.Forms.RadioButton();
+            this.labelDanhSachMonOrder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanAn)).BeginInit();
@@ -71,7 +72,7 @@ namespace QuanLyNhaHang
             // 
             this.buttonXoaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonXoaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaBan.Location = new System.Drawing.Point(349, 242);
+            this.buttonXoaBan.Location = new System.Drawing.Point(355, 202);
             this.buttonXoaBan.Name = "buttonXoaBan";
             this.buttonXoaBan.Size = new System.Drawing.Size(141, 31);
             this.buttonXoaBan.TabIndex = 54;
@@ -260,7 +261,7 @@ namespace QuanLyNhaHang
             // textBoxBanAn
             // 
             this.textBoxBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBanAn.Location = new System.Drawing.Point(180, 241);
+            this.textBoxBanAn.Location = new System.Drawing.Point(186, 201);
             this.textBoxBanAn.Name = "textBoxBanAn";
             this.textBoxBanAn.Size = new System.Drawing.Size(147, 29);
             this.textBoxBanAn.TabIndex = 34;
@@ -269,7 +270,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdBanAn.AutoSize = true;
             this.labelIdBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdBanAn.Location = new System.Drawing.Point(22, 246);
+            this.labelIdBanAn.Location = new System.Drawing.Point(28, 206);
             this.labelIdBanAn.Name = "labelIdBanAn";
             this.labelIdBanAn.Size = new System.Drawing.Size(118, 24);
             this.labelIdBanAn.TabIndex = 33;
@@ -278,7 +279,7 @@ namespace QuanLyNhaHang
             // textBoxIdOrder
             // 
             this.textBoxIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdOrder.Location = new System.Drawing.Point(180, 180);
+            this.textBoxIdOrder.Location = new System.Drawing.Point(186, 140);
             this.textBoxIdOrder.Name = "textBoxIdOrder";
             this.textBoxIdOrder.Size = new System.Drawing.Size(147, 29);
             this.textBoxIdOrder.TabIndex = 32;
@@ -287,7 +288,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdOrder.AutoSize = true;
             this.labelIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdOrder.Location = new System.Drawing.Point(22, 185);
+            this.labelIdOrder.Location = new System.Drawing.Point(28, 145);
             this.labelIdOrder.Name = "labelIdOrder";
             this.labelIdOrder.Size = new System.Drawing.Size(104, 24);
             this.labelIdOrder.TabIndex = 31;
@@ -390,12 +391,23 @@ namespace QuanLyNhaHang
             this.radioButtonTatCa.UseVisualStyleBackColor = true;
             this.radioButtonTatCa.CheckedChanged += new System.EventHandler(this.radioButtonTatCa_CheckedChanged);
             // 
+            // labelDanhSachMonOrder
+            // 
+            this.labelDanhSachMonOrder.AutoSize = true;
+            this.labelDanhSachMonOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDanhSachMonOrder.Location = new System.Drawing.Point(26, 278);
+            this.labelDanhSachMonOrder.Name = "labelDanhSachMonOrder";
+            this.labelDanhSachMonOrder.Size = new System.Drawing.Size(302, 31);
+            this.labelDanhSachMonOrder.TabIndex = 62;
+            this.labelDanhSachMonOrder.Text = "Danh Sách Món Order";
+            // 
             // DanhSachOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.ClientSize = new System.Drawing.Size(1760, 905);
+            this.Controls.Add(this.labelDanhSachMonOrder);
             this.Controls.Add(this.radioButtonTatCa);
             this.Controls.Add(this.radioButtonDaOrder);
             this.Controls.Add(this.buttonThanhToan);
@@ -475,5 +487,6 @@ namespace QuanLyNhaHang
         public System.Windows.Forms.TextBox textBoxIdOrder;
         private System.Windows.Forms.RadioButton radioButtonDaOrder;
         private System.Windows.Forms.RadioButton radioButtonTatCa;
+        private System.Windows.Forms.Label labelDanhSachMonOrder;
     }
 }

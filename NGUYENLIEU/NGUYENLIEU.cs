@@ -171,5 +171,27 @@ namespace QuanLyNhaHang
         {
             return execCount("SELECT COUNT(*) FROM nguyenlieu WHERE donvi = 'l' OR donvi = 'ml'");
         }
+
+
+        //
+        public bool UpdateSoLuongNguyenLieu(string TenNguyenLieu, int SoLuong)
+        {
+            SqlCommand command = new SqlCommand("update nguyenlieu set khoiluong = @soluong " +
+                " where tennguyenlieu = @tennguyenlieu", mynh.GetConnection);
+            command.Parameters.Add("@soluong", SqlDbType.Int).Value = SoLuong;
+            command.Parameters.Add("@tennguyenlieu", SqlDbType.Char).Value = TenNguyenLieu;
+            mynh.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mynh.closeConnection();
+                return true;
+            }
+            else
+            {
+                mynh.closeConnection();
+                return false;
+            }
+        }
     }
 }

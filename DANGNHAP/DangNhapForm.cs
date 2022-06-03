@@ -208,10 +208,7 @@ namespace QuanLyNhaHang
             try
             {
 
-                SqlCommand command = new SqlCommand("SELECT hovaten FROM login WHERE id =@id, pasword=@pass", mynh.GetConnection);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
+               
 
                 DateTime checkout = Convert.ToDateTime(DateTime.Now.ToString());
                 int gio = date.Hour;
@@ -230,7 +227,7 @@ namespace QuanLyNhaHang
                 {
                     if (chamcong.CheckOut(id, checkout, gio, phut, giay))
                     {
-                        MessageBox.Show("Check Out Thành Công ", "CheckIn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Check Out Thành Công ", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 

@@ -19,7 +19,7 @@ namespace QuanLyNhaHang
         }
 
         MONAN monan = new MONAN();
-
+        MY_NH mynh = new MY_NH();
 
         //
         private void DanhSachMonForm_Load(object sender, EventArgs e)
@@ -45,6 +45,18 @@ namespace QuanLyNhaHang
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("SELECT id AS 'Ma Mon', tenmon AS 'Ten Mon', gia AS 'Gia'" +
+                ", soluong AS 'So Luong', loaithucan AS 'Loai Thuc An'  FROM monan WHERE tenmon LIKE'%" + textBoxTimKiem.Text + "%'");
+            fillGrid(command);
+        }
+
+        private void buttonTaiLai_Click(object sender, EventArgs e)
+        {
+            DanhSachMonForm_Load(sender, e);
         }
     }
 }

@@ -56,6 +56,7 @@ namespace QuanLyNhaHang
             this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
             this.buttonCheckOrder = new System.Windows.Forms.Button();
             this.buttonXoaBan = new System.Windows.Forms.Button();
+            this.labelDanhSachMonOrder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
@@ -93,7 +94,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdOrder.AutoSize = true;
             this.labelIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdOrder.Location = new System.Drawing.Point(56, 83);
+            this.labelIdOrder.Location = new System.Drawing.Point(51, 70);
             this.labelIdOrder.Name = "labelIdOrder";
             this.labelIdOrder.Size = new System.Drawing.Size(104, 24);
             this.labelIdOrder.TabIndex = 4;
@@ -102,7 +103,7 @@ namespace QuanLyNhaHang
             // textBoxIdOrder
             // 
             this.textBoxIdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdOrder.Location = new System.Drawing.Point(214, 78);
+            this.textBoxIdOrder.Location = new System.Drawing.Point(209, 65);
             this.textBoxIdOrder.Name = "textBoxIdOrder";
             this.textBoxIdOrder.Size = new System.Drawing.Size(147, 29);
             this.textBoxIdOrder.TabIndex = 5;
@@ -110,7 +111,7 @@ namespace QuanLyNhaHang
             // textBoxBanAn
             // 
             this.textBoxBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBanAn.Location = new System.Drawing.Point(214, 139);
+            this.textBoxBanAn.Location = new System.Drawing.Point(209, 126);
             this.textBoxBanAn.Name = "textBoxBanAn";
             this.textBoxBanAn.Size = new System.Drawing.Size(147, 29);
             this.textBoxBanAn.TabIndex = 7;
@@ -119,7 +120,7 @@ namespace QuanLyNhaHang
             // 
             this.labelIdBanAn.AutoSize = true;
             this.labelIdBanAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdBanAn.Location = new System.Drawing.Point(56, 144);
+            this.labelIdBanAn.Location = new System.Drawing.Point(51, 131);
             this.labelIdBanAn.Name = "labelIdBanAn";
             this.labelIdBanAn.Size = new System.Drawing.Size(118, 24);
             this.labelIdBanAn.TabIndex = 6;
@@ -297,9 +298,9 @@ namespace QuanLyNhaHang
             // dataGridViewOrder
             // 
             this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(48, 229);
+            this.dataGridViewOrder.Location = new System.Drawing.Point(48, 234);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
-            this.dataGridViewOrder.Size = new System.Drawing.Size(356, 302);
+            this.dataGridViewOrder.Size = new System.Drawing.Size(356, 297);
             this.dataGridViewOrder.TabIndex = 25;
             this.dataGridViewOrder.DoubleClick += new System.EventHandler(this.dataGridViewOrder_DoubleClick);
             // 
@@ -307,7 +308,7 @@ namespace QuanLyNhaHang
             // 
             this.buttonCheckOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttonCheckOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCheckOrder.Location = new System.Drawing.Point(382, 78);
+            this.buttonCheckOrder.Location = new System.Drawing.Point(377, 65);
             this.buttonCheckOrder.Name = "buttonCheckOrder";
             this.buttonCheckOrder.Size = new System.Drawing.Size(128, 33);
             this.buttonCheckOrder.TabIndex = 26;
@@ -319,7 +320,7 @@ namespace QuanLyNhaHang
             // 
             this.buttonXoaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonXoaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaBan.Location = new System.Drawing.Point(382, 137);
+            this.buttonXoaBan.Location = new System.Drawing.Point(377, 124);
             this.buttonXoaBan.Name = "buttonXoaBan";
             this.buttonXoaBan.Size = new System.Drawing.Size(128, 31);
             this.buttonXoaBan.TabIndex = 27;
@@ -327,12 +328,23 @@ namespace QuanLyNhaHang
             this.buttonXoaBan.UseVisualStyleBackColor = false;
             this.buttonXoaBan.Click += new System.EventHandler(this.buttonXoaBan_Click);
             // 
+            // labelDanhSachMonOrder
+            // 
+            this.labelDanhSachMonOrder.AutoSize = true;
+            this.labelDanhSachMonOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDanhSachMonOrder.Location = new System.Drawing.Point(49, 187);
+            this.labelDanhSachMonOrder.Name = "labelDanhSachMonOrder";
+            this.labelDanhSachMonOrder.Size = new System.Drawing.Size(302, 31);
+            this.labelDanhSachMonOrder.TabIndex = 28;
+            this.labelDanhSachMonOrder.Text = "Danh Sách Món Order";
+            // 
             // AddOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LawnGreen;
             this.ClientSize = new System.Drawing.Size(1515, 822);
+            this.Controls.Add(this.labelDanhSachMonOrder);
             this.Controls.Add(this.buttonXoaBan);
             this.Controls.Add(this.buttonCheckOrder);
             this.Controls.Add(this.dataGridViewOrder);
@@ -401,5 +413,6 @@ namespace QuanLyNhaHang
         public System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.Button buttonCheckOrder;
         private System.Windows.Forms.Button buttonXoaBan;
+        private System.Windows.Forms.Label labelDanhSachMonOrder;
     }
 }
