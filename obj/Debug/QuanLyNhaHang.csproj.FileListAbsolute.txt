@@ -52,3 +52,4 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Deb
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachMonForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.LoadingForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.CheBienMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.PhanCongNhanSuForm.resources

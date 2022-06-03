@@ -170,5 +170,11 @@ namespace QuanLyNhaHang
             CheBienMonAnForm cheBienMonAnForm = new CheBienMonAnForm();
             cheBienMonAnForm.Show(this);
         }
+
+        private void caLàmViệcNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhanCongNhanSuForm phanCongNhanSuForm = new PhanCongNhanSuForm();
+            phanCongNhanSuForm.Show(this);
+        }
     }
 }

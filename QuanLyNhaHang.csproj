@@ -54,11 +54,11 @@
     <Compile Include="CHAMCONG\ChamCongForm.Designer.cs">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CHEBIENMONAN.cs" />
-    <Compile Include="CheBienMonAnForm.cs">
+    <Compile Include="MONAN\CHEBIENMONAN.cs" />
+    <Compile Include="MONAN\CheBienMonAnForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheBienMonAnForm.Designer.cs">
+    <Compile Include="MONAN\CheBienMonAnForm.Designer.cs">
       <DependentUpon>CheBienMonAnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DANGNHAP\LoadingForm.cs">
@@ -133,6 +133,13 @@
     </Compile>
     <Compile Include="NGUYENLIEU\NGUYENLIEU.cs" />
     <Compile Include="ORDER\ORDER.cs" />
+    <Compile Include="PHANCONG\PHANCONG.cs" />
+    <Compile Include="PHANCONG\PhanCongNhanSuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PHANCONG\PhanCongNhanSuForm.Designer.cs">
+      <DependentUpon>PhanCongNhanSuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QUANLYNHANSU\DanhSachNhanSuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,7 +251,7 @@
     <EmbeddedResource Include="CHAMCONG\ChamCongForm.resx">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CheBienMonAnForm.resx">
+    <EmbeddedResource Include="MONAN\CheBienMonAnForm.resx">
       <DependentUpon>CheBienMonAnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANGNHAP\LoadingForm.resx">
@@ -273,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ORDER\AddOrderForm.resx">
       <DependentUpon>AddOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHANCONG\PhanCongNhanSuForm.resx">
+      <DependentUpon>PhanCongNhanSuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QUANLYNHANSU\ChinhSuaNhanSuForm.resx">
       <DependentUpon>ChinhSuaNhanSuForm.cs</DependentUpon>

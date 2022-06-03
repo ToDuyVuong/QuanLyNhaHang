@@ -20,7 +20,7 @@ namespace QuanLyNhaHang
         }
 
         NHANSU nhansu = new NHANSU();
-
+        PHANCONG phancong = new PHANCONG();
 
         //
         private void DangKyForm_Load(object sender, EventArgs e)
@@ -40,68 +40,98 @@ namespace QuanLyNhaHang
 
         private void buttonThemTaiKhoan_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxTaiKhoan.Text);
-            string hoten = textBoxHoTen.Text;
-            string gioitinh = "Nam";
-            if (radioButtonGioiTinhNu.Checked)
+            try
             {
-                gioitinh = "Nu";
-            }
-            string chucvu = "NhanVien";
-            if(radioButtonQuanLy.Checked)
-            {
-                chucvu = "QuanLy";
-            }
-            DateTime ngaysinh = dateTimePickerNgaySinh.Value;
-            string diachi = textBoxDiaChi.Text;
-            string sdt = textBoxSDT.Text;
-            string matkhau = textBoxMatKhau.Text;
-            string xacnhanmatkhau = textBoxXacNhanMatKhau.Text;
-
-            MemoryStream hinh = new MemoryStream();
-            int born_year = dateTimePickerNgaySinh.Value.Year;
-            int this_year = DateTime.Now.Year;
-
-            // sv tu 10 - 100
-            if (((this_year - born_year) < 18) || ((this_year - born_year) > 60))
-            {
-                MessageBox.Show("Độ tuổi lao đông từ 18 tới 60 tuổi", "Thông Báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (CheckDongTrong())
+                int id = Convert.ToInt32(textBoxTaiKhoan.Text);
+                string hoten = textBoxHoTen.Text;
+                string gioitinh = "Nam";
+                if (radioButtonGioiTinhNu.Checked)
                 {
-                    MessageBox.Show("Thông tin chưa được điều đầy đủ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    gioitinh = "Nu";
+                }
+                string chucvu = "NhanVien";
+                if (radioButtonQuanLy.Checked)
+                {
+                    chucvu = "QuanLy";
+                }
+                DateTime ngaysinh = dateTimePickerNgaySinh.Value;
+                string diachi = textBoxDiaChi.Text;
+                string sdt = textBoxSDT.Text;
+                string matkhau = textBoxMatKhau.Text;
+                string xacnhanmatkhau = textBoxXacNhanMatKhau.Text;
 
+                MemoryStream hinh = new MemoryStream();
+                int born_year = dateTimePickerNgaySinh.Value.Year;
+                int this_year = DateTime.Now.Year;
+
+                // sv tu 10 - 100
+                if (((this_year - born_year) < 18) || ((this_year - born_year) > 60))
+                {
+                    MessageBox.Show("Độ tuổi lao đông từ 18 tới 60 tuổi", "Thông Báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    if (matkhau == xacnhanmatkhau)
+                    if (CheckDongTrong())
                     {
-                        if (radioButtonQuanLy.Checked == true)
-                        {
-                            pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
-                            if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
-                                MessageBox.Show("Đăng ký tài khoản quản lý mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
-                            if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
-                                MessageBox.Show("Đăng ký tài khoản nhanvien mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        MessageBox.Show("Thông tin chưa được điều đầy đủ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                     }
                     else
                     {
-                        MessageBox.Show("Mật khẩu xác nhận không trùng khớp!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (matkhau == xacnhanmatkhau)
+                        {
+                            if (radioButtonQuanLy.Checked == true)
+                            {
+                                pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
+                                if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
+                                {
+                                    int calam = 1;
+                                    
+                                    // Thêm phân công
+                                    if (phancong.InsertPhanCong(id, hoten, calam, 1))
+                                    {
+                                        MessageBox.Show("Đăng ký tài khoản quản lý mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                        MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                else
+                                    MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
+                                if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
+                                {
 
+                                    Random rd = new Random();
+                                    int calam = rd.Next(1, 4);
+                                    // Thêm phân công
+                                    if (phancong.InsertPhanCong(id, hoten, calam, 0))
+                                    {
+                                        MessageBox.Show("Đăng ký tài khoản nhân viên mới thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    }
+                                    else
+                                        MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                }
+                                else
+                                    MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mật khẩu xác nhận không trùng khớp!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
             

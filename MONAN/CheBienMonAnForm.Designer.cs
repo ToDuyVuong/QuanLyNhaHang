@@ -72,7 +72,7 @@ namespace QuanLyNhaHang
             // dataGridViewNguyenLieu
             // 
             this.dataGridViewNguyenLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNguyenLieu.Location = new System.Drawing.Point(69, 671);
+            this.dataGridViewNguyenLieu.Location = new System.Drawing.Point(69, 654);
             this.dataGridViewNguyenLieu.Name = "dataGridViewNguyenLieu";
             this.dataGridViewNguyenLieu.Size = new System.Drawing.Size(382, 250);
             this.dataGridViewNguyenLieu.TabIndex = 1;
@@ -103,7 +103,7 @@ namespace QuanLyNhaHang
             // dataGridViewCheBienMon
             // 
             this.dataGridViewCheBienMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCheBienMon.Location = new System.Drawing.Point(599, 225);
+            this.dataGridViewCheBienMon.Location = new System.Drawing.Point(608, 225);
             this.dataGridViewCheBienMon.Name = "dataGridViewCheBienMon";
             this.dataGridViewCheBienMon.Size = new System.Drawing.Size(760, 388);
             this.dataGridViewCheBienMon.TabIndex = 4;
@@ -120,16 +120,16 @@ namespace QuanLyNhaHang
             // textBoxTenMon
             // 
             this.textBoxTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTenMon.Location = new System.Drawing.Point(233, 466);
+            this.textBoxTenMon.Location = new System.Drawing.Point(206, 447);
             this.textBoxTenMon.Name = "textBoxTenMon";
-            this.textBoxTenMon.Size = new System.Drawing.Size(245, 29);
+            this.textBoxTenMon.Size = new System.Drawing.Size(226, 29);
             this.textBoxTenMon.TabIndex = 9;
             // 
             // labelTenMon
             // 
             this.labelTenMon.AutoSize = true;
             this.labelTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenMon.Location = new System.Drawing.Point(75, 471);
+            this.labelTenMon.Location = new System.Drawing.Point(75, 450);
             this.labelTenMon.Name = "labelTenMon";
             this.labelTenMon.Size = new System.Drawing.Size(100, 24);
             this.labelTenMon.TabIndex = 8;
@@ -190,7 +190,7 @@ namespace QuanLyNhaHang
             // 
             this.radioButtonKhoiLuong.AutoSize = true;
             this.radioButtonKhoiLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonKhoiLuong.Location = new System.Drawing.Point(486, 722);
+            this.radioButtonKhoiLuong.Location = new System.Drawing.Point(476, 741);
             this.radioButtonKhoiLuong.Name = "radioButtonKhoiLuong";
             this.radioButtonKhoiLuong.Size = new System.Drawing.Size(129, 26);
             this.radioButtonKhoiLuong.TabIndex = 33;
@@ -203,7 +203,7 @@ namespace QuanLyNhaHang
             // 
             this.radioButtonTheTich.AutoSize = true;
             this.radioButtonTheTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTheTich.Location = new System.Drawing.Point(486, 772);
+            this.radioButtonTheTich.Location = new System.Drawing.Point(476, 791);
             this.radioButtonTheTich.Name = "radioButtonTheTich";
             this.radioButtonTheTich.Size = new System.Drawing.Size(108, 26);
             this.radioButtonTheTich.TabIndex = 34;
@@ -216,7 +216,7 @@ namespace QuanLyNhaHang
             // 
             this.radioButtonTatCa.AutoSize = true;
             this.radioButtonTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTatCa.Location = new System.Drawing.Point(486, 674);
+            this.radioButtonTatCa.Location = new System.Drawing.Point(476, 693);
             this.radioButtonTatCa.Name = "radioButtonTatCa";
             this.radioButtonTatCa.Size = new System.Drawing.Size(89, 26);
             this.radioButtonTatCa.TabIndex = 35;
@@ -252,7 +252,7 @@ namespace QuanLyNhaHang
             // textBoxSoPhanMuonCheBien
             // 
             this.textBoxSoPhanMuonCheBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSoPhanMuonCheBien.Location = new System.Drawing.Point(378, 516);
+            this.textBoxSoPhanMuonCheBien.Location = new System.Drawing.Point(332, 495);
             this.textBoxSoPhanMuonCheBien.Name = "textBoxSoPhanMuonCheBien";
             this.textBoxSoPhanMuonCheBien.Size = new System.Drawing.Size(100, 29);
             this.textBoxSoPhanMuonCheBien.TabIndex = 39;
@@ -260,7 +260,7 @@ namespace QuanLyNhaHang
             // labelSoPhanMuonCheBien
             // 
             this.labelSoPhanMuonCheBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoPhanMuonCheBien.Location = new System.Drawing.Point(75, 519);
+            this.labelSoPhanMuonCheBien.Location = new System.Drawing.Point(75, 498);
             this.labelSoPhanMuonCheBien.Name = "labelSoPhanMuonCheBien";
             this.labelSoPhanMuonCheBien.Size = new System.Drawing.Size(260, 56);
             this.labelSoPhanMuonCheBien.TabIndex = 38;
@@ -300,7 +300,7 @@ namespace QuanLyNhaHang
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(592, 159);
+            this.label1.Location = new System.Drawing.Point(601, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 39);
             this.label1.TabIndex = 43;
@@ -320,7 +320,7 @@ namespace QuanLyNhaHang
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 601);
+            this.label3.Location = new System.Drawing.Point(62, 586);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(408, 39);
             this.label3.TabIndex = 45;
