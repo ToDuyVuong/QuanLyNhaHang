@@ -53,3 +53,43 @@ C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Deb
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.LoadingForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.CheBienMonAnForm.resources
 C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\WINFORM\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.PhanCongNhanSuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.ResolveComReference.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChinhSuaBanAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachBanAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChamCongForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.CheBienMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.LoadingForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachMonForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DoanhThuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachNguyenLieuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChinhSuaNguyenLieuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.HoaDonForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachOrderForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.PrintForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.AddOrderForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.PhanCongNhanSuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ChinhSuaNhanSuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DangKyForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DangNhapForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.MainForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.OrderForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.DanhSachNhanSuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.SuaMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeMonAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemBanAnForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThanhToanForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThemNguyenLieuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeNguyenLieuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.XuatDanhSachNguyenLieuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeMonForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.ThongKeDoanhThuForm.resources
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+C:\Users\Admin\OneDrive - hcmute.edu.vn\Máy tính\New folder (2)\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb

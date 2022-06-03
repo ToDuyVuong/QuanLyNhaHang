@@ -86,7 +86,7 @@ namespace QuanLyNhaHang
                                 pictureBoxPictureHinh.Image.Save(hinh, pictureBoxPictureHinh.Image.RawFormat);
                                 if (nhansu.InsertNhanSu(id, hoten, gioitinh, ngaysinh, matkhau, diachi, sdt, hinh, chucvu))
                                 {
-                                    int calam = 1;
+                                    int calam = 2;
                                     
                                     // Thêm phân công
                                     if (phancong.InsertPhanCong(id, hoten, calam, 1))

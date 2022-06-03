@@ -161,7 +161,7 @@ namespace QuanLyNhaHang
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(597, 318);
+            this.dataGridView.Size = new System.Drawing.Size(563, 318);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.Click += new System.EventHandler(this.dataGridView_Click);
             // 
@@ -221,7 +221,7 @@ namespace QuanLyNhaHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
-            this.ClientSize = new System.Drawing.Size(1169, 526);
+            this.ClientSize = new System.Drawing.Size(1133, 526);
             this.Controls.Add(this.textBoxSoTien);
             this.Controls.Add(this.labelSoTien);
             this.Controls.Add(this.labelID);

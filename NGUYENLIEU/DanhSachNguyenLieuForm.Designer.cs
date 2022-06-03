@@ -202,6 +202,7 @@ namespace QuanLyNhaHang
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DanhSachNguyenLieuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachNguyenLieuForm";
             this.Load += new System.EventHandler(this.DanhSachNguyenLieuForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

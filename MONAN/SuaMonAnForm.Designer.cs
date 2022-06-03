@@ -37,25 +37,26 @@ namespace QuanLyNhaHang
             this.textboxGia = new System.Windows.Forms.TextBox();
             this.textboxSoLuong = new System.Windows.Forms.TextBox();
             this.comboxTenMon = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewMonAn)).BeginInit();
             this.SuspendLayout();
             // 
             // datagridviewMonAn
             // 
             this.datagridviewMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridviewMonAn.Location = new System.Drawing.Point(370, 45);
+            this.datagridviewMonAn.Location = new System.Drawing.Point(368, 116);
             this.datagridviewMonAn.Margin = new System.Windows.Forms.Padding(2);
             this.datagridviewMonAn.Name = "datagridviewMonAn";
             this.datagridviewMonAn.RowHeadersWidth = 51;
             this.datagridviewMonAn.RowTemplate.Height = 24;
-            this.datagridviewMonAn.Size = new System.Drawing.Size(677, 260);
+            this.datagridviewMonAn.Size = new System.Drawing.Size(590, 260);
             this.datagridviewMonAn.TabIndex = 15;
             this.datagridviewMonAn.DoubleClick += new System.EventHandler(this.datagridviewMonAn_DoubleClick);
             // 
             // buttonEdit
             // 
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Location = new System.Drawing.Point(170, 215);
+            this.buttonEdit.Location = new System.Drawing.Point(225, 293);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(122, 48);
@@ -68,7 +69,7 @@ namespace QuanLyNhaHang
             // 
             this.labelGia.AutoSize = true;
             this.labelGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGia.Location = new System.Drawing.Point(29, 148);
+            this.labelGia.Location = new System.Drawing.Point(27, 219);
             this.labelGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGia.Name = "labelGia";
             this.labelGia.Size = new System.Drawing.Size(38, 24);
@@ -79,7 +80,7 @@ namespace QuanLyNhaHang
             // 
             this.labelSoLuong.AutoSize = true;
             this.labelSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoLuong.Location = new System.Drawing.Point(30, 99);
+            this.labelSoLuong.Location = new System.Drawing.Point(28, 170);
             this.labelSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSoLuong.Name = "labelSoLuong";
             this.labelSoLuong.Size = new System.Drawing.Size(92, 24);
@@ -90,7 +91,7 @@ namespace QuanLyNhaHang
             // 
             this.labelTenMon.AutoSize = true;
             this.labelTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenMon.Location = new System.Drawing.Point(29, 51);
+            this.labelTenMon.Location = new System.Drawing.Point(27, 122);
             this.labelTenMon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTenMon.Name = "labelTenMon";
             this.labelTenMon.Size = new System.Drawing.Size(87, 24);
@@ -100,7 +101,7 @@ namespace QuanLyNhaHang
             // textboxGia
             // 
             this.textboxGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxGia.Location = new System.Drawing.Point(131, 99);
+            this.textboxGia.Location = new System.Drawing.Point(129, 170);
             this.textboxGia.Margin = new System.Windows.Forms.Padding(2);
             this.textboxGia.Name = "textboxGia";
             this.textboxGia.Size = new System.Drawing.Size(218, 29);
@@ -109,7 +110,7 @@ namespace QuanLyNhaHang
             // textboxSoLuong
             // 
             this.textboxSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxSoLuong.Location = new System.Drawing.Point(131, 148);
+            this.textboxSoLuong.Location = new System.Drawing.Point(129, 219);
             this.textboxSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.textboxSoLuong.Name = "textboxSoLuong";
             this.textboxSoLuong.Size = new System.Drawing.Size(218, 29);
@@ -120,19 +121,31 @@ namespace QuanLyNhaHang
             this.comboxTenMon.DisplayMember = "tenmon";
             this.comboxTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboxTenMon.FormattingEnabled = true;
-            this.comboxTenMon.Location = new System.Drawing.Point(131, 45);
+            this.comboxTenMon.Location = new System.Drawing.Point(129, 116);
             this.comboxTenMon.Margin = new System.Windows.Forms.Padding(2);
             this.comboxTenMon.Name = "comboxTenMon";
             this.comboxTenMon.Size = new System.Drawing.Size(218, 32);
             this.comboxTenMon.TabIndex = 8;
             this.comboxTenMon.ValueMember = "tenmon";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(292, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 54);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Chỉnh Sửa Món";
+            // 
             // SuaMonAnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1077, 372);
+            this.ClientSize = new System.Drawing.Size(999, 414);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.datagridviewMonAn);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelGia);
@@ -161,5 +174,6 @@ namespace QuanLyNhaHang
         private System.Windows.Forms.TextBox textboxGia;
         private System.Windows.Forms.TextBox textboxSoLuong;
         private System.Windows.Forms.ComboBox comboxTenMon;
+        private System.Windows.Forms.Label label1;
     }
 }

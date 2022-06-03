@@ -37,27 +37,34 @@ namespace QuanLyNhaHang
         //
         private void buttonThemBanAn_Click(object sender, EventArgs e)
         {
-            if(textBoxIdBanAn.Text != "" && textBoxSoLuongGhe.Text != "")
+          try
             {
-                int id = Convert.ToInt32(textBoxIdBanAn.Text);
-                int soluongghe = Convert.ToInt32(textBoxSoLuongGhe.Text);
-                bool trangthai = true;
-                if (radioButtonTrong.Checked)
-                    trangthai = false;
-                if(banan.InsertBanAn(id, soluongghe, trangthai))
+                if (textBoxIdBanAn.Text != "" && textBoxSoLuongGhe.Text != "")
                 {
-                    MessageBox.Show("Đã thêm bàn ăn thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    int id = Convert.ToInt32(textBoxIdBanAn.Text);
+                    int soluongghe = Convert.ToInt32(textBoxSoLuongGhe.Text);
+                    bool trangthai = true;
+                    if (radioButtonTrong.Checked)
+                        trangthai = false;
+                    if (banan.InsertBanAn(id, soluongghe, trangthai))
+                    {
+                        MessageBox.Show("Đã thêm bàn ăn thành công.", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm bàn ăn không thành công!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
                 }
                 else
                 {
-                    MessageBox.Show("Thêm bàn ăn không thành công!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Hãy nhập đầy đủ thông tin!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
             }
-            else
+            catch
             {
-                MessageBox.Show("Hãy nhập đầy đủ thông tin!!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lỗi!", "Thông Báo.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
